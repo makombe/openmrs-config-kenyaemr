@@ -1,0 +1,369 @@
+{
+	"name": "HIV CARE AND ART CARD South",
+	"description": "HIV care and art ",
+	"version": "1",
+	"published": true,
+	"uuid": "59ed8e62-7f1f-40ae-a2e3-eabe350277ce",
+	"retired": false,
+	"encounter": "TB Screening",
+	"pages": [
+		{
+			"label": "HIV care and art card",
+			"sections": [
+				{
+					"label": "Visit details",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Date:",
+							"type": "encounterDatetime",
+							"questionOptions": {
+								"rendering": "ui-select-extended"
+							},
+							"id": "encDate"
+						},
+						{
+							"label": "Provider:",
+							"type": "encounterProvider",
+							"questionOptions": {
+								"rendering": "ui-select-extended"
+							},
+							"id": "encProvider "
+						},
+						{
+							"label": "Location:",
+							"type": "encounterLocation",
+							"questionOptions": {
+								"rendering": "ui-select-extended"
+							},
+							"id": "encLocation"
+						}
+					]
+				},
+				{
+					"label": "Client identification",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Treatment supporter’s name (if disclosed) ",
+							"type": "obs",
+							"id": "supporterName",
+							"questionOptions": {
+								"concept": "161642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "checkbox"
+							}
+						},
+						{
+							"label": "Treatment supporter’s telephone",
+							"type": "obs",
+							"id": "supporterPhone",
+							"questionOptions": {
+								"concept": "160642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							}
+						},
+						{
+							"label": "Address of treatment supporter",
+							"type": "obs",
+							"id": "supporterAddress",
+							"questionOptions": {
+								"concept": "160641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							}
+						},
+						{
+							"label": "Home based care provided by ",
+							"type": "obs",
+							"id": "homeBaseCare",
+							"questionOptions": {
+								"concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							}
+						},
+						{
+							"label": "Date first tested  HIV+ ",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "date",
+								"concept": "160554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+							},
+							"id": "confirmedPositiveDate",
+							"required": "true",
+							"validators": [
+								{
+									"type": "date",
+									"allowFutureDates": "false"
+								}
+							]
+						},
+						{
+							"label": "Place where test done",
+							"type": "obs",
+							"id": "facilityConfirmed",
+							"questionOptions": {
+								"concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							}
+						},
+						{
+							"label": "Entry point",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "select",
+								"concept": "160540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"answers": [
+									{
+										"concept": "160539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "VCT"
+									},
+									{
+										"concept": "160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "TB Clinic"
+									},
+									{
+										"concept": "161558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "STI Clinic"
+									},
+									{
+										"concept": "159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "ANC"
+									},
+									{
+										"concept": "160536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "In patient"
+									},
+									{
+										"concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "OPD"
+									},
+									{
+										"concept": "160537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Pediatric"
+									},
+									{
+										"concept": "159938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "CBTC"
+									},
+									{
+										"concept": "160552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Nutrition"
+									},
+									{
+										"concept": "160551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Index testing"
+									},
+									{
+										"concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Other"
+									}
+								]
+							},
+							"id": "entryPoint",
+							"required": "true"
+						},
+						{
+							"label": "Other Entry point",
+							"type": "obs",
+							"id": "OtherEntryPoint",
+							"questionOptions": {
+								"concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							},
+							"validators": [],
+							"hide": {
+								"hideWhenExpression": "isEmpty(entryPoint) || entryPoint !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' "
+							}
+						},
+						{
+							"label": "Date of HIV Re-testing before ART",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "date",
+								"concept": "164400AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+							},
+							"id": "restDate",
+							"required": "true",
+							"validators": [
+								{
+									"type": "date",
+									"allowFutureDates": "false"
+								}
+							]
+						},
+						{
+							"label": "Place where Re-test done",
+							"type": "obs",
+							"id": "retestLocation",
+							"questionOptions": {
+								"concept": "161550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							}
+						},
+						{
+							"label": "Transferred in on ART from another treatment site in the national programme",
+							"type": "obs",
+							"id": "transferInChecked",
+							"questionOptions": {
+								"concept": "160563AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "checkbox",
+								"answers": [
+									{
+										"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Transferred in on ART from another treatment site"
+									}
+								]
+							}
+						},
+						{
+							"label": "Name of previous clinic:",
+							"type": "obs",
+							"id": "previousClinic",
+							"questionOptions": {
+								"concept": "160535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
+							},
+							"validators": [],
+							"hide": {
+								"hideWhenExpression": "isEmpty(transferInChecked) || transferInChecked !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
+						},
+						{
+							"label": "Transfer in date:",
+							"type": "obs",
+							"id": "transferInDate",
+							"questionOptions": {
+								"concept": "160534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "date"
+							},
+							"validators": [
+								{
+									"type": "date",
+									"allowFutureDates": "false"
+								}
+							],
+							"hide": {
+								"hideWhenExpression": "isEmpty(transferInChecked) || transferInChecked !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Personal & Family history",
+			"sections": [
+				{
+					"label": "Personal history",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Literate?",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "select",
+								"concept": "166855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"answers": [
+									{
+										"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Yes"
+									},
+									{
+										"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "No"
+									}
+								]
+							},
+							"id": "literate"
+						},
+						{
+							"label": "Alcohol intake? ",
+							"type": "obs",
+							"id": "alcoholIntake",
+							"questionOptions": {
+								"concept": "159449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "checkbox",
+								"answers": [
+									{
+										"concept": "162146AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Habitual"
+									},
+									{
+										"concept": "5486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Social"
+									},
+									{
+										"concept": "1090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Not use"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "Family history",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Entry point",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "select",
+								"concept": "160540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"answers": [
+									{
+										"concept": "160539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "VCT"
+									},
+									{
+										"concept": "160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "TB Clinic"
+									},
+									{
+										"concept": "161558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "STI Clinic"
+									},
+									{
+										"concept": "159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "ANC"
+									},
+									{
+										"concept": "160536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "In patient"
+									},
+									{
+										"concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "OPD"
+									},
+									{
+										"concept": "160537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Pediatric"
+									},
+									{
+										"concept": "159938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "CBTC"
+									},
+									{
+										"concept": "160552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Nutrition"
+									},
+									{
+										"concept": "160551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Index testing"
+									},
+									{
+										"concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Other"
+									}
+								]
+							},
+							"id": "entryPoint"
+						}
+					]
+				}
+			]
+		}
+	],
+	"processor": "EncounterFormProcessor",
+	"referencedForms": []
+}

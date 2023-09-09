@@ -8,7 +8,7 @@
 	"encounter": "TB Screening",
 	"pages": [
 		{
-			"label": "HIV care and art card",
+			"label": "Client identification",
 			"sections": [
 				{
 					"label": "Visit details",
@@ -49,8 +49,8 @@
 							"type": "obs",
 							"id": "supporterName",
 							"questionOptions": {
-								"concept": "161642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "checkbox"
+								"concept": "160638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "text"
 							}
 						},
 						{
@@ -305,51 +305,78 @@
 					"isExpanded": "true",
 					"questions": [
 						{
-							"label": "Entry point",
+							"label": "Marital status",
 							"type": "obs",
 							"questionOptions": {
 								"rendering": "select",
-								"concept": "160540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"concept": "1054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
 								"answers": [
 									{
-										"concept": "160539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "VCT"
+										"concept": "1057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Single"
 									},
 									{
-										"concept": "160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "TB Clinic"
+										"concept": "5555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Married monogamous"
 									},
 									{
-										"concept": "161558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "STI Clinic"
+										"concept": "159715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Married polygamous"
 									},
 									{
-										"concept": "159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "ANC"
+										"concept": "1058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Divorced/Separated"
 									},
 									{
-										"concept": "160536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "In patient"
+										"concept": "1059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Widowed"
 									},
 									{
-										"concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "OPD"
+										"concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Not applicable"
+									}
+								]
+							},
+							"id": "maritalStatus"
+						},
+						{
+							"label": "Occupation",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "select",
+								"concept": "1542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"answers": [
+									{
+										"concept": "123801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Unemployed"
 									},
 									{
-										"concept": "160537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "Pediatric"
+										"concept": "159465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Student"
 									},
 									{
-										"concept": "159938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "CBTC"
+										"concept": "160295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Housewife"
 									},
 									{
-										"concept": "160552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "Nutrition"
+										"concept": "1540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Salaried Employee"
 									},
 									{
-										"concept": "160551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "Index testing"
+										"concept": "1539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Business"
+									},
+									{
+										"concept": "1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Farmer"
+									},
+									{
+										"concept": "163130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Military personnel"
+									},
+									{
+										"concept": "158159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Other Uniformed forces(Police,Prisons Wildlife, Fire Brigades etc)"
 									},
 									{
 										"concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -357,7 +384,220 @@
 									}
 								]
 							},
-							"id": "entryPoint"
+							"id": "occupation"
+						},
+						{
+							"label": "Specify",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "text",
+								"concept": "164879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"conceptMappings": []
+							},
+							"id": "otherOccupation",
+							"hide": {
+								"hideWhenExpression": "isEmpty(occupation) || occupation !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
+						},
+						{
+							"label": "General family info",
+							"type": "obsGroup",
+							"questionOptions": {
+								"rendering": "repeating",
+								"concept": "1560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+							},
+							"id": "generalInfo",
+							"questions": [
+								{
+									"label": "Family member name",
+									"type": "obs",
+									"questionOptions": {
+										"rendering": "text",
+										"concept": "160750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"conceptMappings": []
+									},
+									"id": "familyMemberName"
+								},
+								{
+									"label": "Sex",
+									"type": "obs",
+									"questionOptions": {
+										"rendering": "select",
+										"concept": "166025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"answers": [
+											{
+												"concept": "1534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Male"
+											},
+											{
+												"concept": "1535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Female"
+											}
+										]
+									},
+									"id": "memberSex"
+								},
+								{
+									"label": "Age",
+									"type": "obs",
+									"id": "memberAge",
+									"questionOptions": {
+										"concept": "1532AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"rendering": "number"
+									},
+									"validators": []
+								},
+								{
+									"label": "HIV status?",
+									"type": "obs",
+									"questionOptions": {
+										"rendering": "select",
+										"concept": "1169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"answers": [
+											{
+												"concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Positve"
+											},
+											{
+												"concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Negative"
+											},
+											{
+												"concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Unknown"
+											}
+										]
+									},
+									"id": "hivStatus"
+								},
+								{
+									"label": "On ART?",
+									"type": "obs",
+									"questionOptions": {
+										"rendering": "select",
+										"concept": "160119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"answers": [
+											{
+												"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "Yes"
+											},
+											{
+												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+												"label": "No"
+											}
+										]
+									},
+									"id": "onArt"
+								},
+								{
+									"label": "Unique No.",
+									"type": "obs",
+									"id": "uniqueNo",
+									"questionOptions": {
+										"concept": "164402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"rendering": "number"
+									},
+									"validators": [],
+									"hide": {
+										"hideWhenExpression": "isEmpty(onArt) || onArt !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Antiretroviral Treatment History",
+			"sections": [
+				{
+					"label": "Antiretroviral Treatment History",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Were ARVs received before?",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "select",
+								"concept": "162695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"answers": [
+									{
+										"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Yes"
+									},
+									{
+										"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "No"
+									}
+								]
+							},
+							"id": "arvsReceived"
+						},
+						{
+							"label": "If yes? ",
+							"type": "obs",
+							"id": "yesReceivedArvs",
+							"questionOptions": {
+								"concept": "1149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "checkbox",
+								"answers": [
+									{
+										"concept": "162323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "PMTCT"
+									},
+									{
+										"concept": "1691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "PEP"
+									},
+									{
+										"concept": "160119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Earlier ART not transfer in"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "isEmpty(arvsReceived) || arvsReceived !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
+						},
+						{
+							"label": "Place ",
+							"type": "obs",
+							"id": "placeReceivedArvs",
+							"questionOptions": {
+								"concept": "1745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"rendering": "select",
+								"answers": [
+									{
+										"concept": "1725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Private"
+									},
+									{
+										"concept": "160480AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Government"
+									},
+									{
+										"concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"label": "Other"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "isEmpty(arvsReceived) || arvsReceived !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
+						},
+						{
+							"label": "Specify",
+							"type": "obs",
+							"questionOptions": {
+								"rendering": "text",
+								"concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"conceptMappings": []
+							},
+							"id": "otherArvPlace",
+							"hide": {
+								"hideWhenExpression": "isEmpty(placeReceivedArvs) || placeReceivedArvs !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+							}
 						}
 					]
 				}

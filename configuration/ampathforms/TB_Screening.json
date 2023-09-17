@@ -41,255 +41,307 @@
 					]
 				},
 				{
-					"label": "Screening Questions",
+					"label": "TB Screening Questions",
 					"isExpanded": "true",
 					"questions": [
 						{
-							"label": "Screening Questions",
-							"type": "obsGroup",
-							"id": "scReeNiNQuiZ",
-							"questionOptions": {
-								"concept": "160108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "group"
-							},
-							"questions": [
-								{
-									"label": "Current cough",
-									"type": "obs",
-									"id": "cOughDuratiOn",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									}
-								},
-								{
-									"label": "Fever:",
-									"type": "obs",
-									"id": "FeverIsh",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									}
-								},
-								{
-									"label": "Weight loss",
-									"type": "obs",
-									"id": "WeigHtLossGain",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									},
-									"hide": {
-										"hideWhenExpression": "age < 15"
-									}
-								},
-								{
-									"label": "Poor weight gain",
-									"type": "obs",
-									"required":"true",
-									"id": "WeigHtGain",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									},
-									"hide": {
-										"hideWhenExpression": "age >= 15"
-									}
-								},
-								{
-									"label": "Night sweats:",
-									"type": "obs",
-									"id": "NighTsWeatS",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									},
-									"hide": {
-										"hideWhenExpression": "age < 15"
-									}
-								},
-								{
-									"label": "Close contact history with TB patient",
-									"type": "obs",
-									"id": "ConTacTbCase",
-									"questionOptions": {
-										"concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"rendering": "radio",
-										"answers": [
-											{
-												"concept": "124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "Yes"
-											},
-											{
-												"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-												"label": "No"
-											}
-										]
-									},
-									"hide": {
-										"hideWhenExpression": "age > 14"
-									}
-								}
-							]
-						}
-					]
-				},
-				{
-					"label": "Indicate action taken",
-					"isExpanded": "true",
-					"questions": [
-						{
-							"label": "Test Done ",
+							"label": "Current cough",
 							"type": "obs",
-							"id": "testOrdered",
+							"id": "cOughDuratiOn",
 							"questionOptions": {
-								"concept": "1271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "checkbox",
+								"concept": "147b8be8-d657-4e46-8970-6f9983b27722",
+								"rendering": "radio",
 								"answers": [
 									{
-										"concept": "307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "Sputum Smear"
+										"concept": "true",
+										"label": "Yes"
 									},
 									{
-										"concept": "12AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "Chest Xray"
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							}
+						},
+						{
+							"label": "Fever:",
+							"type": "obs",
+							"id": "FeverIsh",
+							"questionOptions": {
+								"concept": "f405d8ec-14d0-485a-b52d-bffdfeb26581",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
 									},
 									{
-										"concept": "162202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-										"label": "GeneXpert"
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							}
+						},
+						{
+							"label": "Weight loss",
+							"type": "obs",
+							"id": "WeigHtLossGain",
+							"questionOptions": {
+								"concept": "78f5bc62-ecbe-457f-87dd-def20dbee82e",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
 									}
 								]
 							},
 							"hide": {
-								"hideWhenExpression": "((String(cOughDuratiOn) === '159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(FeverIsh) === '1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(WeigHtLossGain) === '832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(NighTsWeatS) === '133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(LeSSpLayFul) === '116334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(ConTacTbCase) === '124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0)) === 0"
+								"hideWhenExpression": "age < 15"
 							}
 						},
+						{
+							"label": "Poor weight gain",
+							"type": "obs",
+							"required":"true",
+							"id": "pWeigHtGain",
+							"questionOptions": {
+								"concept": "78f5bc62-ecbe-457f-87dd-def20dbee82e",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "age >= 15"
+							}
+						},
+						{
+							"label": "Night sweats:",
+							"type": "obs",
+							"id": "NighTsWeatS",
+							"questionOptions": {
+								"concept": "9e0bf1ca-dbbe-4024-9d1c-174f4ab1e80d",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "age < 15"
+							}
+						},
+						{
+							"label": "Close contact history with TB patient",
+							"type": "obs",
+							"id": "ConTacTbCase",
+							"questionOptions": {
+								"concept": "51b82f82-0c27-46e3-9f33-6d65cc1f6eed",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "age > 14"
+							}
+						}
+					]
+				},
+				{
+					"label": "Evaluate for TB if “Yes” to any of the above (Positive TB screening)",
+					"isExpanded": "true",
+					"questions": [
+						{
+							"label": "Sputum for AFB, Has it been done?",
+							"type": "obs",
+							"id": "sputumDone",
+							"questionOptions": {
+								"concept": "06fbce51-d4ff-4ad3-b911-def303f3d2e2",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "((String(cOughDuratiOn) === 'true'? 1 : 0) + (String(FeverIsh) === 'true'? 1 : 0) + (String(WeigHtLossGain) === 'true'? 1 : 0) + (String(NighTsWeatS) === 'true'? 1 : 0) + (String(pWeigHtGain) === 'true'? 1 : 0) + (String(ConTacTbCase) === 'true'? 1 : 0)) === 0"
+							}
+						},			
 						{
 							"label": "Sputum for AFB result",
 							"type": "obs",
 							"id": "sPutUmResuLts",
 							"questionOptions": {
-								"concept": "307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "select",
+								"concept": "fdaa7259-df0b-4e26-9d9c-de2ca68dff1d",
+								"rendering": "radio",
 								"answers": [
 									{
-										"concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "a1dcc066-550c-42a3-90aa-83d8336cb7d5",
 										"label": "AFB+"
 									},
 									{
-										"concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "f9c1016a-dead-42c1-8ea3-7a1325f1159c",
 										"label": "NEGATIVE"
 									},
 									{
-										"concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "5d8d6b9f-1acf-4a4c-a79c-acd0ccd32df8",
 										"label": "Unknown"
 									}
 								]
 							},
 							"hide": {
-								"hideWhenExpression": "((String(cOughDuratiOn) === '159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(FeverIsh) === '1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(WeigHtLossGain) === '832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(NighTsWeatS) === '133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(LeSSpLayFul) === '116334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(ConTacTbCase) === '124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0)) === 0"
+								"hideWhenExpression": "sputumDone !== 'true'"
 							}
 						},
 						{
-							"label": "Chest Xray result ",
+							"label": "Has CxR been Done?",
 							"type": "obs",
-							"id": "chEstXrAyAction",
+							"id": "cxrDone",
 							"questionOptions": {
-								"concept": "12AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"concept": "edf1eec7-f766-4371-814b-0c18024217bb",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "((String(cOughDuratiOn) === 'true'? 1 : 0) + (String(FeverIsh) === 'true'? 1 : 0) + (String(WeigHtLossGain) === 'true'? 1 : 0) + (String(NighTsWeatS) === 'true'? 1 : 0) + (String(pWeigHtGain) === 'true'? 1 : 0) + (String(ConTacTbCase) === 'true'? 1 : 0)) === 0"
+							}
+						},
+						{
+							"label": "CxR result ",
+							"type": "obs",
+							"id": "cxrResult",
+							"questionOptions": {
+								"concept": "7c679f4f-cae6-43ba-bf18-0f3bd9f060a8",
 								"rendering": "select",
 								"answers": [
 									{
-										"concept": "152526AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "31265036-2f0a-4ef0-a6ce-648c3e0844c5",
 										"label": "Suggestive"
 									},	
 									{
-										"concept": "165649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "60c1d4e9-09f4-4fe1-9960-52738f01d3a3",
 										"label": "Inconclusive"
 									},
 									{
-										"concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "d10cedcc-ba9b-426b-8a23-5c906caf0579",
 										"label": "Other Dx"
 									},
 									{
-										"concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "3b75cc72-924b-4d36-8891-95484287495e",
 										"label": "Unknown"
 									}
 								]
 							},
 							"hide": {
-								"hideWhenExpression": "((String(cOughDuratiOn) === '159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(FeverIsh) === '1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(WeigHtLossGain) === '832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(NighTsWeatS) === '133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(LeSSpLayFul) === '116334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(ConTacTbCase) === '124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0)) === 0"
+								"hideWhenExpression": "cxrDone !== 'true'"
+							}
+						},
+						{
+							"label": "Has GeneXpert been Done?",
+							"type": "obs",
+							"id": "geneDone",
+							"questionOptions": {
+								"concept": "c50addfe-baf4-4ed0-b470-d6d4678b4359",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "((String(cOughDuratiOn) === 'true'? 1 : 0) + (String(FeverIsh) === 'true'? 1 : 0) + (String(WeigHtLossGain) === 'true'? 1 : 0) + (String(NighTsWeatS) === 'true'? 1 : 0) + (String(pWeigHtGain) === 'true'? 1 : 0) + (String(ConTacTbCase) === 'true'? 1 : 0)) === 0"
 							}
 						},
 						{
 							"label": "GeneXpert result",
 							"type": "obs",
-							"id": "geneXpertActiOn",
+							"id": "geneXpertResult",
 							"questionOptions": {
-								"concept": "162202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "select",
+								"concept": "c2f01b10-1b5e-485a-a352-05788359d881",
+								"rendering": "radio",
 								"answers": [
 									{
-										"concept": "164104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "19ac4483-f0db-439e-9dfc-997436fa0255",
 										"label": "MTB detected"
 									},
 									{
-										"concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "82f0a100-a76a-4f4b-9b0b-4bc78953cf4d",
 										"label": "MTB not detected "
 									}
 								]
 							},
 							"hide": {
-								"hideWhenExpression": "((String(cOughDuratiOn) === '159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(FeverIsh) === '1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(WeigHtLossGain) === '832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(NighTsWeatS) === '133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(LeSSpLayFul) === '116334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(ConTacTbCase) === '124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0)) === 0"
+								"hideWhenExpression": "geneDone !== 'true'"
+							}
+							
+						},
+						{
+							"label": "FNA,Culture, UltraSound - Done?",
+							"type": "obs",
+							"id": "fnaCulture",
+							"questionOptions": {
+								"concept": "ad8ecb63-6b5d-49b2-9a9d-e16d7a0efc40",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "true",
+										"label": "Yes"
+									},
+									{
+										"concept": "false",
+										"label": "No"
+									}
+								]
+							},
+							"hide": {
+								"hideWhenExpression": "((String(cOughDuratiOn) === 'true'? 1 : 0) + (String(FeverIsh) === 'true'? 1 : 0) + (String(WeigHtLossGain) === 'true'? 1 : 0) + (String(NighTsWeatS) === 'true'? 1 : 0) + (String(pWeigHtGain) === 'true'? 1 : 0) + (String(ConTacTbCase) === 'true'? 1 : 0)) === 0"
 							}
 						},
 						{
@@ -297,21 +349,21 @@
 							"type": "obs",
 							"id": "cliNicalDiagnosisAction",
 							"questionOptions": {
-								"concept": "163752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+								"concept": "1b4f4df7-dddc-4e73-ab18-304c4fd12953",
 								"rendering": "radio",
 								"answers": [
 									{
-										"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "true",
 										"label": "Yes"
 									},
 									{
-										"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+										"concept": "false",
 										"label": "No"
 									}
 								]
 							},
 							"hide": {
-								"hideWhenExpression": "((String(cOughDuratiOn) === '159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(FeverIsh) === '1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(WeigHtLossGain) === '832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(NighTsWeatS) === '133027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(LeSSpLayFul) === '116334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0) + (String(ConTacTbCase) === '124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'? 1 : 0)) === 0"
+								"hideWhenExpression": "((String(cOughDuratiOn) === 'true'? 1 : 0) + (String(FeverIsh) === 'true'? 1 : 0) + (String(WeigHtLossGain) === 'true'? 1 : 0) + (String(NighTsWeatS) === 'true'? 1 : 0) + (String(pWeigHtGain) === 'true'? 1 : 0) + (String(ConTacTbCase) === 'true'? 1 : 0)) === 0"
 							}
 						},
 						{
@@ -319,11 +371,25 @@
 							"type": "obs",
 							"id": "tbDiagnosed",
 							"questionOptions": {
-								"concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-								"rendering": "text"
+								"concept": "3109983a-98af-4017-a16b-e3bac0c48d25",
+								"rendering": "radio",
+								"answers": [
+									{
+										"concept": "5dcd9f36-9688-4b92-b42b-6c1e0300ff87",
+										"label": "Extra Pulmonary"
+									},
+									{
+										"concept": "a9c54233-4e2a-4619-bda8-09a9925b7571",
+										"label": "Pulmonary(BC)"
+									},
+									{
+										"concept": "4a8affbe-5d69-4103-9f77-4c9a50dee630",
+										"label": "Pulmonary(CD)"
+									}
+								]
 							},
 							"hide": {
-								"hideWhenExpression": "cliNicalDiagnosisAction !=='1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+								"hideWhenExpression": "cliNicalDiagnosisAction !=='true'"
 							}
 						}
 					]

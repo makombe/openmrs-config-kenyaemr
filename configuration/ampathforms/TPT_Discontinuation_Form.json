@@ -106,25 +106,6 @@
 						  ]
 						},
 						"id": "rEaSonDisc"
-					  },
-					  {
-						"label": "Discontinuation Date:",
-						"type": "encounterDate",
-						"id": "discondate",
-						"questionOptions": {
-						  "rendering": "date"
-						},
-						"validators": [
-						  {
-							"type": "date",
-							"allowFutureDates": "false"
-						  },
-						  {
-							"type": "js_expression",
-							"failsWhenExpression": "(new moment(encDate)).isAfter((new moment(myValue)), 'day') || (new moment(encDate)).isSame((new moment(myValue)), 'day')",
-							"message": "Discontinuation Date should be greater than the encounter date."
-						  }
-						]
 					  }
 					]
 				  }

@@ -121,8 +121,8 @@
 						  },
 						  {
 							"type": "js_expression",
-							"failsWhenExpression": "(new moment(encDate)).isAfter((new moment(myValue)), 'day') || (new moment(encDate)).isSame((new moment(myValue)), 'day')",
-							"message": "Discontinuation Date should be greater than the encounter date."
+							"failsWhenExpression": "(new moment(encDate)).isBefore((new moment(myValue)), 'day')",
+							"message": "Discontinuation Date should be before or equal to the encounter date."
 						  }
 						]
 					  }

@@ -1,0 +1,1288 @@
+{
+  "name": "ADR Assessment tool",
+  "published": true,
+  "retired": false,
+  "encounter": "ADR Assessment Tool",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Encounter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Visit date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "id": "encDate",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encLocation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Assessment",
+      "sections": [
+        {
+          "label": "Assessment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Initial assessment?",
+              "type": "obs",
+              "required": true,
+              "id": "assessmentType",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Was the client's weight taken during the visit?",
+              "type": "obs",
+              "required": true,
+              "id": "weightTaken",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "163515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED NP",
+                    "value": "248358009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "163515"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "IF NO, explain why:",
+              "type": "obs",
+              "required": false,
+              "id": "explainWhy",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160632"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1915"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "LOINC",
+                    "value": "48767-8"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "weightTaken !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Has the client been taking the ARVs (and/or other new drug) EVERY DAY during the last month?",
+              "type": "obs",
+              "required": true,
+              "id": "takingArvs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "129019007"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1919"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159367"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "IF NO, explain why:",
+              "type": "obs",
+              "required": false,
+              "id": "notTaking",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161011"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "LOINC",
+                    "value": "48767-8"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "takingArvs !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": " Is the dosage taken correct as per the weight?  (ask caregiver/child how much drug is given and how often)",
+              "type": "obs",
+              "required": true,
+              "id": "dosageTakenCorrectly",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "IF NO, explain:",
+              "type": "obs",
+              "required": false,
+              "id": "notTakingDosageCorrectly",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161011"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "LOINC",
+                    "value": "48767-8"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosageTakenCorrectly !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "How often do you take ARVs?",
+              "type": "obs",
+              "required": true,
+              "id": "drugFrequency",
+              "questionOptions": {
+                "concept": "160855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Once daily"
+                  },
+                  {
+                    "concept": "160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Twice daily"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "What time(s) of the day are ARVs or drugs given/taken?",
+              "type": "obs",
+              "required": true,
+              "id": "timeOfDay",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "161076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161076"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "161015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "AM"
+                  },
+                  {
+                    "concept": "161016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mid day"
+                  },
+                  {
+                    "concept": "161017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PM"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "drugFrequency !== '160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "What time(s) of the day are ARVs or drugs given/taken?",
+              "type": "obs",
+              "required": true,
+              "id": "timeOfDayArvMultiOption",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "161076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161076"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "161015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "AM"
+                  },
+                  {
+                    "concept": "161016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mid day"
+                  },
+                  {
+                    "concept": "161017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PM"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "drugFrequency !== '160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "How often do you take any other medication?",
+              "type": "obs",
+              "required": true,
+              "id": "otherMedicationFreq",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Once daily"
+                  },
+                  {
+                    "concept": "160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Twice daily"
+                  },
+                  {
+                    "concept": "160866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Thrice daily"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Other (Specify)",
+              "type": "obs",
+              "id": "specifyOtherDuration",
+              "questionOptions": {
+                "concept": "20395601-257c-490c-86c2-acffb627f91f",
+                "rendering": "text"
+              },
+              "hide": {
+                "hideWhenExpression": "otherMedicationFreq !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "What time(s) of the day are other drugs given/taken?",
+              "type": "obs",
+              "required": true,
+              "id": "timeOfDayOtherDrugs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161076"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "161015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "AM"
+                  },
+                  {
+                    "concept": "161016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mid day"
+                  },
+                  {
+                    "concept": "161017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PM"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "otherMedicationFreq !== '160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "What time(s) of the day are other drugs given/taken?",
+              "type": "obs",
+              "required": true,
+              "id": "timeOfDayOtherDrugsMultiOps",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "1724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161076"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "161015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "AM"
+                  },
+                  {
+                    "concept": "161016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mid day"
+                  },
+                  {
+                    "concept": "161017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PM"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "(otherMedicationFreq !== '160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') && (otherMedicationFreq !== '160866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "validators": []
+            },
+            {
+              "label": "Is the timing of ARVs or drugs working for you?",
+              "type": "obs",
+              "required": true,
+              "id": "timingOfArvs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1257"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH Malawi",
+                    "value": "7010"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160119"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If NO specify",
+              "type": "obs",
+              "required": false,
+              "id": "specifyTimingOfArvNotWorking",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "164879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "timingOfArvs !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Is the timing of the other drugs working for you?",
+              "type": "obs",
+              "required": true,
+              "id": "timingOfOtherDrugs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1257"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH Malawi",
+                    "value": "7010"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160119"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If NO specify",
+              "type": "obs",
+              "required": false,
+              "id": "specifyTimingOfOtherDrugs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "timingOfOtherDrugs !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Is the frequency of ARV drug dosing difficult to follow?",
+              "type": "obs",
+              "required": true,
+              "id": "frequencyOfArvs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "163331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED NP",
+                    "value": "260864003"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "163331"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If YES which ARV drug",
+              "type": "obs",
+              "required": false,
+              "id": "specifyArvDifficultToFollow",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "frequencyOfArvs !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Are the number of tablets, or volume of liquids difficult to administer/take?",
+              "type": "obs",
+              "required": true,
+              "id": "tabletsAdministered",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "161911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If YES which ARV drug",
+              "type": "obs",
+              "required": false,
+              "id": "specifyTabletOfArv",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "tabletsAdministered !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Is the frequency of other drugs dosing difficult to follow?",
+              "type": "obs",
+              "required": true,
+              "id": "frequencyOtherDrugs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If YES which drug",
+              "type": "obs",
+              "required": false,
+              "id": "specifyFreqOtherDrugs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "165399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "frequencyOtherDrugs !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Are the number of tablets, or volume of liquids of other drugs difficult to administer/take?",
+              "type": "obs",
+              "required": true,
+              "id": "tabletsOtherAdministered",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If YES which drug",
+              "type": "obs",
+              "required": false,
+              "id": "specifyTimingOfArv",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "tabletsOtherAdministered !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Does the client have difficulty taking the ARV/drug (spitting up, vomiting) due to the taste, size, or feeling?",
+              "type": "obs",
+              "required": true,
+              "id": "difficultyTakingArvs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If YES which drug",
+              "type": "obs",
+              "required": false,
+              "id": "yesDifficultyTakingArv",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164879"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "difficultyTakingArvs !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Does the client have any of the following symptoms when taking ARVs/drugs?",
+              "type": "obs",
+              "required": true,
+              "id": "symptoms",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "1729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Vomiting"
+                  },
+                  {
+                    "concept": "832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rapid or excessive weight loss"
+                  },
+                  {
+                    "concept": "140937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rapid or excessive weight gain"
+                  },
+                  {
+                    "concept": "879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Itching of the skin"
+                  },
+                  {
+                    "concept": "139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Headache"
+                  },
+                  {
+                    "concept": "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diarrhea"
+                  },
+                  {
+                    "concept": "5192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yellowness of eyes"
+                  },
+                  {
+                    "concept": "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rash on the skin"
+                  },
+                  {
+                    "concept": "141830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dizziness"
+                  },
+                  {
+                    "concept": "141597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sleep Disturbance"
+                  },
+                  {
+                    "concept": "137601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Increased appetite"
+                  },
+                  {
+                    "concept": "6031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Decreased appetite"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other changes or concerns"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Any laboratory abnormality/ies noted",
+              "type": "obs",
+              "required": true,
+              "id": "anyLaboratoryAbnormalityNoted",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED NP",
+                    "value": "364712009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164217"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "If Yes specify",
+              "type": "obs",
+              "required": false,
+              "id": "yesAbnormaly",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "1356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "161134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Creatinine"
+                  },
+                  {
+                    "concept": "654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ALT"
+                  },
+                  {
+                    "concept": "887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "RBS"
+                  },
+                  {
+                    "concept": "1010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Lipid Profile"
+                  },
+                  {
+                    "concept": "160987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Urinalysis"
+                  },
+                  {
+                    "concept": "21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hb"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "anyLaboratoryAbnormalityNoted !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": []
+            },
+            {
+              "label": "Specify other laboratory abnormality/ies noted",
+              "type": "obs",
+              "required": false,
+              "id": "otherLabs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "165398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": []
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(yesAbnormaly) || !arrayContains(yesAbnormaly, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Summary of findings",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Summary of findings",
+              "type": "obs",
+              "required": true,
+              "id": "summaryOfFindings",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "162165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162165"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Grading of the reaction/event",
+      "sections": [
+        {
+          "label": "Grading of reaction/event",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Severity of reaction/event",
+              "type": "obs",
+              "required": true,
+              "id": "severityOfReaction",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED NP",
+                    "value": "405162009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162760"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mild"
+                  },
+                  {
+                    "concept": "1499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Moderate"
+                  },
+                  {
+                    "concept": "1500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Severe"
+                  },
+                  {
+                    "concept": "162819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fatal"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Is the reaction/event serious?",
+              "type": "obs",
+              "required": true,
+              "id": "isReactionEventSerious",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED NP",
+                    "value": "281647001"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "NCI Concept Code",
+                    "value": "C41335"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162867"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Criteria/reason for seriousness",
+              "type": "obs",
+              "id": "cRitec",
+              "questionOptions": {
+                "concept": "ff5188f3-098b-40e9-be37-f248a41160d0",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "5485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hospitalization/Prolonged Hospitalization"
+                  },
+                  {
+                    "concept": "162558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Disability"
+                  },
+                  {
+                    "concept": "119975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Congenital anomality"
+                  },
+                  {
+                    "concept": "162693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Life threatening"
+                  },
+                  {
+                    "concept": "9c348c8c-e033-4fc0-ab2a-7e6702b68739",
+                    "label": "Death"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isReactionEventSerious !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Action Taken and Recommendations",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Action taken",
+              "type": "obs",
+              "id": "ActIonTakenPP",
+              "questionOptions": {
+                "concept": "1255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug Withdrawn"
+                  },
+                  {
+                    "concept": "1257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dose Increased"
+                  },
+                  {
+                    "concept": "1259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dose Reduced"
+                  },
+                  {
+                    "concept": "1258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug Changed"
+                  },
+                  {
+                    "concept": "981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dose Changed"
+                  },
+                  {
+                    "concept": "166188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dose not changed"
+                  },
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Applicable"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Dechallenge/Rechallenge",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Did the reaction resolve after the drug was stopped or when the dose was reduced?",
+              "type": "obs",
+              "required": true,
+              "id": "AdROutComes",
+              "questionOptions": {
+                "concept": "6097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Applicable"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(assessmentType) || assessmentType !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Did the reaction reappear after the drug was reintroduced?",
+              "type": "obs",
+              "required": true,
+              "id": "AdROutComesRE",
+              "questionOptions": {
+                "concept": "159924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Applicable"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(assessmentType) || assessmentType !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "isEmpty(assessmentType) || assessmentType !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        },
+        {
+          "label": "Outcome",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Outcome",
+              "type": "obs",
+              "id": "ADReveNtoUtcome",
+              "required": true,
+              "questionOptions": {
+                "concept": "163105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "159791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Recovered"
+                  },
+                  {
+                    "concept": "162873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Recovered with sequelae"
+                  },
+                  {
+                    "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Recovering"
+                  },
+                  {
+                    "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not recovered"
+                  },
+                  {
+                    "concept": "9c348c8c-e033-4fc0-ab2a-7e6702b68739",
+                    "label": "Death"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(assessmentType) || assessmentType !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ],
+          "hide": {
+            "hideWhenExpression": "isEmpty(assessmentType) || assessmentType !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+          }
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "d18d6d8a-4be2-4115-ac7e-86cc0ec2b263",
+  "referencedForms": [],
+  "uuid": "cc27af13-69ee-49e2-8a43-e1b1926403c1",
+  "description": "Adverse drug reaction assessment tool",
+  "version": "1"
+}

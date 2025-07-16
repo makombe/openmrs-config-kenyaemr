@@ -20,7 +20,7 @@
     "@openmrs/esm-patient-chart-app": "10.1.0",
     "@openmrs/esm-laboratory-app": "1.0.1-pre.467",
     "@openmrs/esm-dispensing-app": "1.6.3-pre.460",
-    "@openmrs/esm-ward-app": "8.1.2-pre.4613",
+    "@kenyaemr/esm-ward-app": "8.5.1-pre.13",
     "@openmrs/esm-active-visits-app": "8.3.2-pre.5067",
     "@openmrs/esm-service-queues-app": "8.3.2-pre.5084",
     "@kenyaemr/esm-login-app": "latest",

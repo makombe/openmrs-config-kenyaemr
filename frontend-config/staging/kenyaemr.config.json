@@ -476,7 +476,7 @@
         "add": [
           "lab-manifest-dashboard-link",
           "laboratory-dashboard-link",
-          "procedure-dashboard-link",
+        
           "imaging-orders-link"
         ],
         "configure": {

@@ -454,10 +454,10 @@
           "ward-dashboard-link",
           "pharmacy-dashboard-link",
           "clinical-appointments-dashboard-link",
-          "imaging-orders-link",
-          "procedure-dashboard-link"
+          "imaging-orders-link"
+        
         ],
-        "add": [],
+        "add": ["procedure-dashboard-link"],
         "configure": {
           "home-widget-db-link": {
             "Display conditions": {

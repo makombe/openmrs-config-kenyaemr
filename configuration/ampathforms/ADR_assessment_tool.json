@@ -368,6 +368,10 @@
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Other"
+                  },
+                  {
+                    "concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Applicable"
                   }
                 ]
               },
@@ -416,7 +420,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "otherMedicationFreq !== '160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "otherMedicationFreq !== '160864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || otherMedicationFreq === '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "validators": []
             },
@@ -451,7 +455,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "(otherMedicationFreq !== '160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') && (otherMedicationFreq !== '160866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                "hideWhenExpression": "(otherMedicationFreq !== '160858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') && (otherMedicationFreq !== '160866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') || otherMedicationFreq === '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "validators": []
             },
@@ -549,6 +553,9 @@
                     "label": "No"
                   }
                 ]
+              },
+              "hide": {
+                "hideWhenExpression": "otherMedicationFreq === '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "validators": []
             },
@@ -689,6 +696,9 @@
                   }
                 ]
               },
+               "hide": {
+                "hideWhenExpression": "otherMedicationFreq === '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
               "validators": []
             },
             {
@@ -730,6 +740,9 @@
                     "label": "No"
                   }
                 ]
+              },
+               "hide": {
+                "hideWhenExpression": "otherMedicationFreq === '1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "validators": []
             },
@@ -807,56 +820,73 @@
                 "conceptMappings": [],
                 "answers": [
                   {
+                    "concept": "1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No Symptoms"
+                  },
+                  {
                     "concept": "122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Vomiting"
+                    "label": "Vomiting",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Rapid or excessive weight loss"
+                    "label": "Rapid or excessive weight loss",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "140937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Rapid or excessive weight gain"
+                    "label": "Rapid or excessive weight gain",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Itching of the skin"
+                    "label": "Itching of the skin",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Headache"
+                    "label": "Headache",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Diarrhea"
+                    "label": "Diarrhea",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "5192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Yellowness of eyes"
+                    "label": "Yellowness of eyes",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Rash on the skin"
+                    "label": "Rash on the skin",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "141830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dizziness"
+                    "label": "Dizziness",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "141597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Sleep Disturbance"
+                    "label": "Sleep Disturbance",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "137601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Increased appetite"
+                    "label": "Increased appetite",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "6031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Decreased appetite"
+                    "label": "Decreased appetite",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Other changes or concerns"
+                    "label": "Other changes or concerns",
+                    "disableWhenExpression": "myValue === '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 ]
               },
@@ -1032,79 +1062,10 @@
                   }
                 ]
               },
-              "validators": []
-            },
-            {
-              "label": "Is the reaction/event serious?",
-              "type": "obs",
-              "required": "true",
-              "id": "isReactionEventSerious",
-              "questionOptions": {
-                "rendering": "radio",
-                "concept": "162867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "conceptMappings": [
-                  {
-                    "relationship": "NARROWER-THAN",
-                    "type": "SNOMED NP",
-                    "value": "281647001"
-                  },
-                  {
-                    "relationship": "SAME-AS",
-                    "type": "NCI Concept Code",
-                    "value": "C41335"
-                  },
-                  {
-                    "relationship": "SAME-AS",
-                    "type": "CIEL",
-                    "value": "162867"
-                  }
-                ],
-                "answers": [
-                  {
-                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Yes"
-                  },
-                  {
-                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "No"
-                  }
-                ]
-              },
-              "validators": []
-            },
-            {
-              "label": "Criteria/reason for seriousness",
-              "type": "obs",
-              "id": "cRitec",
-              "questionOptions": {
-                "concept": "ff5188f3-098b-40e9-be37-f248a41160d0",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "5485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Hospitalization/Prolonged Hospitalization"
-                  },
-                  {
-                    "concept": "162558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Disability"
-                  },
-                  {
-                    "concept": "119975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Congenital anomality"
-                  },
-                  {
-                    "concept": "162693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Life threatening"
-                  },
-                  {
-                    "concept": "9c348c8c-e033-4fc0-ab2a-7e6702b68739",
-                    "label": "Death"
-                  }
-                ]
-              },
               "hide": {
-                "hideWhenExpression": "isReactionEventSerious !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-              }
+                "hideWhenExpression": "arrayContains(symptoms, '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "validators": []
             }
           ]
         },
@@ -1137,12 +1098,8 @@
                     "label": "Drug Changed"
                   },
                   {
-                    "concept": "981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dose Changed"
-                  },
-                  {
-                    "concept": "166188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dose not changed"
+                    "concept": "db3c2c1b-befe-40fc-8cb0-09f2e00f3566",
+                    "label": "Drug timing changed"
                   },
                   {
                     "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1154,6 +1111,10 @@
                   }
                 ]
               }
+              ,
+          "hide": {
+            "hideWhenExpression": "arrayContains(symptoms, '1660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+          }
             }
           ]
         },
@@ -1162,7 +1123,7 @@
           "isExpanded": "true",
           "questions": [
             {
-              "label": "Did the reaction resolve after the drug was stopped or when the dose was reduced?",
+              "label": "Did the reaction resolve after the drug was stopped or when the dose was changed or when the timing was changed?",
               "type": "obs",
               "required": "true",
               "id": "AdROutComes",

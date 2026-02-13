@@ -1299,7 +1299,7 @@
                     "label": "Daily Oral PrEP"
                   },
                   {
-                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
                     "label": "Long acting PrEP"
                   }
                 ]
@@ -1321,7 +1321,7 @@
                     "label": "Daily Oral PrEP"
                   },
                   {
-                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
                     "label": "Long acting PrEP"
                   }
                 ]
@@ -1371,7 +1371,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "dosingStrategyFemale !== '58ed1f26-430f-4922-9bcf-00c51ec7bcb1' || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
+                "hideWhenExpression": "dosingStrategyFemale !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e' || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
               }
             },
             {
@@ -1411,7 +1411,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "dosingStrategyMen !== '58ed1f26-430f-4922-9bcf-00c51ec7bcb1'"
+                "hideWhenExpression": "dosingStrategyMen !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e'"
               }
             },
             {

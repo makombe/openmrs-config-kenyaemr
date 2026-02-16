@@ -408,7 +408,7 @@
               "type": "obs",
               "id": "dosingStrategyMen",
               "questionOptions": {
-                "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
                 "answers": [
                   {
@@ -420,7 +420,7 @@
                     "label": "Daily Oral PrEP"
                   },
                   {
-                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
                     "label": "Long acting PrEP"
                   }
                 ]
@@ -434,7 +434,7 @@
               "type": "obs",
               "id": "dosingStrategyFemale",
               "questionOptions": {
-                "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
                 "answers": [
                   {
@@ -442,7 +442,7 @@
                     "label": "Daily Oral PrEP"
                   },
                   {
-                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
                     "label": "Long acting PrEP"
                   }
                 ]
@@ -492,7 +492,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "dosingStrategyFemale !== '58ed1f26-430f-4922-9bcf-00c51ec7bcb1' || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
+                "hideWhenExpression": "dosingStrategyFemale !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e' || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
               }
             },
             {
@@ -532,8 +532,56 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "dosingStrategyMen !== '58ed1f26-430f-4922-9bcf-00c51ec7bcb1'"
+                "hideWhenExpression": "dosingStrategyMen !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e'"
               }
+            },
+            {
+              "label": "Regimen prescribed",
+              "type": "obs",
+              "id": "regimenOptionsFemale",
+              "questionOptions": {
+                "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "161364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/3TC"
+                  },
+                  {
+                    "concept": "724fc218-47b4-49fa-8f5d-7e5f3e5d4874",
+                    "label": "TAF/FTC"
+                  },
+                  {
+                    "concept": "104567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/FTC(Preferred)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyFemale !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7' && dosingStrategyMen !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7'"
+              }
+            },
+            {
+              "label": "Regimen prescribed",
+              "type": "obs",
+              "id": "regimenOptionsMale",
+              "questionOptions": {
+                "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "161364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/3TC"
+                  },
+                  {
+                    "concept": "104567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/FTC(Preferred)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyMen !== '5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+               }
             },
             {
               "label": "Regimen prescribed",

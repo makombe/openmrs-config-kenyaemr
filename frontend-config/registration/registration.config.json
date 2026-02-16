@@ -287,7 +287,7 @@
       {
         "id": "disabilityType",
         "type": "obs",
-        "uuid": "2031842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "uuid": "2032238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "label": "Please indicate the type of disability",
         "validation": {
           "required": false
@@ -302,7 +302,7 @@
             "label": "None"
           },
           {
-            "uuid": "120291AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "uuid": "2032239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
             "label": "Hearing impairment"
           },
           {
@@ -336,7 +336,7 @@
           "required": false
         },
         "showWhenExpression": {
-          "field": "2031842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "field": "2032238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
           "value": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         }
       },

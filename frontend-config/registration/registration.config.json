@@ -287,7 +287,7 @@
       {
         "id": "disabilityType",
         "type": "obs",
-        "uuid": "2032238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "uuid": "a2733fdb-fd5d-4dcd-8d8e-8a9e229b93a9",
         "label": "Please indicate the type of disability",
         "validation": {
           "required": false
@@ -336,7 +336,7 @@
           "required": false
         },
         "showWhenExpression": {
-          "field": "2032238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "field": "a2733fdb-fd5d-4dcd-8d8e-8a9e229b93a9",
           "value": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         }
       },

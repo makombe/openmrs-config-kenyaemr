@@ -4,6 +4,7 @@
   "version": "1.0",
   "published": true,
   "uuid": "77a06fb9-0035-474e-8b2b-c247ac75d2e7",
+  "retired": false,
   "encounter": "SOPC",
   "pages": [
     {

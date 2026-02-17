@@ -1,0 +1,187 @@
+{
+  "name": "Blood Transfusion Form",
+  "description": "A form collecting blood transfusion details.",
+  "uuid": "ed5ec662-5326-4873-b60c-43d22ad5fb5f",
+  "version": "1.0",
+  "encounter": "Transfusion Services",
+  "pages": [
+    {
+      "label": "Blood Transfusion",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Diagnosis",
+              "type": "obs",
+              "required": "true",
+              "id": "diagnosis",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "159946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Date of Blood  transfussion",
+              "type": "obs",
+              "required": "true",
+              "id": "dateOfBloodTransfussion",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "163268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "showDate": "true"
+              },
+              "validators": []
+            },
+            {
+              "label": "Type of blood transfused",
+              "type": "obs",
+              "required": "true",
+              "id": "typeOfBloodTransfused",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "161927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "161939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Whole blood"
+                  },
+                  {
+                    "concept": "161925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Packed red blood cells"
+                  },
+                  {
+                    "concept": "161926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fresh frozen plasma"
+                  },
+                  {
+                    "concept": "161900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pooled platelets"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Blood unit Number",
+              "type": "obs",
+              "required": "false",
+              "id": "bloodUnitNumber",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Time transfusion started",
+              "type": "obs",
+              "required": "false",
+              "id": "timeTransfusionStarted",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Rate of transfusion(mL/Minutes)",
+              "type": "obs",
+              "required": "false",
+              "id": "rateOfTransfusion(Ml/Minutes)",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "162745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "disallowDecimals": "true"
+              },
+              "validators": []
+            },
+            {
+              "label": "Hours of Observation",
+              "type": "obs",
+              "required": "false",
+              "id": "hoursOfObservation",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "ba7e5b1a-8a89-4b83-967a-fae3bdf4b41e"
+              },
+              "validators": []
+            },
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "required": "false",
+              "id": "remarks",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Time transfussion ended",
+              "type": "obs",
+              "required": "false",
+              "id": "timeTransfussionEnded",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Amount of blood transfused",
+              "type": "obs",
+              "required": "false",
+              "id": "amountOfBloodTransfused",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "164241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "disallowDecimals": "true"
+              },
+              "validators": []
+            },
+            {
+              "label": "Blood transfusion reactions",
+              "type": "obs",
+              "required": "false",
+              "id": "bloodTransfusionReactions",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "159935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Interventional /Drugs given",
+              "type": "obs",
+              "required": "false",
+              "id": "interventionalDrugsGiven",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Name of the Nurse/Doctor/Anaesthetist",
+              "type": "obs",
+              "required": "false",
+              "id": "nameOfTheNurseDoctorAnaesthetist",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "166690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "e506db7f-0b95-48ad-bd50-88fb2fad3fe5",
+  "referencedForms": []
+}

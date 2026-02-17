@@ -287,13 +287,13 @@
               },
               "validators": []
             },
-            {
+           {
               "label": "HB",
               "type": "obs",
               "id": "hb",
               "questionOptions": {
                 "concept": "21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "text"
+                "rendering": "number"
               },
               "validators": []
             },
@@ -473,9 +473,10 @@
               "label": "Time Given",
               "type": "obs",
               "id": "regularMedicationtimeGiven",
+               "datePickerFormat": "timer",
               "questionOptions": {
-                "concept": "bb3724c9-fbcc-49c5-9702-6cde0be325ca",
-                "rendering": "Time"
+               "concept": "9c4c7722-ba3e-4bdf-ab97-c04170100037",
+                "rendering": "date"
               },
               "validators": [],
               "hide": {
@@ -559,13 +560,14 @@
           "label": "Immediate Pre-Operation Observation",
           "isExpanded": "true",
           "questions": [
-            {
+           {
               "label": "Time Done",
               "type": "obs",
               "id": "timeDone",
+              "datePickerFormat": "timer",
               "questionOptions": {
-                "concept": "bb3724c9-fbcc-49c5-9702-6cde0be325ca",
-                "rendering": "Time"
+                "concept": "162869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
               },
               "validators": []
             },
@@ -575,7 +577,9 @@
               "id": "temperature",
               "questionOptions": {
                 "concept": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "number"
+                "rendering": "number",
+                "max": "43",
+                "min": "25"
               },
               "validators": []
             },
@@ -635,7 +639,9 @@
               "id": "cvp",
               "questionOptions": {
                 "concept": "4663eea7-e5c7-4905-b06c-b613f69ee89c",
-                "rendering": "number"
+                "rendering": "number",
+                "max": "50",
+                "min": "0"
               },
               "validators": []
             },
@@ -645,7 +651,9 @@
               "id": "height",
               "questionOptions": {
                 "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "number"
+                "rendering": "number",
+                "max": "272",
+                "min": "10"
               },
               "validators": []
             },
@@ -655,7 +663,9 @@
               "id": "weightInKgs",
               "questionOptions": {
                 "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "number"
+                "rendering": "number",
+                "max": "250",
+                "min": "0"
               },
               "validators": []
             },
@@ -699,13 +709,14 @@
               },
               "validators": []
             },
-            {
+             {
               "label": "Time emptied",
               "type": "obs",
               "id": "timeEmptied",
+              "datePickerFormat": "timer",
               "questionOptions": {
-                "concept": "e79f14c5-2c93-4287-bf06-2024026d6108",
-                "rendering": "time"
+                "concept": "165648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
               },
               "validators": [],
               "hide": {

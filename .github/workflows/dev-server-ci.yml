@@ -1,5 +1,8 @@
 name: KenyaEMR CI
-
+permissions:
+  contents: read
+  actions: write
+  
 on:
   pull_request:
     types: [opened, reopened, synchronize, labeled]

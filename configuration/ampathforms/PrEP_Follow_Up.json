@@ -1259,8 +1259,8 @@
 				"hide": {
 				  "hideWhenExpression": "treatmentPlan !== '1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
 				}
-			  },
-		 {
+			},
+			  {
               "label": "Prescribed PrEP today?",
               "type": "obs",
               "id": "prescribedPrepToday",
@@ -1460,32 +1460,6 @@
               },
               "hide": {
                 "hideWhenExpression": "dosingStrategyMen !== '5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-              }
-            },
-            {
-              "label": "Regimen prescribed",
-              "type": "obs",
-              "id": "regimenOptions",
-              "questionOptions": {
-                "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "select",
-                "answers": [
-                  {
-                    "concept": "161364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "TDF/3TC"
-                  },
-                  {
-                    "concept": "84795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "TDF"
-                  },
-                  {
-                    "concept": "104567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "TDF/FTC(Preferred)"
-                  }
-                ]
-              },
-              "hide": {
-                "hideWhenExpression": "prepTypeMaleOne !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7' && prepTypeFemale !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7'"
               }
             },
 			  {

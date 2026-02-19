@@ -427,23 +427,27 @@
 			"isExpanded": "true",
 			"questions": [
 			  {
-				"label": "Menopausal (Status)",
-				"type": "obs",
-				"id": "menoPausE",
-				"questionOptions": {
-				  "concept": "160596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-				  "rendering": "select",
-				  "answers": [
-					{
-					  "concept": "134346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-					  "label": "Menopause"
-					}
-				  ]
-				},
-				"hide": {
-				  "hideWhenExpression": "sex !== 'F'"
-				}
-			  },
+              "label": "Attained menopause?",
+              "type": "obs",
+              "id": "menoPausE",
+              "questionOptions": {
+                "concept": "160596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "134346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "154175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "sex !== 'F'"
+              }
+            },
 			  {
 				"label": "LMP",
 				"type": "obs",
@@ -1382,7 +1386,7 @@
 				  ]
 				},
 				"hide": {
-				  "hideWhenExpression": "treatmentPlan !== '1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+				  "hideWhenExpression": "treatmentPlan !== 'dc1079c4-9d7b-4955-afaf-fae8d136e567'"
 				}
 			  },
 			  {
@@ -1400,7 +1404,7 @@
 				  }
 				],
 				"hide": {
-				  "hideWhenExpression": "treatmentPlan !== '1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+				  "hideWhenExpression": "treatmentPlan !== 'dc1079c4-9d7b-4955-afaf-fae8d136e567'"
 				}
 			  },
 			  {

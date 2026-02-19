@@ -1,9 +1,10 @@
 {
-  "name": "Blood Transfusion Chart Form ",
-  "processor": "EncounterFormProcessor",
+  "name": "Blood Transfusion Form",
+  "description": "Blood transfusion monitoring form",
+  "uuid": "ed5ec662-5326-4873-b60c-43d22ad5fb5f",
   "version": "1.0",
+  "encounter": "Transfusion Services",
   "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
-  "uuid": "857134df-8248-4cea-9c28-3b7db5a50ed0",
   "pages": [
     {
       "label": "Blood Transfusion Form",
@@ -572,6 +573,5 @@
         }
       ]
     }
-  ],
-  "description": "Blood transfusion monitoring form"
+  ]
 }

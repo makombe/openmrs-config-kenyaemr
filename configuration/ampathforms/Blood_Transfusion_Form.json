@@ -1,187 +1,577 @@
 {
   "name": "Blood Transfusion Form",
-  "description": "A form collecting blood transfusion details.",
+  "description": "Blood transfusion monitoring form",
   "uuid": "ed5ec662-5326-4873-b60c-43d22ad5fb5f",
   "version": "1.0",
   "encounter": "Transfusion Services",
+  "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
   "pages": [
     {
-      "label": "Blood Transfusion",
+      "label": "Blood Transfusion Form",
       "sections": [
         {
-          "label": "Visit Details",
-          "isExpanded": "true",
+          "label": "Encounter Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Visit date:",
+              "type": "encounterDatetime",
+              "required": true,
+              "id": "encDate",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": false
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": true,
+              "id": "encProvider",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": true,
+              "id": "encLocation",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Patient Details",
+      "sections": [
+        {
+          "label": "Patient Details",
+          "isExpanded": true,
           "questions": [
             {
               "label": "Diagnosis",
               "type": "obs",
-              "required": "true",
               "id": "diagnosis",
+              "required": true,
               "questionOptions": {
-                "rendering": "text",
-                "concept": "159946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
+                "concept": "d44492fd-1b0f-4ec1-9ac8-0e1eb2ebe10b",
+                "rendering": "text"
+              }
             },
             {
-              "label": "Date of Blood  transfussion",
+              "label": "Indication For Transfusion",
               "type": "obs",
-              "required": "true",
-              "id": "dateOfBloodTransfussion",
+              "id": "IndicationForTransfusion",
+              "required": true,
               "questionOptions": {
-                "rendering": "date",
-                "concept": "163268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "showDate": "true"
+                "concept": "f27ee6b6-eaf6-4e3f-9d1b-8a61b6c17e0c",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Date of Transfusion",
+              "type": "obs",
+              "id": "dateOfTransfusion",
+              "required": true,
+              "questionOptions": {
+                "concept": "1640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": false
+                }
+              ]
+            },
+            {
+              "label": "Patient Blood Group",
+              "type": "obs",
+              "id": "patientBloodGroup",
+              "questionOptions": {
+                "concept": "300AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "label": "A+",
+                    "concept": "690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "A-",
+                    "concept": "690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "B+",
+                    "concept": "694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "B-",
+                    "concept": "696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "AB+",
+                    "concept": "1230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "AB-",
+                    "concept": "1231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "O+",
+                    "concept": "699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "O-",
+                    "concept": "701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  }
+                ]
               },
               "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Blood Product Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Blood unit Number",
+              "type": "obs",
+              "id": "bloodUnitNumber",
+              "required": true,
+              "questionOptions": {
+                "concept": "162086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
             },
             {
               "label": "Type of blood transfused",
               "type": "obs",
-              "required": "true",
               "id": "typeOfBloodTransfused",
+              "required": true,
               "questionOptions": {
-                "rendering": "radio",
                 "concept": "161927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
                 "answers": [
                   {
-                    "concept": "161939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Whole blood"
+                    "label": "Whole blood",
+                    "concept": "161939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "concept": "161925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Packed red blood cells"
+                    "label": "Packed red blood cells",
+                    "concept": "161925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "concept": "161926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Fresh frozen plasma"
+                    "label": "Fresh frozen plasma",
+                    "concept": "161926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "concept": "161900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Pooled platelets"
+                    "label": "Platelets",
+                    "concept": "161900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "Cryoprecipitate",
+                    "concept": "71ec5b7b-ad25-4dc7-a765-d28ea6b9ebd5"
+                  },
+                  {
+                    "label": "Others Specify",
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Specify other type of blood transfused",
+              "type": "obs",
+              "id": "othertypeOfBloodTransfused",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "typeOfBloodTransfused !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Unit Blood Group",
+              "type": "obs",
+              "id": "unitBloodGroup",
+              "required": true,
+              "questionOptions": {
+                "concept": "163126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "label": "A+",
+                    "concept": "690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "A-",
+                    "concept": "690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "B+",
+                    "concept": "694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "B-",
+                    "concept": "696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "AB+",
+                    "concept": "1230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "AB-",
+                    "concept": "1231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "O+",
+                    "concept": "699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "O-",
+                    "concept": "701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   }
                 ]
               },
               "validators": []
             },
             {
-              "label": "Blood unit Number",
+              "label": "Volume of Unit (mL)",
               "type": "obs",
-              "required": "false",
-              "id": "bloodUnitNumber",
+              "id": "unitVolume",
+              "required": true,
               "questionOptions": {
-                "rendering": "text",
-                "concept": "162086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
-            },
-            {
-              "label": "Time transfusion started",
-              "type": "obs",
-              "required": "false",
-              "id": "timeTransfusionStarted",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "163509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
-            },
-            {
-              "label": "Rate of transfusion(mL/Minutes)",
-              "type": "obs",
-              "required": "false",
-              "id": "rateOfTransfusion(Ml/Minutes)",
-              "questionOptions": {
+                "concept": "dccc11b8-9555-497f-989d-01fb561489d0",
                 "rendering": "number",
+                "min": "100",
+                "max": "5000"
+              }
+            },
+            {
+              "label": "Expiry Date Of Unit",
+              "type": "obs",
+              "id": "unitExpiry",
+              "required": true,
+              "questionOptions": {
+                "concept": "162502AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Transfusion Initiation",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Transfusion Started By",
+              "type": "obs",
+              "id": "startedBy",
+              "required": true,
+              "questionOptions": {
+                "concept": "1473AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Counterchecked By",
+              "type": "obs",
+              "id": "checkedBy",
+              "required": true,
+              "questionOptions": {
+                "concept": "166691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Rate of transfusion (Drops/Min)",
+              "type": "obs",
+              "id": "dropRate",
+              "required": true,
+              "questionOptions": {
                 "concept": "162745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "disallowDecimals": "true"
+                "rendering": "number",
+                "min": "10",
+                "max": "100"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Observation of Vitals",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Systolic blood pressure (mmHg)",
+              "type": "obs",
+              "id": "bpSystolic",
+              "questionOptions": {
+                "concept": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "0",
+                "max": "300"
+              }
+            },
+            {
+              "label": "Diastolic blood pressure (mmHg)",
+              "type": "obs",
+              "id": "bpDiastolic",
+              "questionOptions": {
+                "concept": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "0",
+                "max": "200"
+              }
+            },
+            {
+              "label": "Temperature (°C)",
+              "type": "obs",
+              "id": "temp",
+              "questionOptions": {
+                "concept": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "25",
+                "max": "45"
+              }
+            },
+            {
+              "label": "Pulse Rate (bpm)",
+              "type": "obs",
+              "id": "pulse",
+              "questionOptions": {
+                "concept": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "0",
+                "max": "300"
+              }
+            },
+            {
+              "label": "Respiratory Rate",
+              "type": "obs",
+              "id": "rr",
+              "questionOptions": {
+                "concept": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "0",
+                "max": "100"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Reaction and completion",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Blood transfusion reactions",
+              "type": "obs",
+              "id": "Bloodtransfusionreactions",
+              "required": "false",
+              "questionOptions": {
+                "concept": "5e89c4fe-eeff-4669-93ce-1b8559c16541",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fever",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Chills/Rigors",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "114403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pain",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "140039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Flushing",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "133473AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nausea/Vomiting",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "123468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Urticaria",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Skin rash",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "121543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Anxiety",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "120749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Chest Pain",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "122496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dyspnoea",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "116214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hypotension",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "125063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Tachychardia",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "138936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Haemoglobinuria",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "148566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Anuria",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "162628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unexplained bleeding",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "132418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "oliguria",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Others (specify)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
               },
               "validators": []
             },
             {
-              "label": "Hours of Observation",
+              "label": "Specify",
               "type": "obs",
-              "required": "false",
-              "id": "hoursOfObservation",
+              "id": "specifyReaction",
               "questionOptions": {
-                "rendering": "date",
-                "concept": "ba7e5b1a-8a89-4b83-967a-fae3bdf4b41e"
+                "concept": "3bb426dc-7f5c-43f2-952e-8d15ab16e6a4",
+                "rendering": "text"
               },
-              "validators": []
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(Bloodtransfusionreactions) || !arrayContains(Bloodtransfusionreactions, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Actions Taken",
+              "type": "obs",
+              "id": "ActionsTaken",
+              "questionOptions": {
+                "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Time transfusion ended",
+              "type": "obs",
+              "id": "timeTransfussionEnded",
+              "required": "false",
+              "datePickerFormat": "timer",
+              "questionOptions": {
+                "concept": "9c4c7722-ba3e-4bdf-ab97-c04170100037",
+                "rendering": "date"
+              }
+            },
+            {
+              "label": "Amount of blood transfused (mL)",
+              "type": "obs",
+              "id": "amountOfBloodTransfused",
+              "questionOptions": {
+                "concept": "164241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "100",
+                "max": "5000"
+              }
             },
             {
               "label": "Remarks",
               "type": "obs",
-              "required": "false",
               "id": "remarks",
               "questionOptions": {
-                "rendering": "text",
-                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "concept": "160716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
               },
               "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Completed by",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Name of health care provider:",
+              "type": "encounterProvider",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
             },
             {
-              "label": "Time transfussion ended",
+              "label": "Designation",
               "type": "obs",
-              "required": "false",
-              "id": "timeTransfussionEnded",
+              "required": true,
+              "id": "completedBy",
               "questionOptions": {
                 "rendering": "text",
-                "concept": "163509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "concept": "166688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "validators": []
             },
             {
-              "label": "Amount of blood transfused",
-              "type": "obs",
-              "required": "false",
-              "id": "amountOfBloodTransfused",
+              "label": "Date:",
+              "type": "encounterDatetime",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "164241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "disallowDecimals": "true"
+                "rendering": "ui-select-extended"
               },
-              "validators": []
-            },
-            {
-              "label": "Blood transfusion reactions",
-              "type": "obs",
-              "required": "false",
-              "id": "bloodTransfusionReactions",
-              "questionOptions": {
-                "rendering": "checkbox",
-                "concept": "159935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
-            },
-            {
-              "label": "Interventional /Drugs given",
-              "type": "obs",
-              "required": "false",
-              "id": "interventionalDrugsGiven",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "160716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
-            },
-            {
-              "label": "Name of the Nurse/Doctor/Anaesthetist",
-              "type": "obs",
-              "required": "false",
-              "id": "nameOfTheNurseDoctorAnaesthetist",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "166690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "validators": []
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ],
+              "id": "encDate"
             }
           ]
         }
       ]
     }
-  ],
-  "processor": "EncounterFormProcessor",
-  "encounterType": "e506db7f-0b95-48ad-bd50-88fb2fad3fe5",
-  "referencedForms": []
+  ]
 }

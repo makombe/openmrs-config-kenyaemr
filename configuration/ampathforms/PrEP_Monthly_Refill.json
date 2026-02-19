@@ -317,7 +317,7 @@
 					  "label": "Restart"
 					},
 					{
-					  "concept": "1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+					  "concept": "dc1079c4-9d7b-4955-afaf-fae8d136e567",
 					  "label": "Switch"
 					},
 					{
@@ -360,7 +360,7 @@
 				  ]
 				},
 				"hide": {
-				  "hideWhenExpression": "treatmentPlan !== '1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+				  "hideWhenExpression": "treatmentPlan !== 'dc1079c4-9d7b-4955-afaf-fae8d136e567'"
 				}
 			  },
 			  {
@@ -378,7 +378,7 @@
 				  }
 				],
 				"hide": {
-				  "hideWhenExpression": "treatmentPlan !== '1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+				  "hideWhenExpression": "treatmentPlan !== 'dc1079c4-9d7b-4955-afaf-fae8d136e567'"
 				}
 			  },
 			   {

@@ -1369,6 +1369,7 @@
 				"label": "Reason for switching",
 				"type": "obs",
 				"id": "reasonForSwitch",
+				"required": "true",
 				"questionOptions": {
 				  "concept": "4b59ac07-cf72-4f46-b8c0-4f62b1779f7e",
 				  "rendering": "select",
@@ -1403,6 +1404,7 @@
 				"label": "Date of switch",
 				"type": "obs",
 				"id": "dateOfSwitch",
+				"required": "true",
 				"questionOptions": {
 				  "concept": "68bfa3f3-1fc7-4d9d-bb41-e897c3c430ef",
 				  "rendering": "date"

@@ -178,25 +178,182 @@
 				  "hideWhenExpression": "!arrayContains(['5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'], stiGenitalM)"
 				}
 			  },
-			  {
-				"label": "Treated",
-				"type": "obs",
-				"id": "sti-treated",
-				"questionOptions": {
-				  "concept": "d7b6a98f-025e-4732-b0b2-2fe8b00e6b4c",
-				  "rendering": "radio",
-				  "answers": [
-					{
-					  "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-					  "label": "Yes"
-					},
-					{
-					  "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-					  "label": "No"
-					}
-				  ]
-				}
-			  }
+			   {
+              "label": "Treated Genital Ulcer Disease(GUD)?",
+              "type": "obs",
+              "id": "StiTreatedGud",
+              "questionOptions": {
+                "concept": "c9a2c34a-dc3a-4461-a242-45d98640d681",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalF) || !arrayContains(stiGenitalF, '145762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated Vaginitis and/or Vaginal Discharge(VG)?",
+              "type": "obs",
+              "id": "StiTreatedVg",
+              "questionOptions": {
+                "concept": "9f6117b3-4a33-4981-8f55-c941a2ed633a",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalF) || !arrayContains(stiGenitalF, '121809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated Cervicitis and/or Cervical Discharge(CD)?",
+              "type": "obs",
+              "id": "StiTreatedCd",
+              "questionOptions": {
+                "concept": "66f60ea1-5a9c-4b48-8308-e960bcad773d",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalF) || !arrayContains(stiGenitalF, '116995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated Pelvic Inflammatory Disease(PID)?",
+              "type": "obs",
+              "id": "StiTreatedPid",
+              "questionOptions": {
+                "concept": "3ced6817-b4c6-4b9f-ab38-aab692defd32",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalF) || !arrayContains(stiGenitalF, '130644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treat Urethral Discharge(UD)?",
+              "type": "obs",
+              "id": "StiTreatedUd",
+              "questionOptions": {
+                "concept": "d7b6a98f-025e-4732-b0b2-2fe8b00e6b4c",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalM) || !arrayContains(stiGenitalM, '123529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated Anal Discharge(AD)?",
+              "type": "obs",
+              "id": "StiTreatedAdMale",
+              "questionOptions": {
+                "concept": "242f58db-0666-45ef-93a2-f113e9ff40d9",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalM) || !arrayContains(stiGenitalM, '148895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated Anal Discharge(AD)?",
+              "type": "obs",
+              "id": "StiTreatedAdFemale",
+              "questionOptions": {
+                "concept": "242f58db-0666-45ef-93a2-f113e9ff40d9",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(stiGenitalF) || !arrayContains(stiGenitalF, '148895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Treated other STI documented?",
+              "type": "obs",
+              "id": "StiTreatedOther",
+              "questionOptions": {
+                "concept": "166665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(otherStisymptomsM) && isEmpty(otherStisymptoms)"
+              }
+            }
 			]
 		  },
 		  {

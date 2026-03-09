@@ -585,6 +585,36 @@
                     "hideWhenExpression": "complaintsToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 },
+                 {
+                  "label": "Duration of the complaint",
+                  "type": "obs",
+                  "id": "onsetTime",
+                  "questionOptions": {
+                    "concept": "1732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Days"
+                      },
+                      {
+                        "concept": "1073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Weeks"
+                      },
+                      {
+                        "concept": "1074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Months"
+                      },
+                      {
+                        "concept": "1734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Years"
+                      }
+                    ]
+                  },
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(complaintduration)"
+                  }
+                },
                 {
                   "label": "Onset Status",
                   "type": "obs",

@@ -1548,6 +1548,7 @@
               "label": "Prescribed PrEP today?",
               "type": "obs",
               "id": "prescribedPrepToday",
+			  "required": "true",
               "questionOptions": {
                 "concept": "1417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1570,6 +1571,7 @@
               "label": "Dosing Strategy",
               "type": "obs",
               "id": "dosingStrategyMen",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1596,6 +1598,7 @@
               "label": "Dosing Strategy",
               "type": "obs",
               "id": "dosingStrategyFemale",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1618,6 +1621,7 @@
               "label": "Type of PrEP",
               "type": "obs",
               "id": "prepTypeFemale",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1636,6 +1640,7 @@
               "label": "Type of PrEP",
               "type": "obs",
               "id": "prepTypeFemaleOne",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1662,6 +1667,7 @@
               "label": "Type of PrEP",
               "type": "obs",
               "id": "prepTypeMaleOne",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1680,6 +1686,7 @@
               "label": "Type of PrEP",
               "type": "obs",
               "id": "prepTypeMale",
+			  "required": "true",
               "questionOptions": {
                 "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
@@ -1702,6 +1709,7 @@
               "label": "Regimen prescribed",
               "type": "obs",
               "id": "regimenOptionsFemale",
+			  "required": "true",
               "questionOptions": {
                 "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "select",
@@ -1728,6 +1736,7 @@
               "label": "Regimen prescribed",
               "type": "obs",
               "id": "regimenOptionsMale",
+			  "required": "true",
               "questionOptions": {
                 "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "select",

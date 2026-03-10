@@ -572,7 +572,7 @@
                   }
                 },
                 {
-                  "label": "Duration (Days)",
+                  "label": "Duration",
                   "type": "obs",
                   "id": "complaintduration",
                   "required": "true",

@@ -2003,10 +2003,10 @@
                     "label": "No"
                   }
                 ]
-              },
+             },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "isEmpty(eligibleTest) || eligibleTest !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(patientHivStatus) || patientHivStatus !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && patientHivStatus !== '160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "id": "consentGiven",
               "required": "true"

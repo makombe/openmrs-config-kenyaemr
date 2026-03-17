@@ -3528,7 +3528,97 @@
                   "hide": {
                     "hideWhenExpression": "!arrayContains(diseaseName, '73340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
                   }
-                }
+                },
+                  {
+              "label": "Hepatitis B screening:",
+              "type": "obs",
+              "id": "hepBscreen",
+              "questionOptions": {
+                "concept": "6ec3d456-ba0c-4df1-9254-4dd77037ffb8",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Reactive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Non-Reactive"
+                  },
+                  {
+                    "concept": "165649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Inconclusive"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Was treatment given?",
+              "type": "obs",
+              "id": "treatmentPos",
+              "questionOptions": {
+                "concept": "166665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "hepBscreen !== '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Hepatitis C screening:",
+              "type": "obs",
+              "id": "hepCscreen",
+              "questionOptions": {
+                "concept": "b7416ecd-c3e3-4987-bf9d-194fb365ec2c",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Reactive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Non-Reactive"
+                  },
+                  {
+                    "concept": "165649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Inconclusive"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Was treatment given?",
+              "type": "obs",
+              "id": "treatmentPosc",
+              "questionOptions": {
+                "concept": "81573411-a301-4c46-bc63-c2095e36e7e6",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "hepCscreen !== '703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
               ]
             }
           ]
@@ -5551,6 +5641,7 @@
                 "hideWhenExpression": "!arrayContains(diagnosisOpiod, '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
+
             {
               "label": "Other substance (Specify)",
               "type": "obs",
@@ -5563,10 +5654,24 @@
                 "hideWhenExpression": "!arrayContains(diagnosisOpiod, '140947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
-            {
-              "label": "Methadone/Buprenorphine induction(Initial Dose)Mgs",
+           {
+              "label": "Buprenorphine induction(Initial Dose)Mgs",
               "type": "obs",
               "id": "TreatMentPlan",
+              "questionOptions": {
+                "concept": "167370AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number",
+                "min": "0",
+                "max": "500"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(diagnosisOpiod) || !arrayContains(diagnosisOpiod, '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Methadone induction(Initial Dose)Mls",
+              "type": "obs",
+              "id": "TreatMentPlanmls",
               "questionOptions": {
                 "concept": "167369AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "number",
@@ -5574,7 +5679,7 @@
                 "max": "500"
               },
               "hide": {
-                "hideWhenExpression": "!arrayContains(diagnosisOpiod, '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                "hideWhenExpression": "isEmpty(diagnosisOpiod) || !arrayContains(diagnosisOpiod, '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {

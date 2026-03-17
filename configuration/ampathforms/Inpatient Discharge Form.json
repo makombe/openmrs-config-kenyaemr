@@ -462,6 +462,25 @@
               "validators": []
             },
             {
+              "label": "Date of death",
+              "type": "obs",
+               "required": true,
+              "id": "dateOfDeath",
+              "questionOptions": {
+                "concept": "1543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
+              },
+              "hide": {
+                "hideWhenExpression": "dischargeStatus !== '159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
               "label": "Referred to?",
               "type": "obs",
               "id": "referredTo",

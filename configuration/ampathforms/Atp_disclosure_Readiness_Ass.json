@@ -1,0 +1,991 @@
+{
+  "name": "ATP Disclosure Readiness Assessment",
+  "encounter":"ATP Disclosure Readiness Assessment",
+  "published": true,
+  "retired": false,
+  "uuid": "d11c340d-defb-443f-b7de-e81dc87060a4",
+  "description": "ATP Disclosure Readiness Assessment",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "ATP Disclosure Readiness Assessment",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ],
+              "id": "encDate"
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encLocation"
+            }
+          ]
+        },
+        {
+          "label": "This form will be completed wih the caregiver every 6 months during regular scheduled visits for adolescents who have not reached full disclosure. Adolescents who have not reached full dislcosure should not be present during interview.",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1756627d-a236-4f87-9b3e-27180db67659",
+                "answers": [
+                  {
+                    "concept": "385e4ad3-be6b-4b71-bb46-12f494d7fe3e",
+                    "label": "Pediatric clinic"
+                  },
+                  {
+                    "concept": "f1e1137d-613a-4fef-afdf-1660fca3c58b",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "pointOfEntryAtEnrollment",
+              "required": "true",
+              "label": "Point of entry at enrollment"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(pointOfEntryAtEnrollment) || pointOfEntryAtEnrollment !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherEntryPointSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mother"
+                  },
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Father"
+                  },
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Self (Came alone)"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other relative"
+                  },
+                  {
+                    "concept": "1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-relative specify"
+                  }
+                ]
+              },
+              "id": "whoBroughtChildToTheClinic",
+              "required": "true",
+              "label": "Who brought child to the clinic?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "164879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoBroughtChildToTheClinic) || whoBroughtChildToTheClinic !== '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherRelativeClinic",
+              "label": "Other relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "844bf107-32e6-4d5d-8d40-de8978f79cb3"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoBroughtChildToTheClinic) || whoBroughtChildToTheClinic !== '1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherNonRelativeclinic",
+              "label": "Other non relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "159892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mother"
+                  },
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Father"
+                  },
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other relative"
+                  },
+                  {
+                    "concept": "1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-relative specify"
+                  }
+                ]
+              },
+              "id": "whoElseLivesInTheChildSHousehold",
+              "required": "true",
+              "label": "Who else lives in the child’s household"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoElseLivesInTheChildSHousehold) || !arrayContains(whoElseLivesInTheChildSHousehold,'1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherNonRelativeLives",
+              "label": "Other non relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "98e43640-85cf-4da0-890b-e02f12631799"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoElseLivesInTheChildSHousehold) || !arrayContains(whoElseLivesInTheChildSHousehold, '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherRelativeLives",
+              "label": "Other relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "166665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Father"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mother"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other relative"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Self"
+                  },
+                  {
+                    "concept": "1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-relative specify"
+                  }
+                ]
+              },
+              "id": "whoGivesTheChildMedicine",
+              "required": "true",
+              "label": "Who gives the child medicine"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoGivesTheChildMedicine) || !arrayContains(whoGivesTheChildMedicine,'1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherNonRelativeMedicine",
+              "label": "Other non relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "165645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoGivesTheChildMedicine) || !arrayContains(whoGivesTheChildMedicine, '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherRelativeMedicine",
+              "label": "Other relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "9e7792d6-ee26-4b4a-9683-24b6714e9a91",
+                "answers": [
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mother"
+                  },
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Father"
+                  },
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Self (Came alone)"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other relative"
+                  },
+                  {
+                    "concept": "1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-relative specify"
+                  }
+                ]
+              },
+              "id": "whoBringsChildToTheClinic",
+              "required": "true",
+              "label": "Who brings the child to the clinic"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoBringsChildToTheClinic) || !arrayContains(whoBringsChildToTheClinic,'5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherRelativeBringsClinic",
+              "label": "Other relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoBringsChildToTheClinic) || !arrayContains(whoBringsChildToTheClinic,'1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherNonRelativeBringsclinic",
+              "label": "Other non relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "5303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Father"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mother"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other relative"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-relative specify"
+                  },
+                  {
+                    "concept": "978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Self"
+                  }
+                ]
+              },
+              "id": "whoKnowsTheChildSHivStatus",
+              "required": "true",
+              "label": "Who knows the child’s HIV status?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoKnowsTheChildSHivStatus) || !arrayContains(whoKnowsTheChildSHivStatus, '1582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherNonRelativeHIVstatus",
+              "label": "Other non relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoKnowsTheChildSHivStatus) || !arrayContains(whoKnowsTheChildSHivStatus, '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherRelativeHIVstatus",
+              "label": "Other relative specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "DoAnyOtherHouseholdMembersAlsoHaveHiv",
+              "required": "true",
+              "label": " Do any other household members also have HIV "
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "AreAnyFamilyMembersTakingArvs",
+              "required": "true",
+              "label": " Are any family members taking ARVs"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0ce7c847-b510-4dc6-a955-45e5976007da",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "caregivereverdiscussed",
+              "required": "true",
+              "label": "Has the caregiver ever discussed with other household members what they think about informing the child about his/her HIV status?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Child should be told now"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Child should be told later"
+                  }
+                ]
+              },
+              "id": "whatWasTheOutcome",
+              "hide": {
+                "hideWhenExpression": "isEmpty(caregivereverdiscussed) || caregivereverdiscussed !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "required": "true",
+              "label": "What was the outcome?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "e33a5d4b-b5ab-4531-b4c5-53fc1a804c15",
+                "answers": [
+                  {
+                    "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "They have illness "
+                  },
+                  {
+                    "concept": "4b90b73a-ad11-4650-91b0-baea131974e0",
+                    "label": "To remain strong"
+                  },
+                  {
+                    "concept": "163560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "To prevent illness "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other "
+                  }
+                ]
+              },
+              "id": "reasonForTakingMed",
+              "required": "true",
+              "label": "What has the child been told about why he/she comes to clinic or takes medication?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(reasonForTakingMed) || !arrayContains(reasonForTakingMed, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherReasonForTakingMedSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "7e18712d-8cda-49f5-bfeb-940406cc2e32",
+                "answers": [
+                  {
+                    "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "They have illness "
+                  },
+                  {
+                    "concept": "4b90b73a-ad11-4650-91b0-baea131974e0",
+                    "label": "To remain strong"
+                  },
+                  {
+                    "concept": "163560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "To prevent illness "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other "
+                  }
+                ]
+              },
+              "id": "careGiverThink",
+              "required": "true",
+              "label": "What does the caregiver think the child believes is the reason that he/she comes to clinic and takes medication?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "e7f1b3a9-febb-4ece-abbe-df8de4912670"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(careGiverThink) || !arrayContains(careGiverThink, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "othercareGiverThinkSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "6ee9b535-ecc7-45f3-b655-d7118abafd49",
+                "answers": [
+                  {
+                    "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Why they take medicine "
+                  },
+                  {
+                    "concept": "4b90b73a-ad11-4650-91b0-baea131974e0",
+                    "label": "When they will stop medicine "
+                  },
+                  {
+                    "concept": "163560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Why others not taking medicine "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other "
+                  }
+                ]
+              },
+              "id": "questionsChildAsk",
+              "required": "true",
+              "label": "What questions has the child been asking, if any?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "b7f19768-bb0e-4bd4-b24b-e53b566b6af9"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(questionsChildAsk) || !arrayContains(questionsChildAsk,'5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "othequestionsChildAsk",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "548f648f-d33a-497d-b16b-9d3c81b2b2e2",
+                "answers": [
+                  {
+                    "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "They have illness "
+                  },
+                  {
+                    "concept": "4b90b73a-ad11-4650-91b0-baea131974e0",
+                    "label": "To remain strong"
+                  },
+                  {
+                    "concept": "163560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "To prevent illness "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other "
+                  }
+                ]
+              },
+              "id": "caregiverAnswer",
+              "required": "true",
+              "label": "How did the caregiver answer?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "165427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(caregiverAnswer) || !arrayContains(caregiverAnswer,'5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherCareGiverAnswer",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "ad7a07fb-6b0c-4c5e-a953-0c748e2aa466",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "talkHIV",
+              "required": "true",
+              "label": " Does the child ever talk about HIV?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "166980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "HIV can be treated "
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "People with HIV can live normal"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "HIV kills  "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "childSay",
+              "hide": {
+                "hideWhenExpression": "isEmpty(talkHIV) || talkHIV !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "required": "true",
+              "label": " What does the child say?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(childSay) || !arrayContains(childSay,'5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherChildSay",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Coping well"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not coping well "
+                  }
+                ]
+              },
+              "id": "doingInSchool",
+              "required": "true",
+              "label": " How is the child doing in school?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "e49fb594-b659-4422-8649-584f06a1eefc",
+                    "label": "Above average"
+                  },
+                  {
+                    "concept": "160487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Average"
+                  },
+                  {
+                    "concept": "8bb370f4-0da2-43d2-812e-7f4b8638dba4",
+                    "label": "Below average"
+                  }
+                ]
+              },
+              "id": "howIsTheChild’SSchoolPerformance",
+              "required": "true",
+              "label": "How is the child’s school performance?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "DoesTheChildLikeSchool",
+              "required": "true",
+              "label": " Does the child like school?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "6a6db9bc-eec6-4b1f-85ca-13c4fa5c193a",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "doesHeSheHaveFriends",
+              "required": "true",
+              "label": "Does he/she have friends?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "howIsTheChild’SBehaviourAtHome",
+              "required": "true",
+              "label": "How is the child’s behaviour at home?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "7af21f8a-a51d-435c-a434-e62e07104b90",
+                "answers": [
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Child will not cope well"
+                  },
+                  {
+                    "concept": "163475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Child will blame parent "
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "other, specify "
+                  }
+                ]
+              },
+              "id": "worriesKnowStatus",
+              "required": "true",
+              "label": "What worries does the caregiver have with regard to the child learning of his/her HIV status?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "fdd9b46a-27a4-4edf-99dc-55e3fcf715d0"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(worriesKnowStatus) || !arrayContains(worriesKnowStatus,'5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              },
+              "id": "otherworriesKnowStatus",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "159775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "d810802c-4f98-4861-ab4d-d510b5b1be6b",
+                    "label": "By the caregiver "
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "By the caregiver with another family member"
+                  },
+                  {
+                    "concept": "53447431-147e-4071-9c12-f6baf9463c2f",
+                    "label": "By the caregiver with the HCW"
+                  },
+                  {
+                    "concept": "166443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "By HCW with caregiver "
+                  }
+                ]
+              },
+              "id": "howDoesTheCaregiverPreferThatChildBeDisclosedTo",
+              "required": "true",
+              "label": "How does the caregiver prefer that child be disclosed to:"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "159642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "160131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Today "
+                  },
+                  {
+                    "concept": "56de84b3-b712-412e-a2ab-7e088d182598",
+                    "label": "In 3 mo"
+                  },
+                  {
+                    "concept": "a3489011-40f7-4d47-a131-07596a097b96",
+                    "label": "In 6 mo"
+                  },
+                  {
+                    "concept": "167016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "In 12 mo"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "other, specify "
+                  }
+                ]
+              },
+              "id": "whenDoesTheCaregiverThinkTheChildShouldBeTold",
+              "required": "true",
+              "label": "When does the caregiver think the child should be told?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "145758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whenDoesTheCaregiverThinkTheChildShouldBeTold) || whenDoesTheCaregiverThinkTheChildShouldBeTold !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "othershouldTold",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "whatDoesTheCaregiverThinkTheChild’SReaction",
+              "required": "true",
+              "label": "What does the caregiver think the child’s reaction will be when he/she is informed about his/her HIV status?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "WhatQuestionsDoesTheCaregiverHaveAboutHiv",
+              "required": "true",
+              "label": " What questions does the caregiver have about HIV?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "department",
+              "label": "Department"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
+  "referencedForms": []
+  
+}

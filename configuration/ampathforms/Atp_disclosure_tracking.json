@@ -1,0 +1,834 @@
+{
+  "name": "ATP Disclosure Tracking",
+  "uuid": "40b6b389-5b4e-47b1-aa15-88ee24b56f6a",
+  "description": "ATP Disclosure Tracking Form",
+  "version": "1.0",
+  "encounter": "ATP Disclosure Tracking",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Encounter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Encounter date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "id": "encDate",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encLocation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Section A",
+      "sections": [
+        {
+          "label": " Complete at first Contact",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "2e2316f3-2171-4602-9943-3ee435770b9c",
+                "answers": [
+                  {
+                    "concept": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Biological father"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Biological mother"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandmother"
+                  },
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling of child"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "primaryCaregiver",
+              "label": "Who is the child’s primary caregiver?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(primaryCaregiver) || primaryCaregiver !== '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherPrimaryCareGiver",
+              "label": "Other"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Parent"
+                  },
+                  {
+                    "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Grandparent"
+                  },
+                  {
+                    "concept": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Aunt/Uncle"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling of child"
+                  },
+                  {
+                    "concept": "978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Came alone"
+                  },
+                  {
+                    "concept": "5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "whoBroughtChildToTheClinic",
+              "label": "Who brought child to clinic?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "164879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whoBroughtChildToTheClinic) || whoBroughtChildToTheClinic !== '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherRelativeClinic",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "86f816e4-d093-4e8e-93e3-be2a98c264ac",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "clinicReportChildKnowsStatus",
+              "label": "Does the clinic report the child knows they have HIV?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes, they understand well (go to section C)"
+                  },
+                  {
+                    "concept": "163720AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes, but will review booklet (go to section B)"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "childKnowHIVStatus",
+              "label": "Does the child know they have HIV?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "10c4cc35-fdcc-4791-8a21-092c2f9f2ff9",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "haveIllness",
+              "hide": {
+                "hideWhenExpression": "isEmpty(childKnowHIVStatus) || childKnowHIVStatus !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "label": "If no, does the child know they have an illness?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Section B",
+      "sections": [
+        {
+          "label": " Complete at every child visit until full disclosure. After full disclosure, complete section C ",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Don’t know"
+                  },
+                  {
+                    "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mentions specific illness not HIV"
+                  },
+                  {
+                    "concept": "123676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mentions immunity (make body strong, prevent illness)"
+                  },
+                  {
+                    "concept": "138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "I have HIV"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "whyAreYouTakingYourMedicine",
+              "label": "Child response to “Why are you taking your medicine?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "8636bf40-418d-45b2-9059-9d933080db43"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(whyAreYouTakingYourMedicine) || whyAreYouTakingYourMedicine !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherwhyTakingMedicineSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "96bfe964-f54d-4a9a-978d-5d7d916d4097"
+              },
+              "id": "broughtChildToClinic",
+              "label": "Who brought child to clinic today? "
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "bfe0cbb2-eea0-4431-a5c5-d0f49a4ed21b",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "disclosureCounselingDoneToday",
+              "label": "Disclosure counseling done today"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "32d1e331-a5b2-4c28-91e3-cb24c5de9b17"
+              },
+              "id": "contentOfDiscussionToday",
+              "hide": {
+                "hideWhenExpression": "isEmpty(disclosureCounselingDoneToday) || disclosureCounselingDoneToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "label": "Content of discussion today  (Indicate NONE if no discussion)"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "7af21f8a-a51d-435c-a434-e62e07104b90",
+                "answers": [
+                  {
+                    "concept": "163293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Child too sick"
+                  },
+                  {
+                    "concept": "163524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Already disclosed"
+                  },
+                  {
+                    "concept": "1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not ready"
+                  },
+                  {
+                    "concept": "160101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Short visit"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "ifNoDisclosureDiscussionIndicateWhy",
+              "hide": {
+                "hideWhenExpression": "isEmpty(disclosureCounselingDoneToday) || disclosureCounselingDoneToday !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "label": "If no disclosure discussion, indicate why"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(ifNoDisclosureDiscussionIndicateWhy) || ifNoDisclosureDiscussionIndicateWhy !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherwhyNoDiscussionSpecify",
+              "label": "Other specify"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Section C",
+      "sections": [
+        {
+          "label": "Complete at full disclosure",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "fd58ef5b-9585-4035-a0a8-a0f8ca79557e",
+                "answers": [
+                  {
+                    "concept": "1536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Home"
+                  },
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "Clinic"
+                  },
+                  {
+                    "concept": "1589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hospital"
+                  }
+                ]
+              },
+              "id": "placleOfDisclosure",
+              "label": "Place where full disclosure occurred"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "86f816e4-d093-4e8e-93e3-be2a98c264ac",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "isDateOfDisclosureKnown",
+              "required": "true",
+              "label": "Is the date of disclosure known?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "dateOfFullDisclosureIfKnown",
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "datePickerFormat": "calendar",
+              "required": "true",
+              "label": "Date of full disclosure"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "164433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "disculosureDateUnknown",
+              "required": "true",
+              "label": "Please indicate MM/YY or YY whichever is known"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "d560bf47-f7aa-4135-8262-4885845c57ea",
+                    "label": "Caregiver"
+                  },
+                  {
+                    "concept": "5619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Health provider"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "WhoConductedFullDisclosure",
+              "label": " Who conducted full disclosure?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(WhoConductedFullDisclosure) || WhoConductedFullDisclosure !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherwhoConductedFullDisclosureSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "153b1513-4c90-4a72-9de4-65895eabd901",
+                "answers": [
+                  {
+                    "concept": "abe7f4d2-6d46-41d3-aef8-91cda434acc6",
+                    "label": "Planned"
+                  },
+                  {
+                    "concept": "1550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unplanned/Accidental"
+                  }
+                ]
+              },
+              "id": "natureOfDisclosure",
+              "label": "Nature of disclosure:"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "child’SReactionToFullDisclosure",
+              "label": "Child’s reaction to full disclosure"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "department",
+              "label": "Department"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Section D",
+      "sections": [
+        {
+          "label": "Complete during subsequent follow-up visits after disclosure",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "dateOfFollow-UpVisit",
+              "label": "Date of follow-up visit",
+              "datePickerFormat": "calendar"
+            }
+          ]
+        },
+        {
+          "label": "Child reaction since disclosure (Caregiver reflection)",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Child reaction since disclosure (Caregiver reflection)",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "1528AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "childReactionCareGiverReflection",
+              "questions": [
+                {
+                  "label": "Behavior",
+                  "type": "obs",
+                  "id": "Behavior",
+                  "questionOptions": {
+                    "concept": "1562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Mood",
+                  "type": "obs",
+                  "id": "Mood",
+                  "questionOptions": {
+                    "concept": "167099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Adherence",
+                  "type": "obs",
+                  "id": "adherence",
+                  "questionOptions": {
+                    "concept": "164425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Interaction with caregiver",
+                  "type": "obs",
+                  "id": "InteractionWithCaregiver",
+                  "questionOptions": {
+                    "concept": "165995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Child reaction since disclosure(Provider reflection)",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Child reaction since disclosure(Provider reflection)",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "1796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "childReactionProviderReflection",
+              "questions": [
+                {
+                  "label": "Behavior",
+                  "type": "obs",
+                  "id": "BehaviorOfProvider",
+                  "questionOptions": {
+                    "concept": "1562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Mood",
+                  "type": "obs",
+                  "id": "MoodOfProvider",
+                  "questionOptions": {
+                    "concept": "167099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Adherence",
+                  "type": "obs",
+                  "id": "adherenceProvider",
+                  "questionOptions": {
+                    "concept": "164425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Interaction with caregiver",
+                  "type": "obs",
+                  "id": "InteractionWithCaregiverProvider",
+                  "questionOptions": {
+                    "concept": "165995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Interaction with provider",
+                  "type": "obs",
+                  "id": "InteractionWithProvider",
+                  "questionOptions": {
+                    "concept": "163556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "162678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Worse than before disclosure "
+                      },
+                      {
+                        "concept": "164381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Same as before disclosure"
+                      },
+                      {
+                        "concept": "162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Better than before disclosure "
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "id": "actionTakenAtVisit",
+                  "label": "Action taken at visit"
+                },
+                {
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "2ccab9de-33e3-4ec6-b739-e63a82d5643f"
+                  },
+                  "id": "actionPlanCaregiver",
+                  "label": "Action plan(Caregiver)"
+                },
+                {
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "8bae4986-6fc3-4e6f-a659-6a5cd5b19bd9"
+                  },
+                  "id": "actionPlanChild",
+                  "label": "Action plan (Child)"
+                }
+              ]
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "163108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "whoElseHasBeenToldTheChildHivStatus",
+              "label": "Who else has been told the child HIV status"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "109fd691-d78d-4a0e-ac15-b31954bf9a0a",
+  "referencedForms": []
+}

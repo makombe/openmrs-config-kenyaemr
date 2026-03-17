@@ -1,7 +1,7 @@
 {
 	"name": "PrEP Monthly Refill Form",
 	"description": "PrEP Monthly Refill Form",
-	"version": "1",
+	"version": "2.1",
 	"published": true,
 	"uuid": "291c03c8-a216-11e9-a2a3-2a2ae2dbcce4",
 	"retired": false,
@@ -305,8 +305,8 @@
 				  "rendering": "radio",
 				  "concept": "42ad51f2-dc4f-48eb-8440-9a0bd8969374",
 				  "calculate": {
-					"calculateExpression": "String(hivSigns) === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : ''"
-				  },
+                  "calculateExpression": "String(hivSigns) === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' :''"
+                },
 				  "answers": [
 					{
 					  "concept": "1257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -327,13 +327,16 @@
 				  ]
 				},
 				"id": "treatmentPlan",
-				"required": "true"
+				"required": "true",
+				 "disable": {
+                "disableWhenExpression": "arrayContains(hivSigns, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              }
 			  },
 			  {
 				"label": "Reason for switching",
 				"type": "obs",
 				"id": "reasonForSwitch",
-				 "required": true,
+				 "required": "true",
 				"questionOptions": {
 				  "concept": "4b59ac07-cf72-4f46-b8c0-4f62b1779f7e",
 				  "rendering": "select",
@@ -368,7 +371,7 @@
 				"label": "Date of switch",
 				"type": "obs",
 				"id": "dateOfSwitch",
-				 "required": true,
+				 "required": "true",
 				"questionOptions": {
 				  "concept": "68bfa3f3-1fc7-4d9d-bb41-e897c3c430ef",
 				  "rendering": "date"
@@ -406,9 +409,171 @@
                 "hideWhenExpression": "isEmpty(treatmentPlan) || treatmentPlan === '1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
+			{
+              "label": "Dosing Strategy",
+              "type": "obs",
+              "id": "dosingStrategyMen",
+              "required": "true",
+              "questionOptions": {
+                "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Event Driven"
+                  },
+                  {
+                    "concept": "cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7",
+                    "label": "Daily Oral PrEP"
+                  },
+                  {
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
+                    "label": "Long acting PrEP"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='M'"
+              }
+            },
+            {
+              "label": "Dosing Strategy",
+              "type": "obs",
+              "id": "dosingStrategyFemale",
+              "required": "true",
+              "questionOptions": {
+                "concept": "166535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7",
+                    "label": "Daily Oral PrEP"
+                  },
+                  {
+                    "concept": "83c35f5e-9864-4fdd-9f9a-03f8d6069b3e",
+                    "label": "Long acting PrEP"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
+              }
+            },
+            {
+              "label": "PrEP Regimen",
+              "type": "obs",
+              "id": "prepTypeFemaleOne",
+              "required": "true",
+              "questionOptions": {
+                "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "label": "CAB-LA"
+                  },
+                  {
+                    "concept": "b3f6eab2-93bd-4fe0-81ce-5b7ec633a55a",
+                    "label": "Dapivirine ring"
+                  },
+                  {
+                    "concept": "e92e8fec-66fd-4b6a-a36f-0c28b28df2bc",
+                    "label": "Lenacapavir"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyFemale !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e' || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !=='F'"
+              }
+            },
+            {
+              "label": "PrEP Regimen",
+              "type": "obs",
+              "id": "prepTypeMale",
+              "required": "true",
+              "questionOptions": {
+                "concept": "166866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "58ed1f26-430f-4922-9bcf-00c51ec7bcb1",
+                    "label": "CAB-LA"
+                  },
+                  {
+                    "concept": "e92e8fec-66fd-4b6a-a36f-0c28b28df2bc",
+                    "label": "Lenacapavir"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyMen !== '83c35f5e-9864-4fdd-9f9a-03f8d6069b3e'"
+              }
+            },
+            {
+              "label": "PrEP Regimen",
+              "type": "obs",
+              "id": "regimenOptionsFemale",
+              "required": "true",
+              "questionOptions": {
+                "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "161364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/3TC"
+                  },
+                  {
+                    "concept": "d62e9ddf-14be-4e93-8d84-d21d0e2eb60c",
+                    "label": "TAF/FTC"
+                  },
+                  {
+                    "concept": "104567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/FTC"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyFemale !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7' && dosingStrategyMen !== 'cb583a50-2b6c-4a6a-a458-a6a3c41fa1a7'"
+              }
+            },
+            {
+              "label": "PrEP Regimen",
+              "type": "obs",
+              "id": "regimenOptionsMale",
+              "required": "true",
+              "questionOptions": {
+                "concept": "164515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "161364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/3TC"
+                  },
+                  {
+                    "concept": "104567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TDF/FTC"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "dosingStrategyMen !== '5424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Number of months",
+              "type": "obs",
+              "id": "regimenMonthsPrescribed",
+              "questionOptions": {
+                "concept": "164433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(prescribedPrepToday) || prescribedPrepToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
             {
               "label": "Prescribe Drug",
-              "required": false,
+              "required": "false",
               "id": "drugsWorkspaceLauncher",
               "questionOptions": {
                 "rendering": "workspace-launcher",

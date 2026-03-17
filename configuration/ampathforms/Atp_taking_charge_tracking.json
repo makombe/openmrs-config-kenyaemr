@@ -1,0 +1,377 @@
+{
+  "name": "ATP Taking Charge Tracking Form",
+  "uuid": "a4276b08-5bf1-402a-bb6a-0b2e54b41d67",
+  "description": "Taking Charge Tracking Form",
+  "version": "1.0",
+  "encounter": "ATP Taking Charge Tracking",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "Taking charge tracking",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encLocation"
+            }
+          ]
+        },
+        {
+          "label": "*D: Discussed – Put an X if the topic was discussed with the adolescent during the visit M: Mastered – Put an X if the adolescent fully understands the concept. You can indicate both discussed and mastered at the same visit if applicable  ND: Not discussed – Put an X if the topic was not discussed at the current visit  **Provide the best estimate of the year if unknown and indicate 15 June for month and date ",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1756627d-a236-4f87-9b3e-27180db67659",
+                "answers": [
+                  {
+                    "concept": "385e4ad3-be6b-4b71-bb46-12f494d7fe3e",
+                    "label": "Pediatric clinic"
+                  },
+                  {
+                    "concept": "f1e1137d-613a-4fef-afdf-1660fca3c58b",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PMTCT"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "pointOfEntryAtEnrollment",
+              "required": "true",
+              "label": "Point of entry at enrollment"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(pointOfEntryAtEnrollment) || pointOfEntryAtEnrollment !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherPointOfEntry",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "86f816e4-d093-4e8e-93e3-be2a98c264ac",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "isDateOfDisclosureKnown",
+              "required": "true",
+              "label": "Is the date of disclosure known?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "dateOfFullDisclosureIfKnown",
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "datePickerFormat": "calendar",
+              "required": "true",
+              "label": "Date of full disclosure if known"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "164433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "disculosureDateUnknown",
+              "required": "true",
+              "label": "Please indicate MM/YY or YY whichever is known"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "a85836a2-ef80-44b9-9570-79a6b63703d7",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discussed",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "216fb5bd-ccc0-40f2-b2fc-979cd513f6d5",
+                    "label": "Mastered",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Discussed"
+                  }
+                ]
+              },
+              "id": "treatmentLiteracy",
+              "required": "true",
+              "label": "Treatment literacy"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(treatmentLiteracy) || !arrayContains(treatmentLiteracy, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "id": "treatmentLiteracyDiscussed",
+              "required": "true",
+              "label": "Indicate the sub section covered during the treatment literacy discussion"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "166937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discussed",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "216fb5bd-ccc0-40f2-b2fc-979cd513f6d5",
+                    "label": "Mastered",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Discussed"
+                  }
+                ]
+              },
+              "id": "selfManagement",
+              "required": "true",
+              "label": "Self- management"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(selfManagement) || !arrayContains(selfManagement, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "id": "SelfManagementDiscussed",
+              "required": "true",
+              "label": "Indicate the sub section covered during the Self- management discussion"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "f3489e70-12c7-47af-8209-5143d1cd9081",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discussed",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "216fb5bd-ccc0-40f2-b2fc-979cd513f6d5",
+                    "label": "Mastered",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Discussed"
+                  }
+                ]
+              },
+              "id": "communication",
+              "required": "true",
+              "label": "Communication"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(communication) || !arrayContains(communication, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "id": "CommunicationDiscussed",
+              "required": "true",
+              "label": "Indicate the sub section covered during the discussion"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "163766AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discussed",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "216fb5bd-ccc0-40f2-b2fc-979cd513f6d5",
+                    "label": "Mastered",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Discussed"
+                  }
+                ]
+              },
+              "id": "support",
+              "required": "true",
+              "label": "Support"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "e6ded618-748d-4a5f-bfec-9f43948a6eac"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(support) || !arrayContains(support, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "id": "supportDiscussed",
+              "required": "true",
+              "label": "Indicate the sub section covered during the discussion"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "190dea55-186f-40c8-845d-43635eab262a",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discussed",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "216fb5bd-ccc0-40f2-b2fc-979cd513f6d5",
+                    "label": "Mastered",
+                    "disableWhenExpression": "myValue === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not Discussed"
+                  }
+                ]
+              },
+              "id": "adultClinicExpectations",
+              "required": "true",
+              "label": "Adult clinic expectations"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "164879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(adultClinicExpectations) || !arrayContains(adultClinicExpectations, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "id": "adultExpectationDiscussed",
+              "required": "true",
+              "label": "Indicate the sub section covered during the discussion"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "department",
+              "required": true,
+              "label": "Department"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "07c3d8c4-6fc7-4bdd-a0d9-626d030dc41f",
+  "referencedForms": []
+}

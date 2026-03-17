@@ -1,0 +1,728 @@
+{
+  "name": "ATP Attach Scale Transition Readiness Assessment Form",
+  "uuid": "f4237de5-355a-4437-a09b-3e164719ae9c",
+  "description": "Attach Scale Transition Readiness Assessment Form",
+  "version": "1.0",
+  "encounter": "ATP Transition Readiness Assessment",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "Transition Readiness Assessment",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encProvider "
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "id": "encLocation"
+            }
+          ]
+        },
+        {
+          "label": "Transition Readiness Assessment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "86f816e4-d093-4e8e-93e3-be2a98c264ac",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "isDateOfDisclosureKnown",
+              "required": "true",
+              "label": "Is the date of disclosure known?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "dateOfFullDisclosureIfKnown",
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "datePickerFormat": "calendar",
+              "required": "true",
+              "label": "Date of full disclosure if known"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "164433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(isDateOfDisclosureKnown) || isDateOfDisclosureKnown !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "disculosureDateUnknown",
+              "required": "true",
+              "label": "Please indicate MM/YY or YY whichever is known"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1756627d-a236-4f87-9b3e-27180db67659",
+                "answers": [
+                  {
+                    "concept": "385e4ad3-be6b-4b71-bb46-12f494d7fe3e",
+                    "label": "Pediatric clinic"
+                  },
+                  {
+                    "concept": "f1e1137d-613a-4fef-afdf-1660fca3c58b",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "PMTCT"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "pointOfEntryAtEnrollment",
+              "required": "true",
+              "label": "Point of entry at enrollment"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(pointOfEntryAtEnrollment) || pointOfEntryAtEnrollment !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "id": "otherEntryPointSpecify",
+              "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "CanexplainwhatHIVis",
+              "required": "true",
+              "label": "Can explain what HIV is"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canExplainHowArvsWork",
+              "required": "true",
+              "label": "Can explain how ARVs work"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "knowsTheNamesOfTheirArvs",
+              "required": "true",
+              "label": "Knows the names of their ARVs"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5c4276d0-4a47-42b9-b5f3-990b02fb7853",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canExplainWhatItMeansToHaveASuppressedViralLoad",
+              "required": "true",
+              "label": "Can explain what it means to have a suppressed viral load"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "163310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canStateWhatTheirViralLoadIs",
+              "required": "true",
+              "label": "Can state what their viral load is"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "8ac5808e-4092-49f5-a956-e2b4cc13225c",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "knowsIfTheyAreVirallySuppressed",
+              "required": "true",
+              "label": "Knows if they are virally suppressed"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "knewTheDayAndDateOfCurrentClinicVisit",
+              "required": "true",
+              "label": "Knew the day and date of current clinic visit"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "cameToClinicOnTheScheduledDayForCurrentVisit",
+              "required": "true",
+              "label": "Came to clinic on the scheduled day for current visit"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canExplainWhatToDoIfTheyMissAMedicationDose",
+              "required": "true",
+              "label": "Can explain what to do if they miss a medication dose"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canExplainWhenAndWhereTheyShouldSeekMedicalCare",
+              "required": "true",
+              "label": "Can explain when and where they should seek medical care"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "36ea9715-7d18-4314-addd-7a1a0fa40fae",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "knowsHowToNavigateClinicServicesOnTheirOwnToGetWhatTheyNeed",
+              "required": "true",
+              "label": "Knows how to navigate clinic services on their own to get what they need"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "feelsComfortableComingToClinicAlone",
+              "required": "true",
+              "label": "Feels comfortable coming to clinic alone"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "ifNoToWhy",
+              "label": "If no, why?",
+              "hide": {
+                "hideWhenExpression": "isEmpty(feelsComfortableComingToClinicAlone) || feelsComfortableComingToClinicAlone !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canExplainMedicalProblemsAndReportSymptoms",
+              "required": "true",
+              "label": "Can explain medical problems and report symptoms"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "feelsFree",
+              "required": "true",
+              "label": "Feels free to ask the health care worker questions about their health"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "ylhHavingSex",
+              "required": "true",
+              "label": "Is the YLH having sex"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160575AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "feelsFreeDiscussReproductive",
+              "hide": {
+                "hideWhenExpression": "isEmpty(ylhHavingSex) || ylhHavingSex !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "required": "true",
+              "label": "Feels free to ask the health care workers for reproductive health services like condoms and birth control"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "canNameDifferentContraceptionOptions",
+              "hide": {
+                "hideWhenExpression": "isEmpty(ylhHavingSex) || ylhHavingSex !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "required": "true",
+              "label": "Can name different contraception options"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "57e9f484-15e9-47c0-9a29-4773d1bf3acc",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "feelSafeToSeekHelp",
+              "required": "true",
+              "label": "Can identify at least one person in the clinic that they feel safe to seek help from"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "163000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "attendsAPeerSupportGroup",
+              "required": "true",
+              "label": "Attends a peer support group"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "discloseHIVstatustosomeone",
+              "required": "true",
+              "label": "Can explain when and how they would disclose HIV status to someone else (if necessary)"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "hasIdentifiedATreatmentBuddy",
+              "required": "true",
+              "label": "Has identified a treatment buddy"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "162060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "ableToVerbalizeLong-TermLifeGoals",
+              "required": "true",
+              "label": "Able to verbalize long-term life goals"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "190dea55-186f-40c8-845d-43635eab262a",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "aeb67aa9-68d3-41f8-acaa-0aa01b10f044",
+                    "label": "Partially"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "transitionToAdultServices",
+              "required": "true",
+              "label": "Feels that he/she would be ready to transition to adult services"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "notReadyForTransition",
+              "label": "If not ready to transition, why?",
+              "hide": {
+                "hideWhenExpression": "isEmpty(transitionToAdultServices) || transitionToAdultServices !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "department",
+              "label": "Department"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "2f184ba2-7582-411f-95d0-9cba4023dd46",
+  "referencedForms": []
+  
+}

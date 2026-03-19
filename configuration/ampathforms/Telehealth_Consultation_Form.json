@@ -5,7 +5,7 @@
   "published": true,
   "uuid": "32875d86-5f93-40ac-96f0-1dd0db6f8dc3",
   "retired": false,
-  "encounter": "NCD Initial",
+  "encounter": "NCD Followup",
   "pages": [
     {
       "label": "Visit Details",
@@ -529,5 +529,5 @@
       ]
     }
   ],
-  "encounterType": "b402d094-bff3-4b31-b167-82426b4e3e28"
+  "encounterType": "3e1057da-f130-44d9-b2bb-53e039b953c6"
 }

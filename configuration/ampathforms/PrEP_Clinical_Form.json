@@ -1,13 +1,13 @@
 {
-	"name": "PrEP Clinical Form",
-	"description": "PrEP Clinical Form",
-	"version": "1.0",
-	"published": true,
-	"uuid": "1bfb09fc-56d7-4108-bd59-b2765fd312b8",
-	"retired": false,
-	"encounter": "PrEP Initial",
-	"pages": [
-	  {
+  "name": "PrEP Clinical Form",
+  "description": "PrEP Clinical Form",
+  "version": "1.0",
+  "published": true,
+  "uuid": "1bfb09fc-56d7-4108-bd59-b2765fd312b8",
+  "retired": false,
+  "encounter": "PrEP Initial",
+  "pages": [
+    {
       "label": "PrEP Clinical Form",
       "sections": [
         {
@@ -1276,7 +1276,7 @@
                 "rendering": "radio",
                 "allowUnselect": "true",
                 "calculate": {
-                  "calculateExpression": "String(hivSigns) === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : String(contraindicationForPrEP) === '138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : String(contraindicationForPrEP) === '39fa4212-1210-49e0-ad62-d01090c1cf67' ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : String(contraindicationForPrEP) === '127750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : String(contraindicationForPrEP) === '155589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : ''"
+                  "calculateExpression": "hivSigns === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || arrayContains(contraindicationForPrEP, ['138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['39fa4212-1210-49e0-ad62-d01090c1cf67']) || arrayContains(contraindicationForPrEP, ['127750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['155589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) ? '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                 },
                 "answers": [
                   {
@@ -1290,8 +1290,9 @@
                 ]
               },
               "disable": {
-                "disableWhenExpression": "arrayContains(hivSigns, ['1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['39fa4212-1210-49e0-ad62-d01090c1cf67']) || arrayContains(contraindicationForPrEP, ['127750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['155589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
-              }
+                "disableWhenExpression": "hivSigns === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || arrayContains(contraindicationForPrEP, ['138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['39fa4212-1210-49e0-ad62-d01090c1cf67']) || arrayContains(contraindicationForPrEP, ['127750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(contraindicationForPrEP, ['155589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'])"
+              },
+              "resetValueOnDisable": false
             },
             {
               "label": "Dosing Strategy",
@@ -1446,7 +1447,7 @@
               }
             },
             {
-              "label": "Duration",
+              "label": "Number of months",
               "type": "obs",
               "id": "regimenMonthsPrescribed",
               "questionOptions": {
@@ -1711,7 +1712,7 @@
             },
             {
               "label": "Next review date:",
-              "required": "false",
+              "required": false,
               "id": "appointmentWorkspaceLauncher",
               "questionOptions": {
                 "rendering": "workspace-launcher",
@@ -1765,8 +1766,8 @@
         }
       ]
     }
-	],
-	"processor": "EncounterFormProcessor",
-	"referencedForms": [],
-	"encounterType": "706a8b12-c4ce-40e4-aec3-258b989bf6d3"
-  }
+  ],
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "encounterType": "706a8b12-c4ce-40e4-aec3-258b989bf6d3"
+}

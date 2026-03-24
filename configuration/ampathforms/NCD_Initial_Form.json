@@ -523,7 +523,7 @@
               "type": "obs",
               "id": "dxYearco",
               "questionOptions": {
-                 "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "date"
               },
               "hide": {
@@ -539,7 +539,7 @@
                 "rendering": "text"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -551,7 +551,7 @@
                 "rendering": "text"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -1286,6 +1286,9 @@
                     "label": "Low Risk"
                   }
                 ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -1383,7 +1386,10 @@
                   }
                 ]
               },
-              "validators": []
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "label": "Diabetic foot screening",
@@ -1404,7 +1410,10 @@
                   }
                 ]
               },
-              "validators": []
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "label": "Describe",
@@ -1440,7 +1449,7 @@
               },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "sex !== 'F' || age < 10"
+                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'F' || age < 10"
               }
             },
             {
@@ -1738,8 +1747,6 @@
             }
           ]
         }
-       
-       
       ]
     }
   ],

@@ -1,0 +1,893 @@
+{
+  "name": "Pre- Anaesthesia Checklist",
+  "description": "A form used to capture Pre- Anaesthesia Checklist For Anaesthesia",
+  "version": "1",
+  "published": true,
+  "uuid": "",
+  "encounter": "",
+  "pages": [
+    {
+      "label": "Pre- Anaesthesia Checklis",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "id": "encDate",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "required": "true",
+              "id": "encProvider",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "required": "true",
+              "id": "encLocation",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        },
+        {
+          "label": "PreOperative Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Diagnosis",
+              "type": "obs",
+              "id": "DiaGnosis",
+              "questionOptions": {
+                "concept": "d44492fd-1b0f-4ec1-9ac8-0e1eb2ebe10b",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Surgery",
+              "type": "obs",
+              "id": "SurGery",
+              "questionOptions": {
+                "concept": "166635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Pre-Anaesthesia Evaluation",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Past Medical History",
+              "type": "obs",
+              "id": "PastMedicalHistory",
+              "questionOptions": {
+                "concept": "160221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Past Surgical History",
+              "type": "obs",
+              "id": "SurgicalHistory",
+              "questionOptions": {
+                "concept": "0257d3b6-d0c1-4691-be17-2ddc3378c1be",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Past anesthesia History",
+              "type": "obs",
+              "id": "AnesthesiaHistory",
+              "questionOptions": {
+                "concept": "199115dd-9020-4a05-8007-5d6b57583440",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Currently medications",
+              "type": "obs",
+              "id": "mediCations",
+              "questionOptions": {
+                "concept": "9c33ce65-0bc1-4da4-87f2-8ce891f21ef2",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Allergy/Drug reaction?",
+              "type": "obs",
+              "id": "drugAllergy",
+              "questionOptions": {
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Airway Assessment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Neck Motion",
+              "type": "obs",
+              "id": "NeckMotion",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "ac4d4c3f-7b3f-4e8d-b8e0-1d1a3e45be65",
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Within Normal Limits (WNL) "
+                  },
+                  {
+                    "concept": "1116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Abnormal"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Mouth Opening",
+              "type": "obs",
+              "id": "MouthOpening",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0740a155-cad3-4f92-93e4-21f320e53dd2",
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Within Normal Limits (WNL) "
+                  },
+                  {
+                    "concept": "1116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Abnormal"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Teeth",
+              "type": "obs",
+              "id": "TeeTh",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "6674b872-366e-4e59-a03e-8145f661c454",
+                "answers": [
+                  {
+                    "concept": "f46d3b5e-3c51-4f1b-9a7a-be136b97b3f3",
+                    "label": "Missing"
+                  },
+                  {
+                    "concept": "135600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Loose"
+                  },
+                  {
+                    "concept": "146901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Broken"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Mallampati grade",
+              "type": "obs",
+              "id": "MallampatiGrade",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "edae3c9a-90e5-4776-8db2-d175af06656e",
+                "answers": [
+                  {
+                    "concept": "873a2c69-f9c5-48f1-b33c-71a4aaece672",
+                    "label": "Mallampati class I"
+                  },
+                  {
+                    "concept": "6555009d-9059-46b9-a12d-26971f2ceeb5",
+                    "label": "Mallampati class II"
+                  },
+                  {
+                    "concept": "adaf2842-00ea-4ca3-b670-7c4143851503",
+                    "label": "Mallampati class III"
+                  },
+                  {
+                    "concept": "14626027-f1e3-4caa-bbb0-1cda49288fc2",
+                    "label": "Mallampati class IV"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "System Assessment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Respiratory system",
+              "type": "obs",
+              "id": "RespSystem",
+              "questionOptions": {
+                "concept": "fed014fd-6059-4b43-bee5-23106a0a9bf2",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "b00b4986-6d10-4eb0-a469-058ad8e5e7a1",
+                    "label": "Bilateral Breath Sounds(BS – BL )",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "141600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "shortness of breath(SOB)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "126371AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Apnea",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TB/Tobacco use",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Bronchitis",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "123565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Recent URTI",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "121375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Asthma",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Respiratory system finding comments",
+              "type": "obs",
+              "id": "respComments",
+              "questionOptions": {
+                "concept": "0a4b1637-99db-4f66-9ec3-b74275b315c1",
+                "rendering": "text"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(RespSystem)"
+              }
+            },
+            {
+              "label": "Cardiovascular System",
+              "type": "obs",
+              "id": "CardiovascularSystem",
+              "questionOptions": {
+                "concept": "1124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "159442AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "RRR (Regular rate and rhythm)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "143050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cyanosis",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "139063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Murmur",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Edema",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "119910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "CHF (Congestive Heart Failure)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "139071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Heart Disease",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hypertension",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "9488e78c-a334-4ca9-8090-cdbd5bd2cfe1",
+                    "label": "Exercise Tolerance",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Cardiovascular System Comment",
+              "type": "obs",
+              "id": "cvsComment",
+              "questionOptions": {
+                "concept": "086d1dcf-7d0d-4197-a917-de9819da8689",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Renal/Endocrine System",
+              "type": "obs",
+              "id": "RenalEndocrineSystem",
+              "questionOptions": {
+                "concept": "166363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "136780AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "(IDDM )Insulin‑Dependent Diabetes Mellitus",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "142473AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "(NIDDM)Non‑Insulin‑Dependent Diabetes Mellitus",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "118976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "thyroid disease",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "113338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Renal failure",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "111633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "UTI (urinary tract infection)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "116500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Kidney stones",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Renal / Endocrine System Comments",
+              "type": "obs",
+              "id": "RenalEndocrinecomments",
+              "questionOptions": {
+                "concept": "166363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Gastrointestinal / Hepatic System",
+              "type": "obs",
+              "id": "GastrointestinalHepaticSystem",
+              "questionOptions": {
+                "concept": "1078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "133473AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nausea/Vomiting",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "136443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Jaundice",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hepatosplenomegally",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "116986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hepatitis",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "123919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Ulcers",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "GERD(Gastroesophageal Reflux )",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Gastrointestinal / Hepatic System Comment",
+              "type": "obs",
+              "id": "GastrointestinalHepaticSystemcomment",
+              "questionOptions": {
+                "concept": "160948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Neuromascular system",
+              "type": "obs",
+              "id": "Neuromascularsystem",
+              "questionOptions": {
+                "concept": "1124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "headaches",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "6004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "paraesthesia",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "114362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "paralysis",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "127920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Increased intracranial pressure (ICP)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "cf1a8382-2b8b-4a62-ac83-30580fde2df0",
+                    "label": "Closed head injury",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "45ab7c3c-d90c-4247-a259-fe31e0604eb4",
+                    "label": "Neuromuscular disease",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "540eb30c-66d5-418e-adf2-fa6772f23244",
+                    "label": "Seizures",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "5c7ca13a-21dd-431c-b669-897808713248",
+                    "label": "Peripheral nerve disease",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Glasgow Coma Scale",
+              "type": "obs",
+              "id": "GlasgowComaScale",
+              "questionOptions": {
+                "concept": "160347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number"
+              },
+              "hide": {
+                "hideWhenExpression": "(isEmpty(Neuromascularsystem) || !arrayContains(Neuromascularsystem, 'cf1a8382-2b8b-4a62-ac83-30580fde2df0'))"
+              }
+            },
+            {
+              "label": "Neuromascular system comments",
+              "type": "obs",
+              "id": "Neuromascularsystemcomment",
+              "questionOptions": {
+                "concept": "086d1dcf-7d0d-4197-a917-de9819da8689",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "ASA Status",
+              "type": "obs",
+              "id": "asaStatus",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "162158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "162159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ASA I"
+                  },
+                  {
+                    "concept": "162160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ASA II"
+                  },
+                  {
+                    "concept": "162161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ASA III"
+                  },
+                  {
+                    "concept": "162162AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ASA IV"
+                  },
+                  {
+                    "concept": "162163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ASA V"
+                  },
+                  {
+                    "concept": "162163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "E"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Birth & Developmental History",
+              "type": "obs",
+              "id": "birthDevHistory",
+              "questionOptions": {
+                "concept": "160664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "5fef7e98-a866-4b62-954f-f6c7c0694c50",
+                    "label": "Preterm"
+                  },
+                  {
+                    "concept": "117703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sickle Cell"
+                  },
+                  {
+                    "concept": "4b40125b-0d42-46a5-84bb-c322ba0a82b2",
+                    "label": "Neonatal Problems"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "age >= 5"
+              }
+            },
+            {
+              "label": "Specify gestation age (weeks)",
+              "type": "obs",
+              "id": "gestAge",
+              "questionOptions": {
+                "concept": "1409AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              },
+              "hide": {
+                "hideWhenExpression": "(isEmpty(birthDevHistory) || !arrayContains(birthDevHistory, '5fef7e98-a866-4b62-954f-f6c7c0694c50')) || patientAge >= 5"
+              }
+            },
+            {
+              "label": "List Neonatal Problems",
+              "type": "obs",
+              "id": "neoProbList",
+              "questionOptions": {
+                "concept": "160218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              },
+              "hide": {
+                "hideWhenExpression": "(isEmpty(birthDevHistory) || !arrayContains(birthDevHistory, '4b40125b-0d42-46a5-84bb-c322ba0a82b2')) || patientAge >= 5"
+              }
+            },
+            {
+              "label": "Birth & Developmental History Comments",
+              "type": "obs",
+              "id": "birthDevComm",
+              "questionOptions": {
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "age >= 5"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Management",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Fluids",
+              "type": "obs",
+              "id": "FluIds",
+              "questionOptions": {
+                "concept": "161911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "80804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal Saline (NS)"
+                  },
+                  {
+                    "concept": "162857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dextrose Normal Saline(DsNS)"
+                  },
+                  {
+                    "concept": "161250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "5% Dextrose in Water(5DW)"
+                  },
+                  {
+                    "concept": "104738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peads Saline"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Fluid Intake Rate (ml/hr)",
+              "type": "obs",
+              "id": "fluidIntakeRate",
+              "questionOptions": {
+                "concept": "165987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "number"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(FluIds)"
+              }
+            },
+            {
+              "label": "Maintenance (ml/hr)",
+              "type": "obs",
+              "id": "fluidMaintenance",
+              "questionOptions": {
+                "concept": "fd1a0681-a163-49f6-b488-10cf9da8a966",
+                "rendering": "number"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(FluIds)"
+              }
+            },
+            {
+              "label": "Deficit (ml)",
+              "type": "obs",
+              "id": "fluidDeficit",
+              "questionOptions": {
+                "concept": "b310dd9d-8a3c-4ffb-b776-4542a4b6baff",
+                "rendering": "number"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(FluIds)"
+              }
+            },
+            {
+              "label": "Indicates if the patient has or needs",
+              "type": "obs",
+              "id": "Indicatespatientneeds",
+              "questionOptions": {
+                "concept": "6ab620cc-d5c6-4551-a69e-2a31e8e0d295",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "156339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Foley catheter",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "042dc29b-9ed9-48ec-819d-8cd7be0bc5b0",
+                    "label": "NGT(nasogastric tube)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "161726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Chest tube",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Planned Anaesthesia",
+              "type": "obs",
+              "id": "PlannedAnaesthesia",
+              "questionOptions": {
+                "concept": "164254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "161909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "General"
+                  },
+                  {
+                    "concept": "164243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Inhalation"
+                  },
+                  {
+                    "concept": "f5e8cff5-5a94-49a2-9ba1-54aa14ff6424",
+                    "label": "Regional"
+                  },
+                  {
+                    "concept": "166991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "IV"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Monitored Anaesthesia Care",
+              "type": "obs",
+              "id": "MonitoredAnaesthesiaCare",
+              "questionOptions": {
+                "concept": "35a8c4fc-ccf9-4c57-bfbc-d04edfae8410",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "NPO Time(AM/PM)",
+              "type": "obs",
+              "id": "NPOTime",
+              "datePickerFormat": "timer",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "9c4c7722-ba3e-4bdf-ab97-c04170100037"
+              }
+            },
+            {
+              "label": "Pre‑medication Ordered",
+              "type": "obs",
+              "id": "PremedicationOrdered",
+              "questionOptions": {
+                "concept": "84adfcd8-e8f9-4422-b541-acbfb595b8b1",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Blood Products Required",
+              "type": "obs",
+              "id": "bloodProductsReq",
+              "questionOptions": {
+                "concept": "3b6ee7c9-d748-4070-b03d-64b4b65f9ddb",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Type/Crossmatch Ordered",
+              "type": "obs",
+              "id": "typeCrossOrdered",
+              "questionOptions": {
+                "concept": "1e403ae5-2a58-4509-acbf-9fbab75bba81",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(bloodProductsReq) || bloodProductsReq !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Surgeon Name",
+              "type": "obs",
+              "id": "surgeonName",
+              "questionOptions": {
+                "concept": "166688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Date and Time of Procedure",
+              "type": "obs",
+              "datePickerFormat": "both",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "167132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "timeofProcedure",
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                },
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "(new moment(encDate)).isBefore((new moment(myValue)), 'day') || (new moment(encDate)).isAfter((new moment(myValue)), 'day')",
+                  "message": "Time of procedure should not be before/greater than the encounter date."
+                }
+              ]
+            },
+            {
+              "label": "Consent Given?",
+              "type": "obs",
+              "id": "consentGiven",
+              "questionOptions": {
+                "concept": "166507AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8"
+}

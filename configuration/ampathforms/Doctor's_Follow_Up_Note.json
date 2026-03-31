@@ -1,0 +1,289 @@
+{
+  "name": "Doctor's Follow up Note",
+  "description": "Doctor's Note Form",
+  "version": "1.0",
+  "published": true,
+  "uuid": "",
+  "retired": false,
+  "encounter": "Doctor's Note",
+  "pages": [
+    {
+      "label": "Patient Assessment",
+      "sections": [
+        {
+          "label": "Encounter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Visit date:",
+              "type": "encounterDatetime",
+              "required": "true",
+              "id": "encDate",
+              "questionOptions": {
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            },
+            {
+              "label": "Provider:",
+              "type": "encounterProvider",
+              "id": "encProvider ",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "hide": {
+                "hideWhenExpression": "!isEmpty(encDate)"
+              }
+            },
+            {
+              "label": "Location:",
+              "type": "encounterLocation",
+              "id": "encLocation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "hide": {
+                "hideWhenExpression": "!isEmpty(encDate)"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Patient Complaints",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Patient having complaint(s) today?",
+              "type": "obs",
+              "id": "complaintsToday",
+              "required": "true",
+              "questionOptions": {
+                "concept": "5219AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitTo === '167050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Complaints",
+              "type": "obs",
+              "id": "ClinICNotes",
+              "questionOptions": {
+                "concept": "160430AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "complaintsToday !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "General Examination Findings",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Physical examination findings:",
+              "type": "obs",
+              "required": "true",
+              "id": "genExamFindings",
+              "questionOptions": {
+                "concept": "1391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Review of systems",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "System Review findings:",
+              "type": "obs",
+              "required": "true",
+              "id": "allsystemReview",
+              "questionOptions": {
+                "concept": "166363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": []
+            },
+            {
+              "label": "Diagnosis",
+              "id": "clinicalDiagnosisId",
+              "type": "diagnosis",
+              "questionOptions": {
+                "rendering": "repeating",
+                "dataSource": "diagnoses",
+                "rank": 1,
+                "datasource": {
+                  "name": "diagnoses",
+                  "config": {
+                    "conceptSourceUuid": "39ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Management Plan",
+      "sections": [
+        {
+          "label": "Plan and requested actions",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Prescribe drug",
+              "required": false,
+              "id": "drugsWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Prescribe drugs",
+                "workspaceName": "add-drug-order"
+              }
+            },
+            {
+              "label": "Procedure Orders",
+              "id": "proceduresWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add Procedures  order",
+                "workspaceName": "add-procedures-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
+              }
+            },
+            {
+              "label": "Feeding orders",
+              "type": "obs",
+              "id": "feedOrders",
+              "questionOptions": {
+                "concept": "985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "checkbox",
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "162798AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nasogastric tube feeding",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "165951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Parenteral feeding",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "165951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "NPO(Nil per Oral)",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "162758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clear liquids",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Others",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": ""
+              }
+            },
+            {
+              "label": "Other (Specify)",
+              "type": "obs",
+              "id": "specifyTherapy",
+              "questionOptions": {
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "text"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(feedOrders) || !arrayContains(feedOrders, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Outcome",
+              "type": "obs",
+              "questionOptions": {
+                "concept": "1695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "1693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Transferring to another ward"
+                  },
+                  {
+                    "concept": "164165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Referring to another facility"
+                  },
+                  {
+                    "concept": "1692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Discharge home"
+                  }
+                ]
+              },
+              "id": "referStO",
+              "hide": {
+                "hideWhenExpression": ""
+              }
+            },
+            {
+              "label": "Next review date:",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "167132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "tCAppoinTment",
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "true"
+                },
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "(new moment(encDate)).isAfter((new moment(myValue)), 'day') || (new moment(encDate)).isSame((new moment(myValue)), 'day')",
+                  "message": "Next Appointment should be greater than the encounter date."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "14b36860-5033-4765-b91b-ace856ab64c2"
+}

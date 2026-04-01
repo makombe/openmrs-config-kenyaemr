@@ -337,7 +337,7 @@
               "required": "true",
               "id": "diseaseType",
               "questionOptions": {
-                "rendering": "radio",
+                "rendering": "checkbox",
                 "concept": "74eb8e8d-d078-4fa3-8973-2d710d8f46df",
                 "answers": [
                   {
@@ -347,10 +347,6 @@
                   {
                     "concept": "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Hypertension"
-                  },
-                  {
-                    "concept": "166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Co-morbid"
                   }
                 ]
               }
@@ -374,7 +370,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' )"
               }
             },
             {
@@ -404,7 +400,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'F'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ) || sex !== 'F'"
               }
             },
             {
@@ -430,7 +426,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'M'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') || sex !== 'M'"
               }
             },
             {
@@ -447,7 +443,7 @@
                 }
               ],
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -469,7 +465,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -481,7 +477,7 @@
                 "rendering": "text"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -493,7 +489,7 @@
                 "rendering": "date"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -515,7 +511,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') && !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -539,7 +535,7 @@
                 "rendering": "text"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -551,7 +547,7 @@
                 "rendering": "text"
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -1288,7 +1284,7 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -1388,7 +1384,7 @@
               },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -1412,7 +1408,7 @@
               },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || diseaseType != '166020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             },
             {
@@ -1449,7 +1445,7 @@
               },
               "validators": [],
               "hide": {
-                "hideWhenExpression": "isEmpty(diseaseType) || diseaseType != '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || sex !== 'F' || age < 10"
+                "hideWhenExpression": "isEmpty(diseaseType) || !arrayContains(diseaseType, '117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA') || sex !== 'F' || age < 10"
               }
             },
             {

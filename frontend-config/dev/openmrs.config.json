@@ -79,6 +79,7 @@
       "allowModifyingPrescription": false
     },
     "enableStockDispense": true,
+    "completeOrderWithThisDispense": true,
     "validateBatch": true,
     "Display conditions": {
       "privileges": ["o3: View Dispensing Dashboard"]

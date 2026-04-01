@@ -84,6 +84,7 @@ rename_dist_folder() {
 rename_dist_folder "openmrs-esm-form-entry-app-*" "dist-form-entry"
 rename_dist_folder "openmrs-esm-patient-chart-app-*" "dist-patient-chart"
 rename_dist_folder "openmrs-esm-service-queues-app-*" "dist-service-queues"
+rename_dist_folder "openmrs-esm-dispensing-app-*" "dist-dispense-app"
 
 # Exit with success status
 exit 0

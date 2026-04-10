@@ -472,6 +472,11 @@
         "labOrders": "Maagizo ya Maabara",
         "prescription": "Dawa"
       }
-    }
+    },
+    "showServiceQueueFields": false,
+    "isDHAWorkflow": true,
+    "showUpcomingAppointments": true,
+    "visitAttributeTypes": [],
+    "defaultFacilityUrl": "/ws/rest/v1/kenyaemr/default-facility"
   }
 }

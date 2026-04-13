@@ -462,7 +462,7 @@
             }
           }
         },
-        "remove": ["mark-patient-deceased-button"]
+        "remove": ["mark-patient-deceased-button","start-visit-button"]
       }
     },
     "excludePatientIdentifierCodeTypes": {

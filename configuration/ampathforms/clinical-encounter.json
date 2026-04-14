@@ -2569,6 +2569,7 @@
               "hide": {
                 "hideWhenExpression": "isEmpty(finalDiagnosisId)"
               },
+              "resetValueOnDisable": false,
               "disable": {
                 "disableWhenExpression": "arrayContains(finalDiagnosisId, ['0de84a33-b845-449c-97c3-2bd81813c16d']) || arrayContains(finalDiagnosisId, ['041da219-3bb5-47dc-ab40-18b8b9a5fd8e']) || arrayContains(finalDiagnosisId, ['73040ad4-6fd2-47f3-b9b7-544a918e8a0f']) || arrayContains(finalDiagnosisId, ['9c8201b9-2db8-4561-8cbd-d917d3daf202']) || arrayContains(finalDiagnosisId, ['27035f79-7d16-4822-a3c6-e9a6bb82eceb']) || arrayContains(finalDiagnosisId, ['70574419-3325-404f-ada8-c59ac1681945']) || arrayContains(finalDiagnosisId, ['135361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']) || arrayContains(finalDiagnosisId, ['ba454659-c957-4593-acde-86222dae24e6'])"
               }

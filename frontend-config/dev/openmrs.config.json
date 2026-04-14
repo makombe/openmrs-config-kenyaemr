@@ -175,6 +175,9 @@
     "extensionSlots": {
       "tests-ordered-actions-slot": {
         "remove": ["pick-lab-request-action"]
+      },
+      "inprogress-tests-actions-slot": {
+        "remove": ["add-lab-request-results-action"]
       }
     },
     "Display conditions": {
@@ -462,7 +465,7 @@
             }
           }
         },
-        "remove": ["mark-patient-deceased-button","start-visit-button"]
+        "remove": ["mark-patient-deceased-button", "start-visit-button"]
       }
     },
     "excludePatientIdentifierCodeTypes": {
@@ -902,7 +905,8 @@
           "medications-summary-dashboard",
           "results-summary-dashboard",
           "test-results-summary-dashboard"
-        ]
+        ],
+        "order": ["ewf-homepage-dashboard-link"]
       }
     }
   },

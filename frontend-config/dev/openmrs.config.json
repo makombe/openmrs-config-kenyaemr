@@ -941,7 +941,7 @@
     }
   },
   "@openmrs/esm-app-shell": {
-    "Enabled feature flags": ["mpiFlag", "rde", "healthInformationExchange"]
+    "Enabled feature flags": ["mpiFlag", "rde", "healthInformationExchange","bedmanagement-module"]
   },
   "@openmrs/esm-patient-attachments-app": {
     "maxFileSize": 5

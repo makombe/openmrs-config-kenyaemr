@@ -1,0 +1,540 @@
+{
+  "name": "Travel History",
+  "description": "A form to collect travel history for Malaria management",
+  "version": "1.0",
+  "published": true,
+  "uuid": "c17dcdfe-fa1b-4ba0-9f10-93a91732bb5c",
+  "retired": false,
+  "encounter": "Consultation",
+  "pages": [
+    {
+      "label": "Travel History",
+      "sections": [
+        {
+          "label": "Travel History",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Where did the patient sleep during the period before the illness 0 -2 weeks?",
+              "type": "obs",
+              "id": "sleepDuringPeriod2weeks",
+              "questionOptions": {
+                "concept": "1069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "159818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Indoor Household"
+                  },
+                  {
+                    "concept": "166496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Indoor Hotel"
+                  },
+                  {
+                    "concept": "745c76c4-bc9c-4bb6-b5e6-99de7879e3f1",
+                    "label": "Outdoor"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Others"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Specify",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "otherSpecified2weeks",
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(sleepDuringPeriod2weeks) || sleepDuringPeriod2weeks !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Has the patient travelled in the last 4 to 6 weeks?",
+              "type": "obs",
+              "id": "patientTravelled",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "165656AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Outside the county of residence in Kenya"
+                  },
+                  {
+                    "concept": "21f2f285-6910-4f10-90ac-fbaf75e36c8d",
+                    "label": "Country outside Kenya"
+                  },
+                  {
+                    "concept": "162619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Within the county in Kenya"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "which county did the patient travel to?",
+              "type": "obs",
+              "id": "countyTravelTo",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "City/Town",
+              "type": "obs",
+              "id": "city",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "165645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Village/Area",
+              "type": "obs",
+              "id": "village",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "cbad3f02-40b7-476d-adef-4e85ee0f2148"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Date of travel from",
+              "type": "obs",
+              "id": "dateTravelFrom",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "98d556ce-8eeb-42e7-adf3-15d0c4f1fbb2"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Date of travel to",
+              "type": "obs",
+              "id": "dateTravelTo",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "f6941bc3-8e13-472e-8469-f3a47781ceda"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Where (state name of country)",
+              "type": "obs",
+              "id": "countryName",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "21f2f285-6910-4f10-90ac-fbaf75e36c8d"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '21f2f285-6910-4f10-90ac-fbaf75e36c8d'"
+              }
+            },
+            {
+              "label": "where (state name of city/town)",
+              "type": "obs",
+              "id": "cityName",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "98805842-2912-4e21-b6bb-7975f3e84a77"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '21f2f285-6910-4f10-90ac-fbaf75e36c8d'"
+              }
+            },
+            {
+              "label": "Date of travel from",
+              "type": "obs",
+              "id": "dateOfTravelFrom",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "dd5a6eea-70fa-4ce5-bafc-5a39d27ccd95"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '21f2f285-6910-4f10-90ac-fbaf75e36c8d'"
+              }
+            },
+            {
+              "label": "Date of travel to",
+              "type": "obs",
+              "id": "dateOfTravelTo",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c5f0e3f9-25f9-409e-a461-304108d6ef53"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled !== '21f2f285-6910-4f10-90ac-fbaf75e36c8d'"
+              }
+            },
+            {
+              "label": "Did the patient take any malaria preventive measures before and during the travel?",
+              "type": "obs",
+              "id": "malariPreventiveMeasures",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "cc9b828d-d4a3-4650-a9c0-a3d5f1802989",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(patientTravelled) || patientTravelled === '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Type of prevention measures taken before and during travel",
+              "type": "obs",
+              "id": "malariPreventiveMeasuresBeforeTravel",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "6e34f159-4ebd-4e9a-8e92-6bcb3e1b62b0",
+                "answers": [
+                  {
+                    "concept": "dae3f751-4a52-4dff-a78e-f0d36a818f25",
+                    "label": "Chemoprophylaxis"
+                  },
+                  {
+                    "concept": "160428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Use of LLINs"
+                  },
+                  {
+                    "concept": "d01261f5-cd3d-45da-b441-0349d91fce53",
+                    "label": "Mosquito repellant measures"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Others"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(malariPreventiveMeasures) || malariPreventiveMeasures !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Specify other type of prevention taken before and during travel",
+              "type": "obs",
+              "id": "specifyOtherPrevention",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "687f826b-6f4f-48e2-b710-70276e659e83"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(malariPreventiveMeasuresBeforeTravel) || !arrayContains(malariPreventiveMeasuresBeforeTravel, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
+            },
+            {
+              "label": "Did you travel with any of your household members or co-workers/ friends?",
+              "type": "obs",
+              "id": "householdMembers",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "ffab1519-d495-4fc1-a71b-49260089a05a",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(malariPreventiveMeasures) || malariPreventiveMeasures !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Are any of your household members/co-workers or friends sick?",
+              "type": "obs",
+              "id": "friendsSick",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "00713ff9-95df-4696-a9d6-adb3aa7ba1a2",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Has your household received any visitors in the last 9-14 days?",
+              "type": "obs",
+              "id": "visitorsLast14Days",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "50925c89-9544-4b0d-8c02-934c7720a3ac",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Were any of your visitors in the last 9-12 days sick in the last 14 days?",
+              "type": "obs",
+              "id": "visitorsSickIn12Days",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "547f2786-a5a9-491e-9050-b50d1f5279dc",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(visitorsLast14Days) || visitorsLast14Days !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "History of blood transfusion in the last 6 months?",
+              "type": "obs",
+              "id": "bloodTransfusionLast6Months",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "25006732-340b-4921-9afa-598b0337b817",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date of transfusion",
+              "type": "obs",
+              "id": "dateOfTransfusion",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "163268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(bloodTransfusionLast6Months) || bloodTransfusionLast6Months !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Place of transfusion",
+              "type": "obs",
+              "id": "placeOfTransfusion",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "1874fcfb-3b60-4cf8-9ee7-aa6bc3d9ea1b"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(bloodTransfusionLast6Months) || bloodTransfusionLast6Months !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Vector Control Measures (Current Residence)",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Was your homestead sprayed in the last 12 months - Indoor residual spraying(IRS)?",
+              "type": "obs",
+              "id": "indoorResidualSpray",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "a212a133-5270-4946-8230-e6861839b5ff",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date of last indoor residual spraying",
+              "type": "obs",
+              "id": "dateLastIndoorResidualSpraying",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "028349f4-f51d-4a22-a4e2-6f73b1a09d17"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(indoorResidualSpray) || indoorResidualSpray !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Has the sleeping space in the structure where you sleep been sprayed?",
+              "type": "obs",
+              "id": "sleepingSpaceSprayed",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "28eb84f3-f6b2-474e-8c65-58c5b2e7d22c",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "isEmpty(indoorResidualSpray) || indoorResidualSpray !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Number of LLINs in use in the household",
+              "type": "obs",
+              "id": "numberOfLllinUsed",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "1903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "validators": []
+            },
+            {
+              "label": "Number of Non-LLINs in use in the household",
+              "type": "obs",
+              "id": "numberOfNonLllinUsed",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "8a161d72-f72d-462c-a780-6ad1a57ae889"
+              },
+              "validators": []
+            },
+            {
+              "label": "Number of Persons who slept in the household the previous night",
+              "type": "obs",
+              "id": "numberPersonsSleptInHousehold",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "73e76578-5d8e-4c60-9ff7-510d38524bdf"
+              },
+              "validators": []
+            },
+            {
+              "label": "Number of persons who slept under an LLIN",
+              "type": "obs",
+              "id": "numberPersonsSleptUnderLlin",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "0558c39f-3239-4fcb-8228-69dfcb6a65e3"
+              },
+              "validators": []
+            },
+            {
+              "label": "Case Classification",
+              "type": "obs",
+              "required": "true",
+              "id": "caseClassification",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "165793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "readOnly": "true",
+                "calculate": {
+                  "calculateExpression": "String(patientTravelled) === '167131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? 'b6ef6af5-0b06-4412-8608-759872877b01' : String(patientTravelled) === '21f2f285-6910-4f10-90ac-fbaf75e36c8d' ? '1662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' : String(patientTravelled) === '162619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ? 'e361c30a-e31c-487b-a79c-488ae7ae36aa' :''"
+                },
+                "answers": [
+                  {
+                    "concept": "781af628-b8ad-44f2-a0a6-c432a0dfeecb",
+                    "label": "Imported case (from another country)"
+                  },
+                  {
+                    "concept": "e361c30a-e31c-487b-a79c-488ae7ae36aa",
+                    "label": "Indigenous case local (acquired within the county)"
+                  },
+                  {
+                    "concept": "b6ef6af5-0b06-4412-8608-759872877b01",
+                    "label": "Indigenous case intraported (acquired from another county in Kenya)"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
+  "referencedForms": []
+}

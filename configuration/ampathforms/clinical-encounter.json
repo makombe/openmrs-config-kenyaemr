@@ -2575,6 +2575,21 @@
               }
             },
             {
+              "label": "Travel History",
+              "id": "travelHistoryWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add travel history",
+                "workspaceName": "custom-form-entry-workspace",
+                "additionalProps": {
+                  "form": {
+                    "uuid": "c17dcdfe-fa1b-4ba0-9f10-93a91732bb5c"
+                  },
+                  "encounterUuid": ""
+                }
+              }
+            },
+            {
               "label": "Secondary Diagnosis",
               "id": "secondaryDiagnosisId",
               "type": "diagnosis",

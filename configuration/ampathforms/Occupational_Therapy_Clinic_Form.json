@@ -1,7 +1,7 @@
 {
   "name": "Occupational Therapy Clinic Form",
   "description": "Form for updating Occupational Therapy diagnosis",
-  "version": "2.0",
+  "version": "2.1",
   "published": true,
   "uuid": "062a24b5-728b-4639-8176-197e8f458490",
   "retired": false,
@@ -9,10 +9,10 @@
   "encounter": "Consultation",
   "pages": [
     {
-      "label": "Visit Details",
+      "label": "Patient Details",
       "sections": [
         {
-          "label": "Encounter Details",
+          "label": "Visit Details",
           "isExpanded": "true",
           "questions": [
             {
@@ -21,7 +21,8 @@
               "required": "true",
               "id": "encDate",
               "questionOptions": {
-                "rendering": "date"
+                "rendering": "date",
+                "readOnly": "true"
               },
               "validators": [
                 {
@@ -33,27 +34,27 @@
             {
               "label": "Provider:",
               "type": "encounterProvider",
+              "id": "encProvider ",
               "required": "true",
               "questionOptions": {
                 "rendering": "ui-select-extended"
               },
-              "id": "encProvider "
+              "hide": {
+                "hideWhenExpression": "!isEmpty(encDate)"
+              }
             },
             {
               "label": "Location:",
               "type": "encounterLocation",
+              "id": "encLocation",
               "required": "true",
               "questionOptions": {
                 "rendering": "ui-select-extended"
               },
-              "id": "encLocation"
-            }
-          ]
-        },
-        {
-          "label": "Patient Details",
-          "isExpanded": "true",
-          "questions": [
+              "hide": {
+                "hideWhenExpression": "!isEmpty(encDate)"
+              }
+            },
             {
               "label": "Visit Type?",
               "type": "obs",
@@ -62,13 +63,6 @@
               "questionOptions": {
                 "rendering": "radio",
                 "concept": "164181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "conceptMappings": [
-                  {
-                    "relationship": "SAME-AS",
-                    "type": "CIEL",
-                    "value": "164181"
-                  }
-                ],
                 "answers": [
                   {
                     "concept": "164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -78,7 +72,6 @@
                     "concept": "160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Revisit"
                   }
-                  
                 ]
               }
             },
@@ -99,6 +92,9 @@
                     "label": "No"
                   }
                 ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -111,6 +107,10 @@
                 "concept": "160338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "conceptMappings": [],
                 "answers": [
+                  {
+                    "concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "NA"
+                  },
                   {
                     "concept": "164407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "From other facilities"
@@ -129,64 +129,85 @@
                 "hideWhenExpression": "isEmpty(visitReferral) || visitReferral !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
-            
-            
             {
-              "label": "Occupational Therapy Number",
+              "label": "Reason for Visit",
               "type": "obs",
-              "required": true,
-              "id": "occupationalNumber",
+              "id": "reasonVisit",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "164812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "conceptMappings": []
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(visitType) || visitType === '160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "rendering": "radio",
+                "concept": "4b59ac07-cf72-4f46-b8c0-4f62b1779f7e",
+                "answers": [
+                  {
+                    "concept": "167391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Routine follow-up"
+                  },
+                  {
+                    "concept": "aca0983b-a678-4ffa-bad6-7def9727b7d3",
+                    "label": "Review of results"
+                  },
+                  {
+                    "concept": "e2d5a776-6af8-440a-b899-9909f9ff4545",
+                    "label": "Post-procedure review"
+                  },
+                  {
+                    "concept": "159794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment continuation"
+                  },
+                  {
+                    "concept": "120202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Complication/new symptoms"
+                  },
+                  {
+                    "concept": "1687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "New disease"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
               }
             },
             {
-              "label": "Patient enrolled in school?",
+              "label": "Specify other reasons",
               "type": "obs",
-              "required": true,
-              "id": "patientEnrolledInSchool",
+              "required": "true",
+              "id": "otherReasons",
               "questionOptions": {
-                "rendering": "radio",
-                "concept": "160336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "conceptMappings": [],
-                "answers": [
-                  {
-                    "concept": "5629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "In School"
-                  },
-                  {
-                    "concept": "164212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Out of school"
-                  }
-                ]
+                "concept": "20395601-257c-490c-86c2-acffb627f91f",
+                "rendering": "textarea"
               },
+              "validators": [],
               "hide": {
-                "hideWhenExpression": "!(age <=20)"
+                "hideWhenExpression": "reasonVisit !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "label": "Patient History",
-      "sections": [
+        },
         {
-          "label": "Patient with Disability",
+          "label": "Clinical Assessment",
           "isExpanded": "true",
           "questions": [
             {
-              "label": "Patient with Disability(PWD)?",
+              "label": "Presenting Complaints (HPI)",
               "type": "obs",
-              "id": "patientWithDisability",
+              "id": "ClinICNotes",
+              "questionOptions": {
+                "concept": "160430AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Symptoms since last visit",
+              "type": "obs",
+              "id": "symptomsLastvisit",
               "required": "true",
               "questionOptions": {
-                "concept": "162558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "5219AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "radio",
                 "answers": [
                   {
@@ -198,182 +219,169 @@
                     "label": "No"
                   }
                 ]
-              }
-            },
-            {
-              "label": "Disability Classification",
-              "type": "obs",
-              "id": "disabilityClassification",
-              "questionOptions": {
-                "concept": "1069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "167078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Neurodevelopmental"
-                  },
-                  {
-                    "concept": "153343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "learning"
-                  },
-                  {
-                    "concept": "160176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Neurodiversity conditions"
-                  },
-                  {
-                    "concept": "156923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Intelectual disability"
-                  },
-                  {
-                    "concept": "142616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Delayed developmental milestone"
-                  },
-                  {
-                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Others(specify)"
-                  }
-                ]
               },
               "hide": {
-                "hideWhenExpression": "patientWithDisability !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "visitType !== '160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
-              "label": "Neurodevelopmental findings",
+              "label": "Presenting Complaints (HPI)",
               "type": "obs",
-              "id": "neurodevelopmentaFindings",
-              "questionOptions": {
-                "concept": "167273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "152492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Cerebral palsy"
-                  },
-                  {
-                    "concept": "144481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Down syndrome"
-                  },
-                  {
-                    "concept": "117470AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Hydrocephalus"
-                  },
-                  {
-                    "concept": "126208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Spina bifida"
-                  }
-                ]
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(disabilityClassification) || !arrayContains(disabilityClassification, '167078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
-              }
-            },
-            {
-              "label": "Learning findings",
-              "type": "obs",
-              "id": "lerningFindings",
-              "questionOptions": {
-                "concept": "c67be9a5-f497-4082-af81-11753f65ed4b",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "118795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dyslexia"
-                  },
-                  {
-                    "concept": "118800AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dysgraphia"
-                  },
-                  {
-                    "concept": "141644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Dyscalculia"
-                  },
-                  {
-                    "concept": "153271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Auditory processing,"
-                  },
-                  {
-                    "concept": "121529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Language processing disorder"
-                  },
-                  {
-                    "concept": "155205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Nonverbal learning disabilities"
-                  },
-                  {
-                    "concept": "126456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Visual perceptual/visual motor deficit."
-                  }
-                ]
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(disabilityClassification) || !arrayContains(disabilityClassification, '153343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
-              }
-            },
-            {
-              "label": "Neurodiversity conditions",
-              "type": "obs",
-              "id": "neurodiversityConditions",
-              "questionOptions": {
-                "concept": "165911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "121317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "ADHD(Attention deficit hyperactivity disorder)"
-                  },
-                  {
-                    "concept": "121303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Autism"
-                  }
-                ]
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(disabilityClassification) || !arrayContains(disabilityClassification, '160176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
-              }
-            },
-            {
-              "label": "Other disability notes",
-              "type": "obs",
-              "id": "otherDisabilityNotes",
-              "questionOptions": {
-                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "textarea"
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(disabilityClassification) || !arrayContains(disabilityClassification, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
-              }
-            },
-            {
-              "label": "General Clinical Notes",
-              "type": "obs",
-              "id": "generalClinicalNotes",
+              "id": "presentingComplaints",
               "questionOptions": {
                 "concept": "160430AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "textarea"
               },
-              "validators": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Patient Management",
-      "sections": [
-        {
-          "label": "Treatment/Management Plan",
-          "isExpanded": "true",
-          "questions": [
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "symptomsLastvisit !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
             {
-              "label": "Diagnosis",
-              "id": "DiagNosIS",
-              "required": "true",
+              "label": "Past medical/Surgical history",
+              "type": "obs",
+              "id": "pastSurg",
+              "questionOptions": {
+                "concept": "160221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Social history",
+              "type": "obs",
+              "id": "socialHis",
+              "questionOptions": {
+                "concept": "162143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Physical findings:",
+              "type": "obs",
+             
+              "id": "genExamFindings",
+              "questionOptions": {
+                "concept": "1391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Impression",
+              "id": "clinicalDiagnosisId",
               "type": "diagnosis",
               "questionOptions": {
                 "rendering": "repeating",
                 "dataSource": "diagnoses",
                 "rank": 1,
+                "datasource": {
+                  "name": "diagnoses",
+                  "config": {
+                    "conceptSourceUuid": "39ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+                  }
+                }
+              }
+            },
+            {
+              "label": "Order any Investigation?",
+              "type": "obs",
+              "id": "investigationOrderd",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "0179f241-8c1d-47c1-8128-841f6508e251",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitTo === '167050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Lab Order",
+              "required": false,
+              "id": "labsWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add lab order",
+                "workspaceName": "add-lab-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
+              },
+              "hide": {
+                "hideWhenExpression": "visitTo === '167050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || investigationOrderd !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Radiology & Imaging Order",
+              "id": "imagingWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add imaging order",
+                "workspaceName": "add-imaging-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
+              },
+              "hide": {
+                "hideWhenExpression": "visitTo === '167050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || investigationOrderd !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Clinical Status",
+              "type": "obs",
+              "id": "clinicalStats",
+              "required": "true",
+              "questionOptions": {
+                "concept": "165908AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "1855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Stable"
+                  },
+                  {
+                    "concept": "163053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Improving"
+                  },
+                  {
+                    "concept": "160115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Deteriorating"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitType !== '160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Management Plan",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Main Diagnosis",
+              "id": "finalDiagnosisId",
+              "type": "diagnosis",
+              "questionOptions": {
+                "rendering": "remote-select",
+                "rank": 2,
                 "datasource": {
                   "name": "diagnoses",
                   "config": {
@@ -400,6 +408,24 @@
                     "label": "Pre-Existing diagnosis"
                   }
                 ]
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(finalDiagnosisId)"
+              }
+            },
+            {
+              "label": "Secondary Diagnosis",
+              "id": "secondaryDiagnosisId",
+              "type": "diagnosis",
+              "questionOptions": {
+                "rendering": "repeating",
+                "rank": 3,
+                "datasource": {
+                  "name": "diagnoses",
+                  "config": {
+                    "conceptSourceUuid": "39ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+                  }
+                }
               }
             },
             {
@@ -410,10 +436,6 @@
                 "concept": "63da4194-a26a-4aa5-b5d5-4125b4822cf7",
                 "rendering": "multiCheckbox",
                 "answers": [
-                  {
-                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "None"
-                  },
                   {
                     "concept": "164806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Neonatal Screening"
@@ -427,6 +449,10 @@
                     "label": "Re-Assessment"
                   },
                   {
+                    "concept": "100e4aa2-2d05-404a-b965-b74126dcef1d",
+                    "label": "Activities of Daily Living Training"
+                  },
+                  {
                     "concept": "43ef29ca-bc09-4c69-8cdf-a0e91df8c94a",
                     "label": "PWDs Assessment and Categorisation"
                   },
@@ -435,16 +461,36 @@
                     "label": "Environmental Assessment"
                   },
                   {
+                    "concept": "d962b3ba-2ab5-46f4-8279-ac998d718aa9",
+                    "label": "Vocational Assessments"
+                  },
+                  {
+                    "concept": "b7e1e06a-29c7-431a-8f38-f4d34a782802",
+                    "label": "OT Driver Assessment"
+                  },
+                  {
                     "concept": "1c1ac853-b408-4790-9b9e-c6f3554fa923",
                     "label": "Assistive Technology Assessment"
+                  },
+                  {
+                    "concept": "2d62bc7c-7100-45e4-a692-164594d87cc3",
+                    "label": "School Placement Assessment"
                   },
                   {
                     "concept": "527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Splinting"
                   },
                   {
-                    "concept": "100e4aa2-2d05-404a-b965-b74126dcef1d",
+                    "concept": "340bbb18-79c7-48da-b8db-2258fd7b90fd",
+                    "label": "Assistive/Supportive/Corrective Devices provided"
+                  },
+                  {
+                    "concept": "2f56c9ba-ea4e-4cf3-8c37-7a57b8070a36",
                     "label": "Activities of Daily Living Training"
+                  },
+                  {
+                    "concept": "d0b11428-0595-455b-8697-047641506ae1",
+                    "label": " Oral motor facilitation"
                   },
                   {
                     "concept": "3edd6779-c379-4b5e-be87-c79fdeef7299",
@@ -459,6 +505,14 @@
                     "label": "Multi sensory screening"
                   },
                   {
+                    "concept": "b6cc7f3c-8c3d-4cf0-931c-2fe1939dab3a",
+                    "label": "Wheel Chair Service Delivery"
+                  },
+                  {
+                    "concept": "3b1604ac-c5bd-4ec2-9d90-e2ec8967d7ed",
+                    "label": "Clubfoot Management"
+                  },
+                  {
                     "concept": "310807e9-5b47-4007-8d8c-68828855ba4f",
                     "label": "Therapeutic Activities"
                   },
@@ -469,6 +523,10 @@
                   {
                     "concept": "160130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Vocational Training"
+                  },
+                  {
+                    "concept": "57984b5f-0d86-480d-b0ad-91be76ba43f2",
+                    "label": "Sensory Integration"
                   },
                   {
                     "concept": "164518AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -495,8 +553,20 @@
                     "label": "Group Psychotherapy"
                   },
                   {
+                    "concept": "55860f3e-1d26-47ae-adb9-aeab41fba893",
+                    "label": "Life  Skills Training"
+                  },
+                  {
                     "concept": "079eb3c7-ae85-4d6c-84b0-d015836f810e",
                     "label": "Health Education/ Patient Education"
+                  },
+                  {
+                    "concept": "7715e974-22d4-4f53-b08f-2c0cc97d461f",
+                    "label": "Prevocational Training"
+                  },
+                  {
+                    "concept": "b7b11646-f1fb-4215-ac09-c44cad885a73",
+                    "label": "Renal rehabilitation"
                   },
                   {
                     "concept": "95f73a05-7c52-4a8d-b3b1-f632a41d065d",
@@ -511,8 +581,20 @@
                     "label": "Therapeutic play"
                   },
                   {
+                    "concept": "817dcb19-1440-4fe2-8928-f9a9f0b05a8d",
+                    "label": "AT products and user training"
+                  },
+                  {
                     "concept": "161625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "OT in critical care"
+                  },
+                  {
+                    "concept": "55e4a71f-cc4d-4c15-b620-4715a29c3917",
+                    "label": "OT in Oncology and palliative care"
+                  },
+                  {
+                    "concept": "7d945bc1-1c00-4f27-9558-b9edcb088010",
+                    "label": "OT Wellness activities"
                   },
                   {
                     "concept": "cda613c9-dd03-405a-af7c-c44212b08586",
@@ -523,8 +605,8 @@
                     "label": "Teletherapy"
                   },
                   {
-                    "concept": "163579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Fine and gross motor skills training"
+                    "concept": "04efee10-d791-439c-82de-2892f94e1b76",
+                    "label": "Disability mainstreamimg activities"
                   },
                   {
                     "concept": "160563AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -537,153 +619,61 @@
                   {
                     "concept": "1692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Discharge on recovery"
-                  },
-                  {
-                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Other"
                   }
                 ]
               }
             },
             {
-              "label": "Other (Specify)",
-              "type": "obs",
-              "id": "otherTherapiesOrderd",
+              "label": "Non-Pharms",
+              "id": "medicalsupplyordersWorkspaceLauncher",
               "questionOptions": {
-                "rendering": "text",
-                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add Medical Supply order",
+                "workspaceName": "add-medicalsupply-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(otIntervention) || !arrayContains(otIntervention, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                "hideWhenExpression": "visitTo === '167050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || investigationOrderd !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
-              "label": "Assistive technology (AT)",
-              "type": "obs",
-              "id": "assistiveTechnology",
+              "label": "Prescribe drug",
+              "required": false,
+              "id": "drugsWorkspaceLauncher",
               "questionOptions": {
-                "concept": "164204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "None"
-                  },
-                  {
-                    "concept": "01022add-be7e-41e7-bd57-4cf0e7ff72cd",
-                    "label": "Inclusive Play Therapy",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  },
-                  {
-                    "concept": "165424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Cognitive/Intellectual",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  },
-                  {
-                    "concept": "87cf8a94-eb27-4e77-a992-a1af8e66a770",
-                    "label": "Communication",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  },
-                  {
-                    "concept": "7989d8ed-abf9-42f3-816b-c0e69406cd03",
-                    "label": "Self Care",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  },
-                  {
-                    "concept": "42539c7d-ea40-430b-a925-d361585342c4",
-                    "label": "Hearing Devices",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  },
-                  {
-                    "concept": "2a030791-14b4-4996-95ad-39c54b25f2b6",
-                    "label": "Physical",
-                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-                  }
-                ]
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Prescribe drugs",
+                "workspaceName": "add-drug-order"
               }
             },
             {
-              "label": "Where were therapeutic play services offered?",
-              "type": "obs",
-              "id": "whereServicesOffered",
+              "label": "Procedure Orders",
+              "id": "proceduresWorkspaceLauncher",
               "questionOptions": {
-                "concept": "164406AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "radio",
-                "answers": [
-                  {
-                    "concept": "1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Facility"
-                  },
-                  {
-                    "concept": "160545AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Community Outreach"
-                  }
-                ]
-              }
-            },
-            {
-              "label": "Therapeutic play interventions and Evaluation",
-              "type": "obs",
-              "id": "therapeuticInterventions",
-              "questionOptions": {
-                "concept": "548f648f-d33a-497d-b16b-9d3c81b2b2e2",
-                "rendering": "checkbox",
-                "answers": [
-                  {
-                    "concept": "3bb25381-cc9c-4082-8965-fa00df0f1aff",
-                    "label": "Evaluation using play"
-                  },
-                  {
-                    "concept": "163579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Fine motor play"
-                  },
-                  {
-                    "concept": "160047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Concentration play"
-                  },
-                  {
-                    "concept": "d28b0df2-6a0a-48a9-8f2e-5cbc8ef0d72a",
-                    "label": "Vestibular stimulation play"
-                  },
-                  {
-                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Other"
-                  }
-                ]
-              }
-            },
-            {
-              "label": "Other (Specify)",
-              "type": "obs",
-              "id": "otherTherapeuticPlayInterventions",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              },
-              "hide": {
-                "hideWhenExpression": "isEmpty(therapeuticInterventions) || !arrayContains(therapeuticInterventions, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add Procedures  order",
+                "workspaceName": "add-procedures-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
               }
             },
             {
               "label": "Remarks",
               "type": "obs",
-              "id": "remarks",
+             
+              "id": "genExamFindings",
               "questionOptions": {
-                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "1391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "textarea"
-              },
-              "validators": []
-            }
-            
-          ]
-        },
-        {
-          "label": "Patient Outcome",
-          "isExpanded": "true",
-          "questions": [
+              }
+            },
             {
-              "label": "Patient Outcome ",
+              "label": "Visit Outcome ",
               "type": "obs",
+              "required": "true",
               "id": "outcomePatient",
               "questionOptions": {
                 "concept": "160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -694,7 +684,7 @@
                     "label": "Released Home"
                   },
                   {
-                    "concept": "77eafb3f-58d3-4397-a6dc-d2c06e9062f3",
+                    "concept": "1654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "Admit"
                   },
                   {
@@ -709,7 +699,7 @@
               }
             },
             {
-              "label": "Appointments",
+              "label": "Next Appointment",
               "required": false,
               "id": "appointmentWorkspaceLauncher",
               "questionOptions": {
@@ -718,7 +708,7 @@
                 "workspaceName": "appointments-form-workspace"
               },
               "hide": {
-                "hideWhenExpression": "outcomePatient !=='160429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                "hideWhenExpression": "outcomePatient !== '160429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && outcomePatient !== '1693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -726,7 +716,7 @@
               "type": "obs",
               "id": "refferalsOrderd",
               "questionOptions": {
-                "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "rendering": "textarea"
               },
               "hide": {
@@ -748,10 +738,6 @@
                   {
                     "concept": "163266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "This health facility"
-                  },
-                  {
-                    "concept": "4fcf003e-71cf-47a5-a967-47d24aa61092",
-                    "label": "Community Health Unit"
                   }
                 ]
               },
@@ -772,15 +758,94 @@
               }
             },
             {
-              "label": "Service Referred for:",
+              "label": "Department referred to",
               "type": "obs",
-              "id": "thisfacility",
+              "id": "departmentSpecify",
               "questionOptions": {
-                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "text"
+                "rendering": "checkbox",
+                "concept": "160478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "160454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Ophthalmology (Eye)Clinic"
+                  },
+                  {
+                    "concept": "160455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Ear, Nose, and Throat(ENT)Clinic"
+                  },
+                  {
+                    "concept": "2a030791-14b4-4996-95ad-39c54b25f2b6",
+                    "label": "Physiotherapy clinic"
+                  },
+                  {
+                    "concept": "164164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Surgical Outpatient Clinic"
+                  },
+                  {
+                    "concept": "160457AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Paediatrics clinics"
+                  },
+                  {
+                    "concept": "1d7d7c76-d807-4f33-8c7e-2531e28126ed",
+                    "label": "Maxillofacial Clinic"
+                  },
+                  {
+                    "concept": "160448AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Medical Outpatient clinic"
+                  },
+                  {
+                    "concept": "66710a6d-5894-4f7d-a874-b449df77314d",
+                    "label": "Oncology Clinic"
+                  },
+                  {
+                    "concept": "30aff715-92de-4662-aa33-fa6b6179fed0",
+                    "label": "Dental clinic"
+                  },
+                  {
+                    "concept": "160475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Renal Clinic"
+                  },
+                  {
+                    "concept": "5489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mental Health"
+                  },
+                  {
+                    "concept": "160460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dermatology Clinic"
+                  },
+                  {
+                    "concept": "164103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diabetic Clinic"
+                  },
+                  {
+                    "concept": "c2f85aed-695f-49b1-973e-002c37cbdebf",
+                    "label": "Occupational Therapy Clinic"
+                  },
+                  {
+                    "concept": "160465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Orthopaedic Clinic"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Others specify"
+                  }
+                ]
               },
               "hide": {
                 "hideWhenExpression": "referralTo !=='163266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Specify other",
+              "type": "obs",
+              "id": "otherTransferto",
+              "questionOptions": {
+                "concept": "160948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(departmentSpecify) || !arrayContains(departmentSpecify, '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
               }
             }
           ]
@@ -813,7 +878,7 @@
                     ]
                   },
                   "hide": {
-                    "hideWhenExpression": "outcomePatient !=='77eafb3f-58d3-4397-a6dc-d2c06e9062f3'"
+                    "hideWhenExpression": "outcomePatient !=='1654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   "validators": []
                 },
@@ -833,7 +898,7 @@
                     }
                   },
                   "hide": {
-                    "hideWhenExpression": "outcomePatient !=='77eafb3f-58d3-4397-a6dc-d2c06e9062f3'"
+                    "hideWhenExpression": "outcomePatient !=='1654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 }
               ]

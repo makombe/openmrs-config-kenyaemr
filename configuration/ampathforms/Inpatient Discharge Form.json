@@ -521,7 +521,7 @@
               "questionOptions": {
                 "rendering": "workspace-launcher",
                 "buttonLabel": "Add appointments",
-                "workspaceName": "appointments-form-workspace"
+                "workspaceName": "discharge-appointment-form-workspace"
               },
               "hide": {
                 "hideWhenExpression": "isEmpty(dischargeStatus) || dischargeStatus !=='162677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && dischargeStatus !=='160483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"

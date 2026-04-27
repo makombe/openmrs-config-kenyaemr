@@ -1,12 +1,12 @@
 {
-    "name": "Gastroenterology Clinic Visit",
-    "description": "Gastroenterology Clinic Visit Form",
-    "version": "2.1",
-    "published": true,
-    "uuid": "6b4fa553-f2b3-47d0-a4c5-fc11f38b0b24",
+  "name": "Hearing Screening Clinical Encounter Form",
+   "description": "A form for collecting hearing screening data",
+  "version": "1.0",
+  "published": true,
+   "uuid": "284b6038-d86e-4bdd-83ba-edd89a05cbc0",
     "retired": false,
-    "encounter": "Consultation",
-    "pages": [
+  "encounter": "Hearing Screening Clinic",
+  "pages": [
     {
       "label": "Patient Details",
       "sections": [
@@ -20,8 +20,7 @@
               "required": "true",
               "id": "encDate",
               "questionOptions": {
-                "rendering": "date",
-                "readOnly": "true"
+                "rendering": "date"
               },
               "validators": [
                 {
@@ -133,7 +132,7 @@
               "type": "obs",
               "id": "reasonVisit",
               "questionOptions": {
-                "rendering": "radio",
+                "rendering": "select",
                 "concept": "4b59ac07-cf72-4f46-b8c0-4f62b1779f7e",
                 "answers": [
                   {
@@ -179,6 +178,49 @@
               "validators": [],
               "hide": {
                 "hideWhenExpression": "reasonVisit !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Site of screening done?",
+              "type": "obs",
+              "required": true,
+              "id": "siteOfScreeningDone",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "a69f18da-54ae-4a14-b040-bc9e03f835fc",
+                "answers": [
+                  {
+                    "concept": "1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Facility based"
+                  },
+                  {
+                    "concept": "159928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "School based"
+                  },
+                  {
+                    "concept": "4fcf003e-71cf-47a5-a967-47d24aa61092",
+                    "label": "Community health Unit (Outreach/EARC/Household)"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Mode of communication",
+              "type": "obs",
+              "id": "modeOfCommunication",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "163787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Verbal Communication"
+                  },
+                  {
+                    "concept": "159928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Non-verbal communication"
+                  }
+                ]
               }
             }
           ]
@@ -250,12 +292,142 @@
               }
             },
             {
-              "label": "Social history",
+              "label": "Presence of  any neonatal risk factor?",
               "type": "obs",
-              "id": "socialHis",
+              "id": "presenceRiskFactor",
               "questionOptions": {
-                "concept": "162143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "rendering": "textarea"
+                "rendering": "checkbox",
+                "concept": "165430AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "113841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Prematurity"
+                  },
+                  {
+                    "concept": "120129AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Congenital anomalies"
+                  },
+                  {
+                    "concept": "115368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Neonatal jaundice"
+                  },
+                  {
+                    "concept": "115763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Birth asphyxia"
+                  },
+                  {
+                    "concept": "116222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Low Birth Weight"
+                  },
+                  {
+                    "concept": "115835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Meningitis"
+                  },
+                  {
+                    "concept": "133671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mumps"
+                  },
+                  {
+                    "concept": "134561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Measles"
+                  },
+                  {
+                    "concept": "5355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Toxoplasmosis"
+                  },
+                  {
+                    "concept": "113205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rubella"
+                  },
+                  {
+                    "concept": "142963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cytomegalovirus infection"
+                  },
+                  {
+                    "concept": "138706AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Herpes Simplex"
+                  },
+                  {
+                    "concept": "1169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "HIV"
+                  },
+                  {
+                    "concept": "112493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Syphilis"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Presence of comobidities /risk factors",
+              "type": "obs",
+              "id": "presenceOfComobidities",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "162747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "117086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Recurrent ear infections"
+                  },
+                  {
+                    "concept": "117087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Chronic ear disease"
+                  },
+                  {
+                    "concept": "140903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Noise exposure"
+                  },
+                  {
+                    "concept": "119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diabetes"
+                  },
+                  {
+                    "concept": "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "HTN"
+                  },
+                  {
+                    "concept": "112141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "TB"
+                  },
+                  {
+                    "concept": "148117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Autoimmune diseases"
+                  },
+                  {
+                    "concept": "116838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Head injury"
+                  },
+                  {
+                    "concept": "1169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "HIV"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Maternal vaccination for rubella?",
+              "type": "obs",
+              "id": "maternalVaccinationForRubella",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "36AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
               },
               "validators": [],
               "hide": {
@@ -272,19 +444,51 @@
               }
             },
             {
-              "label": "Impression",
-              "id": "clinicalDiagnosisId",
-              "type": "diagnosis",
+              "label": "Outcome of first screening(Newborn screening only)",
+              "type": "obs",
+              "required": true,
+              "id": "outcomeOf1Screening",
               "questionOptions": {
-                "rendering": "repeating",
-                "dataSource": "diagnoses",
-                "rank": 1,
-                "datasource": {
-                  "name": "diagnoses",
-                  "config": {
-                    "conceptSourceUuid": "39ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+                "rendering": "radio",
+                "concept": "162737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pass"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fail"
                   }
-                }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "visitType !== '164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Outcome of second screening (Newborn Screening only)",
+              "type": "obs",
+              "required": true,
+              "id": "outcomeOfSecondScreening",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pass"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fail"
+                  }
+                ]
+              },
+              "validators": [],
+              "hide": {
+                "hideWhenExpression": "visitType !== '160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -686,5 +890,8 @@
       ]
     }
   ],
-    "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8"
-  }
+  "processor": "EncounterFormProcessor",
+  "encounterType": "9c015ff8-8c5d-42bc-8ebd-dc7ea01e19d3",
+  "referencedForms": []
+ 
+}

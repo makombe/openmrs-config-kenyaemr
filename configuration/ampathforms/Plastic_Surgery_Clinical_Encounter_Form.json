@@ -1,12 +1,11 @@
 {
-    "name": "Gastroenterology Clinic Visit",
-    "description": "Gastroenterology Clinic Visit Form",
-    "version": "2.1",
-    "published": true,
-    "uuid": "6b4fa553-f2b3-47d0-a4c5-fc11f38b0b24",
-    "retired": false,
-    "encounter": "Consultation",
-    "pages": [
+  "name": "Plastic Surgery Clinical Encounter Form",
+   "description": "A form used to capture Plastic surgery data",
+  "version": "1.1",
+   "published": true,
+ "uuid": "782af868-6759-43b4-92cf-126a34a9b078",
+  "encounter": "Plastic Surgery Clinic",
+  "pages": [
     {
       "label": "Patient Details",
       "sections": [
@@ -686,5 +685,9 @@
       ]
     }
   ],
-    "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8"
-  }
+  "processor": "EncounterFormProcessor",
+  "encounterType": "5748bd8a-06bf-41a0-88df-16eed290db21",
+  "referencedForms": []
+  
+ 
+}

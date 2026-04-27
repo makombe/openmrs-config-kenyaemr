@@ -1,12 +1,11 @@
 {
-    "name": "Gastroenterology Clinic Visit",
-    "description": "Gastroenterology Clinic Visit Form",
-    "version": "2.1",
-    "published": true,
-    "uuid": "6b4fa553-f2b3-47d0-a4c5-fc11f38b0b24",
-    "retired": false,
-    "encounter": "Consultation",
-    "pages": [
+  "name": "Therapeutic Play Encounter Form",
+ "description": "A form used to capture Therapeutic data",
+  "version": "1.0",
+   "published": true,
+  "uuid": "8424097e-2d07-4ce7-b231-617bf4c7c6a6",
+  "encounter": "Therapeutic Play",
+  "pages": [
     {
       "label": "Patient Details",
       "sections": [
@@ -106,10 +105,7 @@
                 "concept": "160338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "conceptMappings": [],
                 "answers": [
-                  {
-                    "concept": "1175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "NA"
-                  },
+                 
                   {
                     "concept": "164407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "label": "From other facilities"
@@ -126,6 +122,46 @@
               },
               "hide": {
                 "hideWhenExpression": "isEmpty(visitReferral) || visitReferral !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Client is currently enrolled in an institution?",
+              "type": "obs",
+             
+              "id": "enrolledS",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "5629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "In school"
+                  },
+                  {
+                    "concept": "164212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Out of school"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Place play services offered",
+              "type": "obs",
+              "id": "playOffered",
+             
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "fd58ef5b-9585-4035-a0a8-a0f8ca79557e",
+                "answers": [
+                  {
+                    "concept": "1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Facility"
+                  },
+                  {
+                    "concept": "5e579e0d-eb90-407b-bf36-e0631809303c",
+                    "label": "Outside the facillity"
+                  }
+                ]
               }
             },
             {
@@ -427,6 +463,86 @@
               }
             },
             {
+              "label": "Therapeutic play Intervention & evaluation",
+              "type": "obs",
+              "required": "true",
+              "id": "treatmentIntervention",
+              "questionOptions": {
+                "rendering": "multiCheckbox",
+                "concept": "772703c2-3915-4fbe-aa07-42bb66b9d6d8",
+                "answers": [
+                  {
+                    "concept": "2babb345-c356-4ab3-81b8-5013c8224c82",
+                    "label": " Evaluation using play"
+                  },
+                  {
+                    "concept": "de2c116b-268c-4b1b-bbcd-f152f7f45cbb",
+                    "label": "Tactile play"
+                  },
+                  {
+                    "concept": "0b0d257b-0a7e-465e-8c24-ad19d66113b9",
+                    "label": "Fine motor play"
+                  },
+                  {
+                    "concept": "cad81a1d-9f30-4dd3-a15e-26e9f81853fb",
+                    "label": "Social interaction play"
+                  },
+                  {
+                    "concept": "9a40cbcb-70ea-4da2-b91e-faa871b2aa96",
+                    "label": "Gross motor play"
+                  },
+                  {
+                    "concept": "143e8874-64ce-4bb7-b444-d2751f1e8def",
+                    "label": "Concentration play"
+                  },
+                  {
+                    "concept": "d7ecb0fd-85d7-4b74-a863-8fea5d38a035",
+                    "label": "Visual motor play"
+                  },
+                  {
+                    "concept": "da99a310-7661-4809-b068-75ab5a21bb51",
+                    "label": "Bilateral activity play"
+                  },
+                  {
+                    "concept": "b32d90f5-4935-4c64-87ea-164e2a0b04ee",
+                    "label": "Therapist directed play"
+                  },
+                  {
+                    "concept": "4559eadc-356a-4f4d-bb2b-efa466eefc30",
+                    "label": "Communication play"
+                  },
+                  {
+                    "concept": "4e2a6d6b-f90d-4467-bcd5-48fac69ad501",
+                    "label": "Position through play"
+                  },
+                  {
+                    "concept": "2458ba8e-4520-42dc-b452-71ec40fb296e",
+                    "label": "Oral motor play"
+                  },
+                  {
+                    "concept": "df1f92df-f6b1-4a20-982c-e05c3cd584f5",
+                    "label": " Vestibular stimulation play"
+                  },
+                  {
+                    "concept": "22f80d6e-a784-4a1f-b3ed-dd39c69be8ee",
+                    "label": "Health education in therapeutic play"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Assistive Technology Prescribed and issue",
+              "id": "medicalsupplyordersWorkspaceLauncher",
+              "questionOptions": {
+                "rendering": "workspace-launcher",
+                "buttonLabel": "Add Medical Supply order",
+                "workspaceName": "add-medicalsupply-order",
+                "additionalProps": {
+                  "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
+                }
+              }
+            },
+            {
               "label": "Prescribe drug",
               "required": false,
               "id": "drugsWorkspaceLauncher",
@@ -446,6 +562,15 @@
                 "additionalProps": {
                   "orderTypeUuid": "52a447d3-a64a-11e3-9aeb-50e549534c5e"
                 }
+              }
+            },
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "genExamFindings",
+              "questionOptions": {
+                "concept": "1391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "textarea"
               }
             },
             {
@@ -686,5 +811,9 @@
       ]
     }
   ],
-    "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8"
-  }
+  "processor": "EncounterFormProcessor",
+  "encounterType": "0623ef8d-4374-41c3-a425-90add8fcc568",
+  "referencedForms": []
+ 
+  
+}

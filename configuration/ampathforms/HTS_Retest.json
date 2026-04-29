@@ -1050,7 +1050,7 @@
                   "id": "kitName",
                   "validators": [],
                   "hide": {
-                    "hideWhenExpression": "isEmpty(consentGiven) || consentGiven !== 'true' || age <= 10"
+                    "hideWhenExpression": "isEmpty(consentGiven) || consentGiven !== 'true' || age <10"
                   }
                 },
                 {

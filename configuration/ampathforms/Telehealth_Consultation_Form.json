@@ -376,14 +376,9 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(bpStatus) || bpStatus === '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || isEmpty(myValue) && myValue && (sysBPAvg >= 140 || diasBPAvg >= 90)"
+                "hideWhenExpression": "isEmpty(bpStatus) || bpStatus === '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
-              "validators": [
-                {
-                  "type": "js_expression",
-                  "hideWhenExpression": "isEmpty(myValue) && myValue && (sysBPAvg >= 140 || diasBPAvg < 90)"
-                }
-              ]
+              "validators": []
             },
             {
               "label": "Hypertensive Emergency Symptoms (past 72 hours, acute & severe)",

@@ -239,8 +239,11 @@
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   }
                 ]
-              }
-            },
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(hospitalized) || hospitalized !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+            }
+          },
             {
               "label": "Add any other relevant description of the reason for hospitalization",
               "type": "obs",
@@ -286,7 +289,10 @@
                 "rendering": "workspace-launcher",
                 "buttonLabel": "Add Allergies",
                 "workspaceName": "conditions-form-workspace"
-              }
+              },
+              "hide": {
+                "hideWhenExpression": "isEmpty(medicationAdherence) || medicationAdherence !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+            }
             }
           ]
         },
@@ -370,8 +376,14 @@
                 ]
               },
               "hide": {
-                "hideWhenExpression": "isEmpty(bpStatus) || bpStatus === '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-              }
+                "hideWhenExpression": "isEmpty(bpStatus) || bpStatus === '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || isEmpty(myValue) && myValue && (sysBPAvg >= 140 || diasBPAvg >= 90)"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "hideWhenExpression": "isEmpty(myValue) && myValue && (sysBPAvg >= 140 || diasBPAvg < 90)"
+                }
+              ]
             },
             {
               "label": "Hypertensive Emergency Symptoms (past 72 hours, acute & severe)",

@@ -49,7 +49,8 @@
     "@kenyaemr/esm-facility-dashboard-app": "next",
     "@kenyaemr/esm-express-workflow-app": "next",
     "@kenyaemr/esm-stock-management-app": "next",
-    "@kenyaemr/esm-ward-app": "next"
+    "@kenyaemr/esm-ward-app": "next",
+    "@kenyaemr/esm-patient-growth-chart-app": "next"
 
   },
   "spaPath": "/openmrs/spa",

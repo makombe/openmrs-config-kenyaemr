@@ -1,8 +1,7 @@
 name: HIE ASSET UPDATE
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches: [main]
   release:
     types: [published]

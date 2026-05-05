@@ -4,8 +4,7 @@ permissions:
   actions: write
   
 on:
-  pull_request:
-    types: [opened, reopened, synchronize, labeled]
+  push:
     branches: [main]
   release:
     types: [published]
@@ -72,13 +71,22 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v2
   
-        - name: Invoke workflow without inputs. Don't wait for result
+        - name: Trigger QA workflow
           uses: aurelien-baudet/workflow-dispatch@v2
           with:
             workflow: Deployin_to_stagin_server
-            repo: Palladium-hub//openmrs-config-kenyaemr
+            repo: Palladium-hub/openmrs-config-kenyaemr
             token: ${{ secrets.PERSONAL_TOKENS }}
             wait-for-completion: false
+
+        - name: Trigger HIE workflow
+          uses: aurelien-baudet/workflow-dispatch@v2
+          with:
+            workflow: HIE ASSET UPDATE
+            repo: Palladium-hub/openmrs-config-kenyaemr
+            token: ${{ secrets.PERSONAL_TOKENS }}
+            wait-for-completion: false
+            
   release:
     runs-on: ubuntu-latest
     needs: build_and_deploy

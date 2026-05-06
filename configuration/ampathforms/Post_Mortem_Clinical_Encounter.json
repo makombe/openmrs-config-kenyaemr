@@ -1,9 +1,9 @@
 {
-    "name": "Post-Mortem Form",
+    "name": "Post-Mortem Clinical Form",
     "description": "A form for used to in the examination of a body after death.",
     "version": "1.0",
     "published": true,
-    "uuid": "2b61a73-4971-4fc0-b20b-9a30176317e2",
+    "uuid": "016beec1-edff-4293-b3ed-817c7dddaa93",
     "retired": false,
     "encounter": "Post-Mortem",
     "pages": [
@@ -511,6 +511,6 @@
       }
     ],
     "processor": "EncounterFormProcessor",
-    "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
+    "encounterType": "32b61a73-4971-4fc0-b20b-9a30176317e2",
     "referencedForms": []
   }

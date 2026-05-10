@@ -55,8 +55,7 @@
     "@kenyaemr/esm-stock-management-app": "next",
     "@kenyaemr/esm-version-app": "next",
     "@kenyaemr/esm-ward-app": "next",
-    "@kenyaemr/esm-appointments-app": "next",
-    "@kenyaemr/esm-patient-growth-chart-app": "next"
+    "@kenyaemr/esm-appointments-app": "next"
   },
   "spaPath": "/openmrs/spa",
   "apiUrl": "/openmrs",

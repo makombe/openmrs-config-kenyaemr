@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_openmrs_esm_service_queues_app=globalThis.webpackChunk_openmrs_esm_service_queues_app||[]).push([["5553"],{7992(e,s,u){u.r(s),u.d(s,{default:()=>_});var n=u(33291),a=u.n(n),r=u(14657);let _=function(){return a().createElement(r.LeftNavMenu,null)}}}]);

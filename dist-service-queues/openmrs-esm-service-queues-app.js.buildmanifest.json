@@ -1,338 +1,40 @@
 {
   "chunks": [
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 36924,
-      "sizes": {
-        "javascript": 36924
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "89.js"
-      ],
-      "auxiliaryFiles": [
-        "89.js.map"
-      ],
-      "hash": "c02040af99233926",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 84824,
-      "sizes": {
-        "javascript": 84824
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "348.js"
-      ],
-      "auxiliaryFiles": [
-        "348.js.map"
-      ],
-      "hash": "51d47f16df0c82ea",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 109051,
-      "sizes": {
-        "javascript": 109051
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "370.js"
-      ],
-      "auxiliaryFiles": [
-        "370.js.map"
-      ],
-      "hash": "98ff5769941609a4",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
       "reason": "split chunk (cache group: default)",
-      "size": 52749,
+      "size": 27597,
       "sizes": {
-        "javascript": 52749
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "714.js"
-      ],
-      "auxiliaryFiles": [
-        "714.js.map"
-      ],
-      "hash": "7a2346260624d3e2",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "723.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "422114d032275380",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 9116,
-      "sizes": {
-        "javascript": 9116
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "795.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "8f5e266fb93bdeae",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "890.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "e9fc60e2e0b38a1f",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "986.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "fee0656c52904b33",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "1119.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "4fa288f677559fc2",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 23495,
-      "sizes": {
-        "javascript": 23495
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "1151.js"
-      ],
-      "auxiliaryFiles": [
-        "1151.js.map"
-      ],
-      "hash": "c248523d13b1f8c9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 17976,
-      "sizes": {
-        "javascript": 17976
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "1176.js"
-      ],
-      "auxiliaryFiles": [
-        "1176.js.map"
-      ],
-      "hash": "9f6f8c49022ba2b3",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8638,
-      "sizes": {
-        "javascript": 8638
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "1197.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "935ebaac17877602",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: defaultVendors)",
-      "size": 88746,
-      "sizes": {
-        "javascript": 88746
+        "javascript": 27597
       },
       "names": [],
       "idHints": [
-        "vendors"
+        ""
       ],
       "runtime": [
         "@openmrs/esm-service-queues-app",
         "main"
       ],
       "files": [
-        "1239.js"
+        "106.js"
       ],
       "auxiliaryFiles": [
-        "1239.js.map"
+        "106.js.map"
       ],
-      "hash": "cded00590cea6cb9",
+      "hash": "d760b6bfa8eb34b6",
       "childrenByOrder": {}
     },
     {
-      "rendered": false,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: default)",
-      "size": 42,
-      "sizes": {
-        "consume-shared": 42
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [],
-      "auxiliaryFiles": [],
-      "hash": "cccd2c72bb2f15fd",
-      "childrenByOrder": {}
-    },
-    {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 53064,
+      "size": 18384,
       "sizes": {
-        "javascript": 53064
+        "javascript": 18384
       },
       "names": [],
       "idHints": [],
@@ -341,22 +43,48 @@
         "main"
       ],
       "files": [
-        "1638.js"
+        "1093.js"
       ],
       "auxiliaryFiles": [
-        "1638.js.map"
+        "1093.js.map"
       ],
-      "hash": "e73d390b0859ee71",
+      "hash": "21b665afe8c52b5a",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
+      "size": 199694,
       "sizes": {
-        "javascript": 8634
+        "javascript": 199694
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "1251.js"
+      ],
+      "auxiliaryFiles": [
+        "1251.js.map"
+      ],
+      "hash": "a823c0e4f78d1045",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 1115,
+      "sizes": {
+        "javascript": 1115
       },
       "names": [],
       "idHints": [],
@@ -365,68 +93,69 @@
         "main"
       ],
       "files": [
-        "2146.js"
+        "1295.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "079b45f331ade175",
+      "auxiliaryFiles": [
+        "1295.js.map"
+      ],
+      "hash": "fa18cee33cf65abd",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 14260,
+      "sizes": {
+        "javascript": 14260
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "1480.js"
+      ],
+      "auxiliaryFiles": [
+        "1480.js.map"
+      ],
+      "hash": "7f7492bc312ea95a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
       "rendered": false,
       "initial": false,
       "entry": false,
-      "recorded": false,
       "reason": "split chunk (cache group: default)",
       "size": 42,
       "sizes": {
         "consume-shared": 42
       },
       "names": [],
-      "idHints": [],
+      "idHints": [
+        ""
+      ],
       "runtime": [
         "@openmrs/esm-service-queues-app",
         "main"
       ],
       "files": [],
       "auxiliaryFiles": [],
-      "hash": "5f2469b5d613c395",
+      "hash": "a296fa75259047ff",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: defaultVendors)",
-      "size": 25608,
+      "size": 9486,
       "sizes": {
-        "javascript": 25608
-      },
-      "names": [],
-      "idHints": [
-        "vendors"
-      ],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "2372.js"
-      ],
-      "auxiliaryFiles": [
-        "2372.js.map"
-      ],
-      "hash": "64939d610e6fd88a",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 34723,
-      "sizes": {
-        "javascript": 34723
+        "javascript": 9486
       },
       "names": [],
       "idHints": [],
@@ -435,166 +164,23 @@
         "main"
       ],
       "files": [
-        "2470.js"
+        "1646.js"
       ],
       "auxiliaryFiles": [
-        "2470.js.map"
+        "1646.js.map"
       ],
-      "hash": "30d271a8512660f3",
+      "hash": "ce082bb5f29f9781",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 9131,
-      "sizes": {
-        "javascript": 9131
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "2690.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "7b6b83c8c5f93009",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 29737,
-      "sizes": {
-        "javascript": 29737
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "2726.js"
-      ],
-      "auxiliaryFiles": [
-        "2726.js.map"
-      ],
-      "hash": "834df6e05eb8d7fa",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 77717,
-      "sizes": {
-        "javascript": 77717
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "2799.js"
-      ],
-      "auxiliaryFiles": [
-        "2799.js.map"
-      ],
-      "hash": "3dc574b0021ae10a",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: defaultVendors)",
-      "size": 314795,
-      "sizes": {
-        "javascript": 314795
-      },
-      "names": [],
-      "idHints": [
-        "vendors"
-      ],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "2913.js"
-      ],
-      "auxiliaryFiles": [
-        "2913.js.map"
-      ],
-      "hash": "de9cd83e47c68522",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 155545,
-      "sizes": {
-        "javascript": 155545
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3050.js"
-      ],
-      "auxiliaryFiles": [
-        "3050.js.map"
-      ],
-      "hash": "f6543a34c36a622e",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 9603,
-      "sizes": {
-        "javascript": 9603
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3099.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "1e26a6bd7e08f0a9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
       "reason": "split chunk (cache group: defaultVendors)",
-      "size": 137481,
+      "size": 26267,
       "sizes": {
-        "javascript": 137481
+        "javascript": 26267
       },
       "names": [],
       "idHints": [
@@ -605,741 +191,42 @@
         "main"
       ],
       "files": [
-        "3144.js"
+        "1744.js"
       ],
       "auxiliaryFiles": [
-        "3144.js.map"
+        "1744.js.map"
       ],
-      "hash": "a31620b83aff87dd",
+      "hash": "da5fc6549539c30a",
       "childrenByOrder": {}
     },
     {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 89468,
-      "sizes": {
-        "javascript": 89468
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3344.js"
-      ],
-      "auxiliaryFiles": [
-        "3344.js.map"
-      ],
-      "hash": "88e104f843db9cab",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 91368,
-      "sizes": {
-        "javascript": 91368
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3386.js"
-      ],
-      "auxiliaryFiles": [
-        "3386.js.map"
-      ],
-      "hash": "2e8363884abd46b4",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3584.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "77292a190eef980f",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: default)",
-      "size": 278354,
-      "sizes": {
-        "javascript": 278354
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3683.js"
-      ],
-      "auxiliaryFiles": [
-        "3683.js.map"
-      ],
-      "hash": "74bcf72552af55aa",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 4982,
-      "sizes": {
-        "javascript": 4982
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3728.js"
-      ],
-      "auxiliaryFiles": [
-        "3728.js.map"
-      ],
-      "hash": "49afb0e6614022f3",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 1060,
-      "sizes": {
-        "javascript": 1060
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "3922.js"
-      ],
-      "auxiliaryFiles": [
-        "3922.js.map"
-      ],
-      "hash": "77378b986c6629c9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 7120,
-      "sizes": {
-        "javascript": 7120
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4041.js"
-      ],
-      "auxiliaryFiles": [
-        "4041.js.map"
-      ],
-      "hash": "688afca5f8d4a582",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 10471,
-      "sizes": {
-        "javascript": 10471
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4055.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "159cedce0c313b84",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8683,
-      "sizes": {
-        "javascript": 8683
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4132.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "c90d25e72bc8909d",
-      "childrenByOrder": {}
-    },
-    {
+      "type": "chunk",
       "rendered": false,
       "initial": false,
       "entry": false,
-      "recorded": false,
       "reason": "split chunk (cache group: default)",
-      "size": 84,
-      "sizes": {
-        "consume-shared": 84
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [],
-      "auxiliaryFiles": [],
-      "hash": "d3d1d6b53c6612b9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8730,
-      "sizes": {
-        "javascript": 8730
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4300.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "5695d9fbda10cc76",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8893,
-      "sizes": {
-        "javascript": 8893
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4335.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "01582c8f0b0b3f60",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 47509,
-      "sizes": {
-        "javascript": 47509
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4597.js"
-      ],
-      "auxiliaryFiles": [
-        "4597.js.map"
-      ],
-      "hash": "b1a2945498cb1ba8",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4618.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "03a5e5a54abd579f",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8418,
-      "sizes": {
-        "javascript": 8418
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4652.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "5cbf4536680a97d8",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": true,
-      "entry": true,
-      "recorded": false,
-      "size": 21666,
-      "sizes": {
-        "javascript": 42,
-        "share-init": 294,
-        "runtime": 21330
-      },
-      "names": [
-        "@openmrs/esm-service-queues-app"
-      ],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app"
-      ],
-      "files": [
-        "openmrs-esm-service-queues-app.js"
-      ],
-      "auxiliaryFiles": [
-        "openmrs-esm-service-queues-app.js.map"
-      ],
-      "hash": "b6c3e0a6627e71a2",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 23239,
-      "sizes": {
-        "javascript": 23239
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4890.js"
-      ],
-      "auxiliaryFiles": [
-        "4890.js.map"
-      ],
-      "hash": "8bb3f07e865361d7",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4944.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "b44595322f091f5b",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 202,
-      "sizes": {
-        "javascript": 202
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "4984.js"
-      ],
-      "auxiliaryFiles": [
-        "4984.js.map"
-      ],
-      "hash": "f2d5fb4eda71c124",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: default)",
-      "size": 71099,
-      "sizes": {
-        "javascript": 71099
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5070.js"
-      ],
-      "auxiliaryFiles": [
-        "5070.js.map"
-      ],
-      "hash": "3958a07c310a9b32",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5173.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "1c72bfecadd1371b",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 157309,
-      "sizes": {
-        "javascript": 157309
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5228.js"
-      ],
-      "auxiliaryFiles": [
-        "5228.js.map"
-      ],
-      "hash": "800c36a3635d776c",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5241.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "6560c6f33647fa70",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": false,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: default)",
       "size": 42,
       "sizes": {
         "consume-shared": 42
       },
       "names": [],
-      "idHints": [],
+      "idHints": [
+        ""
+      ],
       "runtime": [
         "@openmrs/esm-service-queues-app",
         "main"
       ],
       "files": [],
       "auxiliaryFiles": [],
-      "hash": "197049ded8dee003",
+      "hash": "021f60679e191874",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5442.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "bad7140672bcb129",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: default)",
-      "size": 125368,
-      "sizes": {
-        "javascript": 125368
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5578.js"
-      ],
-      "auxiliaryFiles": [
-        "5578.js.map"
-      ],
-      "hash": "34143a87cf599e5f",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 7322,
-      "sizes": {
-        "javascript": 7322
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5661.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "6c83db46da6646bf",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: defaultVendors)",
-      "size": 2778178,
-      "sizes": {
-        "javascript": 2778178
-      },
-      "names": [],
-      "idHints": [
-        "vendors"
-      ],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5680.js"
-      ],
-      "auxiliaryFiles": [
-        "5680.js.map"
-      ],
-      "hash": "cb0db74cc10c6aa9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 87317,
-      "sizes": {
-        "javascript": 87317
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5702.js"
-      ],
-      "auxiliaryFiles": [
-        "5702.js.map"
-      ],
-      "hash": "60b3ec247fb8d31c",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 27139,
-      "sizes": {
-        "javascript": 27139
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "5967.js"
-      ],
-      "auxiliaryFiles": [
-        "5967.js.map"
-      ],
-      "hash": "175c67dbdcaebe27",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 9442,
-      "sizes": {
-        "javascript": 9442
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "6022.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "4d88a2feb3c94046",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: defaultVendors)",
       "size": 29620,
       "sizes": {
         "javascript": 29620
@@ -1353,22 +240,22 @@
         "main"
       ],
       "files": [
-        "6336.js"
+        "1789.js"
       ],
       "auxiliaryFiles": [
-        "6336.js.map"
+        "1789.js.map"
       ],
-      "hash": "1c59cd02d1034a1d",
+      "hash": "28dc7f8a79f3ba89",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 55280,
+      "size": 9486,
       "sizes": {
-        "javascript": 55280
+        "javascript": 9486
       },
       "names": [],
       "idHints": [],
@@ -1377,22 +264,22 @@
         "main"
       ],
       "files": [
-        "6381.js"
+        "1869.js"
       ],
       "auxiliaryFiles": [
-        "6381.js.map"
+        "1869.js.map"
       ],
-      "hash": "64cbfdec33d2171d",
+      "hash": "baf18e54f4e9dbc3",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 9214,
+      "size": 10090,
       "sizes": {
-        "javascript": 9214
+        "javascript": 10090
       },
       "names": [],
       "idHints": [],
@@ -1401,486 +288,25 @@
         "main"
       ],
       "files": [
-        "6468.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "280cc12ca08c819c",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 9152,
-      "sizes": {
-        "javascript": 9152
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "6679.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "115af56445b4f6ea",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "6840.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "96986542a63a7214",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "6859.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "ccbaf80c0f98b3ca",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 66152,
-      "sizes": {
-        "javascript": 66152
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7067.js"
+        "1877.js"
       ],
       "auxiliaryFiles": [
-        "7067.js.map"
+        "1877.js.map"
       ],
-      "hash": "1449254cae359541",
+      "hash": "ca511c77f66eadd5",
       "childrenByOrder": {}
     },
     {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7097.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "04c08202e5679db2",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8654,
-      "sizes": {
-        "javascript": 8654
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7159.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "6c1625db280f1d0f",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 5419,
-      "sizes": {
-        "javascript": 5419
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7491.js"
-      ],
-      "auxiliaryFiles": [
-        "7491.js.map"
-      ],
-      "hash": "550a72d5f553510c",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7617.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "139cf20083220695",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 5018,
-      "sizes": {
-        "javascript": 5018
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7618.js"
-      ],
-      "auxiliaryFiles": [
-        "7618.js.map"
-      ],
-      "hash": "06761997e5618666",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: defaultVendors)",
-      "size": 4308705,
-      "sizes": {
-        "javascript": 4308705
-      },
-      "names": [],
-      "idHints": [
-        "vendors"
-      ],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7706.js"
-      ],
-      "auxiliaryFiles": [
-        "7706.js.map"
-      ],
-      "hash": "e5a91249bfb1b33a",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: defaultVendors)",
-      "size": 145025,
-      "sizes": {
-        "javascript": 145025
-      },
-      "names": [],
-      "idHints": [
-        "vendors"
-      ],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "7756.js"
-      ],
-      "auxiliaryFiles": [
-        "7756.js.map"
-      ],
-      "hash": "8caad69193eb94d9",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": false,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: default)",
-      "size": 42,
-      "sizes": {
-        "consume-shared": 42
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [],
-      "auxiliaryFiles": [],
-      "hash": "9947a50c9023a777",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8163.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "f859105b87604c30",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8349.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "78ac5aabb0c5aa80",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "split chunk (cache group: default)",
-      "size": 199850,
-      "sizes": {
-        "javascript": 199850
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8370.js"
-      ],
-      "auxiliaryFiles": [
-        "8370.js.map"
-      ],
-      "hash": "14a6bf98d4c6a8c2",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": false,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "reason": "reused as split chunk (cache group: default)",
-      "size": 42,
-      "sizes": {
-        "consume-shared": 42
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [],
-      "auxiliaryFiles": [],
-      "hash": "97291fcf9e18630b",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 24004,
-      "sizes": {
-        "javascript": 24004
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8561.js"
-      ],
-      "auxiliaryFiles": [
-        "8561.js.map"
-      ],
-      "hash": "d0a2d5f25c6c7c19",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8634,
-      "sizes": {
-        "javascript": 8634
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8618.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "aaf27c1ecfb6d156",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 8305,
-      "sizes": {
-        "javascript": 8305
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8645.js"
-      ],
-      "auxiliaryFiles": [
-        "8645.js.map"
-      ],
-      "hash": "f578c4f6a053ca29",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 13649,
-      "sizes": {
-        "javascript": 13649
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app",
-        "main"
-      ],
-      "files": [
-        "8694.js"
-      ],
-      "auxiliaryFiles": [
-        "8694.js.map"
-      ],
-      "hash": "095d7006af05fee7",
-      "childrenByOrder": {}
-    },
-    {
+      "type": "chunk",
       "rendered": true,
       "initial": true,
       "entry": true,
-      "recorded": false,
-      "size": 50708,
+      "size": 244497,
       "sizes": {
         "consume-shared": 126,
-        "javascript": 28499,
-        "share-init": 294,
-        "runtime": 21789
+        "javascript": 244077,
+        "runtime": 14651,
+        "share-init": 294
       },
       "names": [
         "main"
@@ -1895,17 +321,17 @@
       "auxiliaryFiles": [
         "main.js.map"
       ],
-      "hash": "3214ba245a466e82",
+      "hash": "8a00fd265909424b",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 55984,
+      "size": 18151,
       "sizes": {
-        "javascript": 55984
+        "javascript": 18151
       },
       "names": [],
       "idHints": [],
@@ -1914,22 +340,22 @@
         "main"
       ],
       "files": [
-        "8844.js"
+        "1974.js"
       ],
       "auxiliaryFiles": [
-        "8844.js.map"
+        "1974.js.map"
       ],
-      "hash": "eb511c3ebbca574d",
+      "hash": "f4a85812949678a5",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 9098,
+      "size": 9909,
       "sizes": {
-        "javascript": 9098
+        "javascript": 9909
       },
       "names": [],
       "idHints": [],
@@ -1938,43 +364,22 @@
         "main"
       ],
       "files": [
-        "9214.js"
-      ],
-      "auxiliaryFiles": [],
-      "hash": "29846251e5ddd317",
-      "childrenByOrder": {}
-    },
-    {
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "recorded": false,
-      "size": 28499,
-      "sizes": {
-        "javascript": 28499
-      },
-      "names": [],
-      "idHints": [],
-      "runtime": [
-        "@openmrs/esm-service-queues-app"
-      ],
-      "files": [
-        "9384.js"
+        "2150.js"
       ],
       "auxiliaryFiles": [
-        "9384.js.map"
+        "2150.js.map"
       ],
-      "hash": "6ef6a44b912d4fe9",
+      "hash": "4575e00c6b70b569",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 9720,
+      "size": 10114,
       "sizes": {
-        "javascript": 9720
+        "javascript": 10114
       },
       "names": [],
       "idHints": [],
@@ -1983,17 +388,421 @@
         "main"
       ],
       "files": [
-        "9538.js"
+        "2317.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "1f99cb508a422163",
+      "auxiliaryFiles": [
+        "2317.js.map"
+      ],
+      "hash": "153432972822d6e8",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 98761,
+      "sizes": {
+        "javascript": 98761
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2369.js"
+      ],
+      "auxiliaryFiles": [
+        "2369.js.map"
+      ],
+      "hash": "fe8f9c6b80d2cff9",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2416.js"
+      ],
+      "auxiliaryFiles": [
+        "2416.js.map"
+      ],
+      "hash": "da0468c835f3a82a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 36437,
+      "sizes": {
+        "javascript": 36437
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2433.js"
+      ],
+      "auxiliaryFiles": [
+        "2433.js.map"
+      ],
+      "hash": "5c70fc0b8c1b8358",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 114110,
+      "sizes": {
+        "javascript": 114110
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2471.js"
+      ],
+      "auxiliaryFiles": [
+        "2471.js.map"
+      ],
+      "hash": "bf0e038f1d0683dc",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 48275,
+      "sizes": {
+        "javascript": 48275
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "257.js"
+      ],
+      "auxiliaryFiles": [
+        "257.js.map"
+      ],
+      "hash": "56d401a6ce6a81cd",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 2819469,
+      "sizes": {
+        "javascript": 2819469
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2640.js"
+      ],
+      "auxiliaryFiles": [
+        "2640.js.map"
+      ],
+      "hash": "e7a58365c0089d6a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": false,
+      "initial": false,
+      "entry": false,
+      "size": 42,
+      "sizes": {
+        "consume-shared": 42
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [],
+      "auxiliaryFiles": [],
+      "hash": "7e9de1de5cfa90d0",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "282.js"
+      ],
+      "auxiliaryFiles": [
+        "282.js.map"
+      ],
+      "hash": "aba46c5475f31674",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 50003,
+      "sizes": {
+        "javascript": 50003
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2825.js"
+      ],
+      "auxiliaryFiles": [
+        "2825.js.map"
+      ],
+      "hash": "4e00c0fced79f1c2",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 44796,
+      "sizes": {
+        "javascript": 44796
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2853.js"
+      ],
+      "auxiliaryFiles": [
+        "2853.js.map"
+      ],
+      "hash": "168d74a47adad015",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "2881.js"
+      ],
+      "auxiliaryFiles": [
+        "2881.js.map"
+      ],
+      "hash": "841d319234fb0ef9",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 40627,
+      "sizes": {
+        "javascript": 40627
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3049.js"
+      ],
+      "auxiliaryFiles": [
+        "3049.js.map"
+      ],
+      "hash": "578a4341f0501aca",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 200767,
+      "sizes": {
+        "javascript": 200767
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3211.js"
+      ],
+      "auxiliaryFiles": [
+        "3211.js.map"
+      ],
+      "hash": "e8d4795779e66a5e",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 17941,
+      "sizes": {
+        "javascript": 17941
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3311.js"
+      ],
+      "auxiliaryFiles": [
+        "3311.js.map"
+      ],
+      "hash": "2fac12944cd31fea",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3378.js"
+      ],
+      "auxiliaryFiles": [
+        "3378.js.map"
+      ],
+      "hash": "945190bfd69644fa",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 15926,
+      "sizes": {
+        "javascript": 15926
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3580.js"
+      ],
+      "auxiliaryFiles": [
+        "3580.js.map"
+      ],
+      "hash": "17ae7a748dadde89",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
       "reason": "split chunk (cache group: defaultVendors)",
       "size": 254166,
       "sizes": {
@@ -2008,22 +817,22 @@
         "main"
       ],
       "files": [
-        "9559.js"
+        "3598.js"
       ],
       "auxiliaryFiles": [
-        "9559.js.map"
+        "3598.js.map"
       ],
-      "hash": "ed8adba1de6ac10d",
+      "hash": "08c3240a1f4e4f75",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
+      "size": 13661,
       "sizes": {
-        "javascript": 8634
+        "javascript": 13661
       },
       "names": [],
       "idHints": [],
@@ -2032,20 +841,457 @@
         "main"
       ],
       "files": [
-        "9569.js"
+        "3706.js"
       ],
+      "auxiliaryFiles": [
+        "3706.js.map"
+      ],
+      "hash": "c1de4260824f5e71",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 2201,
+      "sizes": {
+        "javascript": 2201
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3720.js"
+      ],
+      "auxiliaryFiles": [
+        "3720.js.map"
+      ],
+      "hash": "9c5685f38574e4d2",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 69946,
+      "sizes": {
+        "javascript": 69946
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3733.js"
+      ],
+      "auxiliaryFiles": [
+        "3733.js.map"
+      ],
+      "hash": "eb6c81af5cbbdae3",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 1503,
+      "sizes": {
+        "javascript": 1503
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3735.js"
+      ],
+      "auxiliaryFiles": [
+        "3735.js.map"
+      ],
+      "hash": "d6fe7c41681831ee",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 10434,
+      "sizes": {
+        "javascript": 10434
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3963.js"
+      ],
+      "auxiliaryFiles": [
+        "3963.js.map"
+      ],
+      "hash": "d679b8ea515040bf",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 25608,
+      "sizes": {
+        "javascript": 25608
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "3989.js"
+      ],
+      "auxiliaryFiles": [
+        "3989.js.map"
+      ],
+      "hash": "a6cfe020f8b54e82",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 16467,
+      "sizes": {
+        "javascript": 16467
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4063.js"
+      ],
+      "auxiliaryFiles": [
+        "4063.js.map"
+      ],
+      "hash": "6a2c44aca3ab8b87",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4106.js"
+      ],
+      "auxiliaryFiles": [
+        "4106.js.map"
+      ],
+      "hash": "95d473b7d7e5a9f4",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 10420,
+      "sizes": {
+        "javascript": 10420
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4111.js"
+      ],
+      "auxiliaryFiles": [
+        "4111.js.map"
+      ],
+      "hash": "138dc2ff6f648514",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "434.js"
+      ],
+      "auxiliaryFiles": [
+        "434.js.map"
+      ],
+      "hash": "eb1b9476315da3f7",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 62554,
+      "sizes": {
+        "javascript": 62554
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4343.js"
+      ],
+      "auxiliaryFiles": [
+        "4343.js.map"
+      ],
+      "hash": "8bd35b8a39935dde",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4348.js"
+      ],
+      "auxiliaryFiles": [
+        "4348.js.map"
+      ],
+      "hash": "f9d519fba826c713",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4383.js"
+      ],
+      "auxiliaryFiles": [
+        "4383.js.map"
+      ],
+      "hash": "559af3a65c74c055",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 21013,
+      "sizes": {
+        "javascript": 21013
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4598.js"
+      ],
+      "auxiliaryFiles": [
+        "4598.js.map"
+      ],
+      "hash": "1d056a8821b91916",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4658.js"
+      ],
+      "auxiliaryFiles": [
+        "4658.js.map"
+      ],
+      "hash": "7c6fb0fe35bd1de6",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 7120,
+      "sizes": {
+        "javascript": 7120
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "466.js"
+      ],
+      "auxiliaryFiles": [
+        "466.js.map"
+      ],
+      "hash": "4463fce72d087a8f",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 35128,
+      "sizes": {
+        "javascript": 35128
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4661.js"
+      ],
+      "auxiliaryFiles": [
+        "4661.js.map"
+      ],
+      "hash": "533623297f7aea8a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "4928.js"
+      ],
+      "auxiliaryFiles": [
+        "4928.js.map"
+      ],
+      "hash": "fa7be8668ab56755",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": false,
+      "initial": false,
+      "entry": false,
+      "size": 42,
+      "sizes": {
+        "consume-shared": 42
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [],
       "auxiliaryFiles": [],
-      "hash": "91547a30c8e7cd0e",
+      "hash": "9e4235891f4bbd07",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 89191,
+      "size": 9479,
       "sizes": {
-        "javascript": 89191
+        "javascript": 9479
       },
       "names": [],
       "idHints": [],
@@ -2054,19 +1300,1096 @@
         "main"
       ],
       "files": [
-        "9707.js"
+        "5117.js"
       ],
       "auxiliaryFiles": [
-        "9707.js.map"
+        "5117.js.map"
       ],
-      "hash": "2875820d141006e8",
+      "hash": "32c9f4d22afbcbad",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
+      "size": 10006,
+      "sizes": {
+        "javascript": 10006
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5132.js"
+      ],
+      "auxiliaryFiles": [
+        "5132.js.map"
+      ],
+      "hash": "efd629d0be249b3f",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 11552,
+      "sizes": {
+        "javascript": 11552
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5145.js"
+      ],
+      "auxiliaryFiles": [
+        "5145.js.map"
+      ],
+      "hash": "acf77ad0348c8090",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 1759,
+      "sizes": {
+        "javascript": 1759
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5316.js"
+      ],
+      "auxiliaryFiles": [
+        "5316.js.map"
+      ],
+      "hash": "0ba077d1af5682c7",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5503.js"
+      ],
+      "auxiliaryFiles": [
+        "5503.js.map"
+      ],
+      "hash": "fe50fdee2761c791",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": false,
+      "initial": false,
+      "entry": false,
+      "size": 42,
+      "sizes": {
+        "consume-shared": 42
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [],
+      "auxiliaryFiles": [],
+      "hash": "17ac57e65ce6379b",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 211,
+      "sizes": {
+        "javascript": 211
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5553.js"
+      ],
+      "auxiliaryFiles": [
+        "5553.js.map"
+      ],
+      "hash": "5728768a758d78a5",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "556.js"
+      ],
+      "auxiliaryFiles": [
+        "556.js.map"
+      ],
+      "hash": "2d5ad1f370beee96",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9209,
+      "sizes": {
+        "javascript": 9209
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5644.js"
+      ],
+      "auxiliaryFiles": [
+        "5644.js.map"
+      ],
+      "hash": "489512b43925d254",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 8664,
+      "sizes": {
+        "javascript": 8664
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5894.js"
+      ],
+      "auxiliaryFiles": [
+        "5894.js.map"
+      ],
+      "hash": "a0424c7d2691993c",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 11604,
+      "sizes": {
+        "javascript": 11604
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "5940.js"
+      ],
+      "auxiliaryFiles": [
+        "5940.js.map"
+      ],
+      "hash": "e9fad0fe30771df4",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9930,
+      "sizes": {
+        "javascript": 9930
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6047.js"
+      ],
+      "auxiliaryFiles": [
+        "6047.js.map"
+      ],
+      "hash": "5c340ea3d879a85f",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 33029,
+      "sizes": {
+        "javascript": 33029
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6138.js"
+      ],
+      "auxiliaryFiles": [
+        "6138.js.map"
+      ],
+      "hash": "7d013554ebb00400",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 10939,
+      "sizes": {
+        "javascript": 10939
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6371.js"
+      ],
+      "auxiliaryFiles": [
+        "6371.js.map"
+      ],
+      "hash": "82bbcf8b606eb55a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6377.js"
+      ],
+      "auxiliaryFiles": [
+        "6377.js.map"
+      ],
+      "hash": "202bc8caab314c2a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9883,
+      "sizes": {
+        "javascript": 9883
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6444.js"
+      ],
+      "auxiliaryFiles": [
+        "6444.js.map"
+      ],
+      "hash": "63f7cb94d6961cf6",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 11403,
+      "sizes": {
+        "javascript": 11403
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6508.js"
+      ],
+      "auxiliaryFiles": [
+        "6508.js.map"
+      ],
+      "hash": "b4b52277ec640c76",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 8304,
+      "sizes": {
+        "javascript": 8304
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6623.js"
+      ],
+      "auxiliaryFiles": [
+        "6623.js.map"
+      ],
+      "hash": "bf25a573a22d8faf",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6724.js"
+      ],
+      "auxiliaryFiles": [
+        "6724.js.map"
+      ],
+      "hash": "e47c6850a55b1b49",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 22970,
+      "sizes": {
+        "javascript": 22970
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6775.js"
+      ],
+      "auxiliaryFiles": [
+        "6775.js.map"
+      ],
+      "hash": "f878d2edff4a9c57",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 137481,
+      "sizes": {
+        "javascript": 137481
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "689.js"
+      ],
+      "auxiliaryFiles": [
+        "689.js.map"
+      ],
+      "hash": "80d4557ad372ffca",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "6904.js"
+      ],
+      "auxiliaryFiles": [
+        "6904.js.map"
+      ],
+      "hash": "9015b320281a6a8d",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 10551,
+      "sizes": {
+        "javascript": 10551
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7045.js"
+      ],
+      "auxiliaryFiles": [
+        "7045.js.map"
+      ],
+      "hash": "b9ee617a483fd536",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 2276,
+      "sizes": {
+        "javascript": 2276
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "714.js"
+      ],
+      "auxiliaryFiles": [
+        "714.js.map"
+      ],
+      "hash": "2668e53672f6a854",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7175.js"
+      ],
+      "auxiliaryFiles": [
+        "7175.js.map"
+      ],
+      "hash": "171c1daaebdb0b01",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7182.js"
+      ],
+      "auxiliaryFiles": [
+        "7182.js.map"
+      ],
+      "hash": "f83152fe6dd3e663",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 8744,
+      "sizes": {
+        "javascript": 8744
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7296.js"
+      ],
+      "auxiliaryFiles": [
+        "7296.js.map"
+      ],
+      "hash": "f16f055e47834891",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": false,
+      "initial": false,
+      "entry": false,
+      "size": 42,
+      "sizes": {
+        "consume-shared": 42
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [],
+      "auxiliaryFiles": [],
+      "hash": "9acdde929a4ba7a4",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 215678,
+      "sizes": {
+        "expose": 42,
+        "javascript": 215342,
+        "runtime": 15200,
+        "share-init": 294
+      },
+      "names": [
+        "@openmrs/esm-service-queues-app"
+      ],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app"
+      ],
+      "files": [
+        "openmrs-esm-service-queues-app.js"
+      ],
+      "auxiliaryFiles": [
+        "openmrs-esm-service-queues-app.js.map"
+      ],
+      "hash": "c9c001bd3a63e957",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 28819,
+      "sizes": {
+        "consume-shared": 42,
+        "javascript": 28777
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app"
+      ],
+      "files": [
+        "7654.js"
+      ],
+      "auxiliaryFiles": [
+        "7654.js.map"
+      ],
+      "hash": "7d9434b5ea1cd77c",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 3599408,
+      "sizes": {
+        "javascript": 3599408
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7698.js"
+      ],
+      "auxiliaryFiles": [
+        "7698.js.map"
+      ],
+      "hash": "4d6f81a3ce21923d",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 52127,
+      "sizes": {
+        "javascript": 52127
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7719.js"
+      ],
+      "auxiliaryFiles": [
+        "7719.js.map"
+      ],
+      "hash": "aca80e4d5612791e",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9209,
+      "sizes": {
+        "javascript": 9209
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7742.js"
+      ],
+      "auxiliaryFiles": [
+        "7742.js.map"
+      ],
+      "hash": "ca81c3951fcc73cf",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 78545,
+      "sizes": {
+        "javascript": 78545
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7829.js"
+      ],
+      "auxiliaryFiles": [
+        "7829.js.map"
+      ],
+      "hash": "fb4a1a2898494316",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 10373,
+      "sizes": {
+        "javascript": 10373
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7912.js"
+      ],
+      "auxiliaryFiles": [
+        "7912.js.map"
+      ],
+      "hash": "45135a7e70515bcb",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 54086,
+      "sizes": {
+        "javascript": 54086
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "7953.js"
+      ],
+      "auxiliaryFiles": [
+        "7953.js.map"
+      ],
+      "hash": "7d62ea497568b4c6",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 66542,
+      "sizes": {
+        "javascript": 66542
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8010.js"
+      ],
+      "auxiliaryFiles": [
+        "8010.js.map"
+      ],
+      "hash": "592d0f1850fd770e",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8358.js"
+      ],
+      "auxiliaryFiles": [
+        "8358.js.map"
+      ],
+      "hash": "91fdf8a59e2bbf1a",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8359.js"
+      ],
+      "auxiliaryFiles": [
+        "8359.js.map"
+      ],
+      "hash": "499c1364fc782542",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 22371,
+      "sizes": {
+        "javascript": 22371
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8385.js"
+      ],
+      "auxiliaryFiles": [
+        "8385.js.map"
+      ],
+      "hash": "710fa6e7ec812169",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 8480,
+      "sizes": {
+        "javascript": 8480
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8585.js"
+      ],
+      "auxiliaryFiles": [
+        "8585.js.map"
+      ],
+      "hash": "7c3c214216b45aef",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8695.js"
+      ],
+      "auxiliaryFiles": [
+        "8695.js.map"
+      ],
+      "hash": "47a42dbebdb600a4",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 52917,
+      "sizes": {
+        "javascript": 52917
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8833.js"
+      ],
+      "auxiliaryFiles": [
+        "8833.js.map"
+      ],
+      "hash": "cc352abb769e7e03",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 125593,
+      "sizes": {
+        "javascript": 125593
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "8990.js"
+      ],
+      "auxiliaryFiles": [
+        "8990.js.map"
+      ],
+      "hash": "5a518500bae19d3d",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "903.js"
+      ],
+      "auxiliaryFiles": [
+        "903.js.map"
+      ],
+      "hash": "c4c8baf9d04e190e",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
       "reason": "split chunk (cache group: defaultVendors)",
       "size": 26475,
       "sizes": {
@@ -2081,22 +2404,22 @@
         "main"
       ],
       "files": [
-        "9876.js"
+        "9061.js"
       ],
       "auxiliaryFiles": [
-        "9876.js.map"
+        "9061.js.map"
       ],
-      "hash": "eccef9a42acdfe80",
+      "hash": "2d8f686635763d42",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 6500,
+      "size": 9486,
       "sizes": {
-        "javascript": 6500
+        "javascript": 9486
       },
       "names": [],
       "idHints": [],
@@ -2105,20 +2428,49 @@
         "main"
       ],
       "files": [
-        "9879.js"
+        "9072.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "8475305324c8fb93",
+      "auxiliaryFiles": [
+        "9072.js.map"
+      ],
+      "hash": "939a9ac3992dba2b",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
+      "reason": "split chunk (cache group: default)",
+      "size": 29908,
       "sizes": {
-        "javascript": 8634
+        "javascript": 29908
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9084.js"
+      ],
+      "auxiliaryFiles": [
+        "9084.js.map"
+      ],
+      "hash": "92576bbf34fae48b",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 20494,
+      "sizes": {
+        "javascript": 20494
       },
       "names": [],
       "idHints": [],
@@ -2127,20 +2479,102 @@
         "main"
       ],
       "files": [
-        "9895.js"
+        "9204.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "a46d7a5c27b96c90",
+      "auxiliaryFiles": [
+        "9204.js.map"
+      ],
+      "hash": "81c8d27868ca8dda",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
+      "reason": "split chunk (cache group: defaultVendors)",
+      "size": 21242,
       "sizes": {
-        "javascript": 8634
+        "javascript": 21242
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9412.js"
+      ],
+      "auxiliaryFiles": [
+        "9412.js.map"
+      ],
+      "hash": "7ad164aa9332afd9",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 314795,
+      "sizes": {
+        "javascript": 314795
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9712.js"
+      ],
+      "auxiliaryFiles": [
+        "9712.js.map"
+      ],
+      "hash": "99353c2f87530fb5",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "reason": "split chunk (cache group: default)",
+      "size": 27429,
+      "sizes": {
+        "javascript": 27429
+      },
+      "names": [],
+      "idHints": [
+        ""
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9721.js"
+      ],
+      "auxiliaryFiles": [
+        "9721.js.map"
+      ],
+      "hash": "ff19b957b3fbd7cb",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9909,
+      "sizes": {
+        "javascript": 9909
       },
       "names": [],
       "idHints": [],
@@ -2149,20 +2583,48 @@
         "main"
       ],
       "files": [
-        "9900.js"
+        "9769.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "b349baf08555d109",
+      "auxiliaryFiles": [
+        "9769.js.map"
+      ],
+      "hash": "2b6463d3cf434560",
       "childrenByOrder": {}
     },
     {
+      "type": "chunk",
       "rendered": true,
       "initial": false,
       "entry": false,
-      "recorded": false,
-      "size": 8634,
+      "size": 34723,
       "sizes": {
-        "javascript": 8634
+        "javascript": 34723
+      },
+      "names": [],
+      "idHints": [
+        "vendors"
+      ],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9771.js"
+      ],
+      "auxiliaryFiles": [
+        "9771.js.map"
+      ],
+      "hash": "8991d21bec9a973e",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 9486,
+      "sizes": {
+        "javascript": 9486
       },
       "names": [],
       "idHints": [],
@@ -2171,10 +2633,36 @@
         "main"
       ],
       "files": [
-        "9913.js"
+        "9806.js"
       ],
-      "auxiliaryFiles": [],
-      "hash": "4532c88a56846e14",
+      "auxiliaryFiles": [
+        "9806.js.map"
+      ],
+      "hash": "d7da803c5918e52d",
+      "childrenByOrder": {}
+    },
+    {
+      "type": "chunk",
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 17050,
+      "sizes": {
+        "javascript": 17050
+      },
+      "names": [],
+      "idHints": [],
+      "runtime": [
+        "@openmrs/esm-service-queues-app",
+        "main"
+      ],
+      "files": [
+        "9982.js"
+      ],
+      "auxiliaryFiles": [
+        "9982.js.map"
+      ],
+      "hash": "c5e4329a2e0e1b42",
       "childrenByOrder": {}
     }
   ]

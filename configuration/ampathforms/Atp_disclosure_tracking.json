@@ -215,6 +215,60 @@
                 "hideWhenExpression": "isEmpty(childKnowHIVStatus) || childKnowHIVStatus !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "label": "If no, does the child know they have an illness?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nurse"
+                  },
+                  {
+                    "concept": "1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinician"
+                  },
+                  {
+                    "concept": "166512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peer Educator"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Menoter mother"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "cadreA",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre-otherA",
+              "label": "Cadre other",
+              "hide": {
+                "hideWhenExpression": "isEmpty(cadreA) || cadreA !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "departmentA",
+              "label": "Department"
             }
           ]
         }
@@ -358,6 +412,79 @@
               },
               "id": "otherwhyNoDiscussionSpecify",
               "label": "Other specify"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "8e3af23c-cb62-45f8-96e3-e590672efa59",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              },
+              "id": "haveFullDisclosure",
+              "label": "Does the child have full disclosure?"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nurse"
+                  },
+                  {
+                    "concept": "1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinician"
+                  },
+                  {
+                    "concept": "166512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peer Educator"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Menoter mother"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "cadreB",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre-otherB",
+              "label": "Cadre other",
+              "hide": {
+                "hideWhenExpression": "isEmpty(cadreB) || cadreB !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "departmentB",
+              "label": "Department"
             }
           ]
         }
@@ -391,7 +518,10 @@
                 ]
               },
               "id": "placleOfDisclosure",
-              "label": "Place where full disclosure occurred"
+              "label": "Place where full disclosure occurred",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -410,6 +540,9 @@
                 ]
               },
               "id": "isDateOfDisclosureKnown",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
               "required": "true",
               "label": "Is the date of disclosure known?"
             },
@@ -462,7 +595,10 @@
                 ]
               },
               "id": "WhoConductedFullDisclosure",
-              "label": " Who conducted full disclosure?"
+              "label": " Who conducted full disclosure?",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -494,7 +630,10 @@
                 ]
               },
               "id": "natureOfDisclosure",
-              "label": "Nature of disclosure:"
+              "label": "Nature of disclosure:",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -503,7 +642,44 @@
                 "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "child’SReactionToFullDisclosure",
-              "label": "Child’s reaction to full disclosure"
+              "label": "Child’s reaction to full disclosure",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nurse"
+                  },
+                  {
+                    "concept": "1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinician"
+                  },
+                  {
+                    "concept": "166512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peer Educator"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Menoter mother"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "cadreC",
+              "label": "Cadre",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -512,8 +688,11 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre",
-              "label": "Cadre"
+              "id": "cadre-otherC",
+              "label": "Cadre other",
+              "hide": {
+                "hideWhenExpression": "isEmpty(cadreC) || cadreC !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -522,8 +701,11 @@
                 "maxLength": "100",
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "department",
-              "label": "Department"
+              "id": "departmentC",
+              "label": "Department",
+              "hide": {
+                "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
         }
@@ -822,6 +1004,60 @@
               },
               "id": "whoElseHasBeenToldTheChildHivStatus",
               "label": "Who else has been told the child HIV status"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nurse"
+                  },
+                  {
+                    "concept": "1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinician"
+                  },
+                  {
+                    "concept": "166512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peer Educator"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Menoter mother"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "cadreD",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "cadre-otherD",
+              "label": "Cadre other",
+              "hide": {
+                "hideWhenExpression": "isEmpty(cadreD) || cadreD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "departmentD",
+              "label": "Department"
             }
           ]
         }

@@ -1,6 +1,6 @@
 {
   "name": "ATP Disclosure Readiness Assessment",
-  "encounter":"ATP Disclosure Readiness Assessment",
+  "encounter": "ATP Disclosure Readiness Assessment",
   "published": true,
   "retired": false,
   "uuid": "d11c340d-defb-443f-b7de-e81dc87060a4",
@@ -50,7 +50,7 @@
           ]
         },
         {
-          "label": "This form will be completed wih the caregiver every 6 months during regular scheduled visits for adolescents who have not reached full disclosure. Adolescents who have not reached full dislcosure should not be present during interview.",
+          "label": "This form will be completed with the caregiver every 6 months during regular scheduled visits for adolescents who have not reached full disclosure. Adolescents who have not reached full disclosure should not be present during interview.",
           "isExpanded": "true",
           "questions": [
             {
@@ -599,19 +599,27 @@
                 "answers": [
                   {
                     "concept": "137793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Why they take medicine "
+                    "label": "Why they take medicine ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "4b90b73a-ad11-4650-91b0-baea131974e0",
-                    "label": "When they will stop medicine "
+                    "label": "When they will stop medicine ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "163560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Why others not taking medicine "
+                    "label": "Why others not taking medicine ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Other "
+                    "label": "Other ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 ]
               },
@@ -658,7 +666,10 @@
               },
               "id": "caregiverAnswer",
               "required": "true",
-              "label": "How did the caregiver answer?"
+              "label": "How did the caregiver answer?",
+              "hide": {
+                "hideWhenExpression": "isEmpty(questionsChildAsk) || arrayContains(questionsChildAsk,'1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+              }
             },
             {
               "type": "obs",
@@ -836,16 +847,23 @@
                 "concept": "7af21f8a-a51d-435c-a434-e62e07104b90",
                 "answers": [
                   {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
                     "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Child will not cope well"
+                    "label": "Child will not cope well",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "163475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Child will blame parent "
+                    "label": "Child will blame parent ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "other, specify "
+                    "label": "other, specify ",
+                    "disableWhenExpression": "myValue === '1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 ]
               },
@@ -962,12 +980,46 @@
             {
               "type": "obs",
               "questionOptions": {
+                "rendering": "select",
+                "concept": "1783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "1577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nurse"
+                  },
+                  {
+                    "concept": "1574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinician"
+                  },
+                  {
+                    "concept": "166512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peer Educator"
+                  },
+                  {
+                    "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Menoter mother"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "cadre",
+              "label": "Cadre"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
                 "rendering": "text",
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre",
-              "label": "Cadre"
+              "id": "cadre-other",
+              "label": "Cadre other",
+              "hide": {
+                "hideWhenExpression": "isEmpty(cadre) || cadre !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "type": "obs",
@@ -987,5 +1039,4 @@
   "processor": "EncounterFormProcessor",
   "encounterType": "465a92f2-baf8-42e9-9612-53064be868e8",
   "referencedForms": []
-  
 }

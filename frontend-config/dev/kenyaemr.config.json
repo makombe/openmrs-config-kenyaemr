@@ -150,7 +150,7 @@
         "id": "psychiatry-clinic",
         "title": "Psychiatry",
         "formUuid": "1fbd26f1-0478-437c-be1e-b8468bd03ffa",
-        "encounterTypeUuid": "49da00fd-5b62-437a-a2d4-a28b3d22fa27"
+        "encounterTypeUuid": "7671cc06-b852-46e6-a279-afc8e2343a04"
       },
       {
         "id": "renal-clinic",
@@ -287,8 +287,20 @@
       {
         "id": "plastic-surgery-clinic",
         "title": "Plastic surgery",
-        "formUuid": "05365b29-0bf1-4351-a2fb-524ec72130e8",
-        "encounterTypeUuid": "5ee93f48-960b-11ec-b909-0242ac120002"
+        "formUuid": "782af868-6759-43b4-92cf-126a34a9b078",
+        "encounterTypeUuid": "5748bd8a-06bf-41a0-88df-16eed290db21"
+      },
+      {
+        "id": "hearing-screening-clinic",
+        "title": "Hearing Screening",
+        "formUuid": "284b6038-d86e-4bdd-83ba-edd89a05cbc0",
+        "encounterTypeUuid": "9c015ff8-8c5d-42bc-8ebd-dc7ea01e19d3"
+      },
+      {
+        "id": "therapeutic-play-clinic",
+        "title": "Therapeutic Play",
+        "formUuid": "8424097e-2d07-4ce7-b231-617bf4c7c6a6",
+        "encounterTypeUuid": "0623ef8d-4374-41c3-a425-90add8fcc568"
       }
     ]
   },

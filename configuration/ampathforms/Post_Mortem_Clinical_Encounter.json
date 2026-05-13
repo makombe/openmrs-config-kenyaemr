@@ -460,15 +460,6 @@
           "isExpanded": "true",
           "questions": [
               {
-                "label": "Attachments",
-                "id": "suPPortDocs",
-                "questionOptions": {
-                    "rendering": "workspace-launcher",
-                    "buttonLabel": "Add An Attachment",
-                    "workspaceName": "patient-attachments"
-                }
-              },
-              {
                 "label": "Death Certificate No.",
                 "type": "obs",
                 "id": "deathCertificateNo",

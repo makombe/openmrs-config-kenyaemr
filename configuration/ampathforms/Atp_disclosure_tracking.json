@@ -641,7 +641,7 @@
                 "rendering": "textarea",
                 "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "child’SReactionToFullDisclosure",
+              "id": "childSReactionToFullDisclosure",
               "label": "Child’s reaction to full disclosure",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -688,7 +688,7 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre-otherC",
+              "id": "cadreotherC",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreC) || cadreC !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -1043,8 +1043,8 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre-otherD",
-              "label": "Cadre other",
+              "id": "cadreotherD",
+              "label": "Other cadre ",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreD) || cadreD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }

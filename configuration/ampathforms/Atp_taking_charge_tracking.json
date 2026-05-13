@@ -383,8 +383,8 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre-other",
-              "label": "Cadre other",
+              "id": "cadreother",
+              "label": "Other Cadre ",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadre) || cadre !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }

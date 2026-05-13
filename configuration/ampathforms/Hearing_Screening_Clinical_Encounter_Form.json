@@ -1,10 +1,10 @@
 {
   "name": "Hearing Screening Clinical Encounter Form",
-   "description": "A form for collecting hearing screening data",
+  "description": "A form for collecting hearing screening data",
   "version": "1.0",
   "published": true,
-   "uuid": "284b6038-d86e-4bdd-83ba-edd89a05cbc0",
-    "retired": false,
+  "uuid": "284b6038-d86e-4bdd-83ba-edd89a05cbc0",
+  "retired": false,
   "encounter": "Hearing Screening Clinic",
   "pages": [
     {
@@ -893,5 +893,4 @@
   "processor": "EncounterFormProcessor",
   "encounterType": "9c015ff8-8c5d-42bc-8ebd-dc7ea01e19d3",
   "referencedForms": []
- 
 }

@@ -1,9 +1,10 @@
 {
   "name": "Plastic Surgery Clinical Encounter Form",
-   "description": "A form used to capture Plastic surgery data",
+  "description": "A form used to capture Plastic surgery data",
   "version": "1.1",
-   "published": true,
- "uuid": "782af868-6759-43b4-92cf-126a34a9b078",
+  "published": true,
+  "uuid": "782af868-6759-43b4-92cf-126a34a9b078",
+  "retired": false,
   "encounter": "Plastic Surgery Clinic",
   "pages": [
     {
@@ -688,6 +689,4 @@
   "processor": "EncounterFormProcessor",
   "encounterType": "5748bd8a-06bf-41a0-88df-16eed290db21",
   "referencedForms": []
-  
- 
 }

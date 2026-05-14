@@ -11579,9 +11579,9 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 294220,
+      "size": 294232,
       "sizes": {
-        "javascript": 170401,
+        "javascript": 170413,
         "consume-shared": 42,
         "css/mini-extract": 20746,
         "share-init": 42,
@@ -11596,12 +11596,12 @@
       ],
       "files": [
         "main.c9fedbf76d90aec0.css",
-        "main.837eff71a50de8c0.js"
+        "main.2ad8e64519090759.js"
       ],
       "auxiliaryFiles": [
-        "main.837eff71a50de8c0.js.map"
+        "main.2ad8e64519090759.js.map"
       ],
-      "hash": "3dace6e8c81cf61e",
+      "hash": "111fba8731218019",
       "childrenByOrder": {}
     },
     {
@@ -14976,7 +14976,7 @@
       "auxiliaryFiles": [
         "openmrs-esm-form-entry-app.js.map"
       ],
-      "hash": "c240c108ffde8130",
+      "hash": "0f94b5dd78f0274a",
       "childrenByOrder": {}
     },
     {
@@ -20192,9 +20192,9 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "size": 5975325,
+      "size": 5978735,
       "sizes": {
-        "javascript": 5975325
+        "javascript": 5978735
       },
       "names": [
         "bootstrap"
@@ -20205,12 +20205,12 @@
         "main"
       ],
       "files": [
-        "66159.be001368634b517e.js"
+        "66159.c331c566750dc05b.js"
       ],
       "auxiliaryFiles": [
-        "66159.be001368634b517e.js.map"
+        "66159.c331c566750dc05b.js.map"
       ],
-      "hash": "a5be186b6d76ef83",
+      "hash": "ee9537f96d8ab6d2",
       "childrenByOrder": {}
     },
     {
@@ -21896,7 +21896,7 @@
         "styles.c9fedbf76d90aec0.css"
       ],
       "auxiliaryFiles": [],
-      "hash": "efc5c0b07c0ee54f",
+      "hash": "0bb5aab83c1eecd7",
       "childrenByOrder": {}
     },
     {
@@ -27917,9 +27917,9 @@
       "initial": false,
       "entry": false,
       "recorded": false,
-      "size": 199902,
+      "size": 199914,
       "sizes": {
-        "javascript": 179114,
+        "javascript": 179126,
         "consume-shared": 42,
         "css/mini-extract": 20746
       },
@@ -27935,7 +27935,7 @@
       "auxiliaryFiles": [
         "90739.2f98b0e5d09a0741.js.map"
       ],
-      "hash": "d98c8edebdca399b",
+      "hash": "7f4965858c822df7",
       "childrenByOrder": {}
     },
     {

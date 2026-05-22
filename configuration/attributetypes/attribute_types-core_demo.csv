@@ -7,4 +7,4 @@ df0362f9-782e-4d92-8bb2-3112e9e9eb3c,,Visit,Is patient exempted,If a patient isn
 ccb79e92-3308-454b-a326-5cba26c86658,,Location,Ward Authorized Beds,Authorized beds capacity,0,1,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
 e1eb667a-918f-4877-befc-31e760a57804,,Location,Ward Authorized Cots,Authorized cots capacity,0,1,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
 1e7e4f1b-62b2-4506-b70a-9e8e4cfac1cd,,Location,Ward Authorized Incubators,Authorized incubators capacity,0,1,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
-
+a3f8c2d1-5b7e-4f93-8a6c-2e9d4b1c8f50,,Visit,Claim Scheme,Claim scheme visit attribute for tracking scheme (e.g. SHA UHC SHIF TSC POMSF),0,1,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,

@@ -236,7 +236,11 @@
                   },
                   {
                     "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Menoter mother"
+                    "label": "Mentor mother"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counsellor"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -254,7 +258,7 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre-otherA",
+              "id": "cadreotherA",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreA) || cadreA !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -263,12 +267,50 @@
             {
               "type": "obs",
               "questionOptions": {
+                "rendering": "select",
+                "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1acb3707-9e03-40e3-b157-ce28451c3fd0",
+                    "label": "MCH"
+                  },
+                  {
+                    "concept": "1744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "departmentA",
+              "label": "Department"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
                 "rendering": "text",
                 "maxLength": "100",
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "departmentA",
-              "label": "Department"
+              "id": "OtherdepartmentA",
+              "label": "Other department",
+              "hide": {
+                "hideWhenExpression": "isEmpty(departmentA) || departmentA !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
         }
@@ -452,7 +494,11 @@
                   },
                   {
                     "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Menoter mother"
+                    "label": "Mentor mother"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counsellor"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -470,7 +516,7 @@
                 "maxLength": "100",
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "cadre-otherB",
+              "id": "cadreotherB",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreB) || cadreB !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -479,12 +525,50 @@
             {
               "type": "obs",
               "questionOptions": {
+                "rendering": "select",
+                "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1acb3707-9e03-40e3-b157-ce28451c3fd0",
+                    "label": "MCH"
+                  },
+                  {
+                    "concept": "1744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "departmentB",
+              "label": "Department"
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
                 "rendering": "text",
                 "maxLength": "100",
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "departmentB",
-              "label": "Department"
+              "id": "OtherdepartmentB",
+              "label": "Other department",
+              "hide": {
+                "hideWhenExpression": "isEmpty(departmentB) || departmentB !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
         }
@@ -667,7 +751,11 @@
                   },
                   {
                     "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Menoter mother"
+                    "label": "Mentor mother"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counsellor"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -697,14 +785,52 @@
             {
               "type": "obs",
               "questionOptions": {
-                "rendering": "text",
-                "maxLength": "100",
-                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "rendering": "select",
+                "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1acb3707-9e03-40e3-b157-ce28451c3fd0",
+                    "label": "MCH"
+                  },
+                  {
+                    "concept": "1744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
               },
               "id": "departmentC",
               "label": "Department",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "text",
+                "maxLength": "100",
+                "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "OtherdepartmentC",
+              "label": "Other department",
+              "hide": {
+                "hideWhenExpression": "isEmpty(departmentC) || departmentC !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             }
           ]
@@ -1025,7 +1151,11 @@
                   },
                   {
                     "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Menoter mother"
+                    "label": "Mentor mother"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counsellor"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1044,10 +1174,45 @@
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "cadreotherD",
-              "label": "Other cadre ",
+              "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreD) || cadreD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1acb3707-9e03-40e3-b157-ce28451c3fd0",
+                    "label": "MCH"
+                  },
+                  {
+                    "concept": "1744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "departmentD",
+              "label": "Department"
             },
             {
               "type": "obs",
@@ -1056,8 +1221,11 @@
                 "maxLength": "100",
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "departmentD",
-              "label": "Department"
+              "id": "OtherdepartmentD",
+              "label": "Other department",
+              "hide": {
+                "hideWhenExpression": "isEmpty(departmentD) || departmentD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
         }

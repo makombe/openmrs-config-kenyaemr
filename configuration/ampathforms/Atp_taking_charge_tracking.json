@@ -365,7 +365,11 @@
                   },
                   {
                     "concept": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Menoter mother"
+                    "label": "Mentor mother"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counsellor"
                   },
                   {
                     "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -384,10 +388,45 @@
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "cadreother",
-              "label": "Other Cadre ",
+              "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadre) || cadre !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
+            },
+            {
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
+                    "label": "CCC"
+                  },
+                  {
+                    "concept": "160549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adolescent clinic"
+                  },
+                  {
+                    "concept": "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1acb3707-9e03-40e3-b157-ce28451c3fd0",
+                    "label": "MCH"
+                  },
+                  {
+                    "concept": "1744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "id": "department",
+              "label": "Department"
             },
             {
               "type": "obs",
@@ -396,9 +435,11 @@
                 "maxLength": "100",
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
-              "id": "department",
-              "required": true,
-              "label": "Department"
+              "id": "Otherdepartment",
+              "label": "Other department",
+              "hide": {
+                "hideWhenExpression": "isEmpty(department) || department !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             }
           ]
         }

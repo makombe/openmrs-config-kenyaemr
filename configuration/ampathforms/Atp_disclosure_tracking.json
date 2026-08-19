@@ -787,6 +787,7 @@
                 ]
               },
               "id": "cadreC",
+              "required":"true",
               "label": "Cadre",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -800,6 +801,7 @@
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "cadreotherC",
+              "required":"true",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreC) || cadreC !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -838,6 +840,7 @@
                 ]
               },
               "id": "departmentC",
+              "required":"true",
               "label": "Department",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -874,6 +877,7 @@
                 "concept": "5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "dateOfFollow-UpVisit",
+              "required":"true",
               "label": "Date of follow-up visit",
               "datePickerFormat": "calendar"
             }
@@ -894,6 +898,7 @@
               "questions": [
                 {
                   "label": "Behavior",
+                  "required":"true",
                   "type": "obs",
                   "id": "Behavior",
                   "questionOptions": {
@@ -918,6 +923,7 @@
                 {
                   "label": "Mood",
                   "type": "obs",
+                  "required":"true",
                   "id": "Mood",
                   "questionOptions": {
                     "concept": "167099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -941,6 +947,7 @@
                 {
                   "label": "Adherence",
                   "type": "obs",
+                  "required":"true",
                   "id": "adherence",
                   "questionOptions": {
                     "concept": "164425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -964,6 +971,7 @@
                 {
                   "label": "Interaction with caregiver",
                   "type": "obs",
+                  "required":"true",
                   "id": "InteractionWithCaregiver",
                   "questionOptions": {
                     "concept": "165995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1005,6 +1013,7 @@
                   "label": "Behavior",
                   "type": "obs",
                   "id": "BehaviorOfProvider",
+                  "required":"true",
                   "questionOptions": {
                     "concept": "1562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "rendering": "select",
@@ -1027,6 +1036,7 @@
                 {
                   "label": "Mood",
                   "type": "obs",
+                  "required":"true",
                   "id": "MoodOfProvider",
                   "questionOptions": {
                     "concept": "167099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1050,6 +1060,7 @@
                 {
                   "label": "Adherence",
                   "type": "obs",
+                  "required":"true",
                   "id": "adherenceProvider",
                   "questionOptions": {
                     "concept": "164425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1073,6 +1084,7 @@
                 {
                   "label": "Interaction with caregiver",
                   "type": "obs",
+                  "required":"true",
                   "id": "InteractionWithCaregiverProvider",
                   "questionOptions": {
                     "concept": "165995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1096,6 +1108,7 @@
                 {
                   "label": "Interaction with provider",
                   "type": "obs",
+                  "required":"true",
                   "id": "InteractionWithProvider",
                   "questionOptions": {
                     "concept": "163556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -1123,6 +1136,7 @@
                     "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   "id": "actionTakenAtVisit",
+                  "required":"true",
                   "label": "Action taken at visit"
                 },
                 {
@@ -1132,6 +1146,7 @@
                     "concept": "2ccab9de-33e3-4ec6-b739-e63a82d5643f"
                   },
                   "id": "actionPlanCaregiver",
+                  "required":"true",
                   "label": "Action plan(Caregiver)"
                 },
                 {
@@ -1141,6 +1156,7 @@
                     "concept": "8bae4986-6fc3-4e6f-a659-6a5cd5b19bd9"
                   },
                   "id": "actionPlanChild",
+                  "required":"true",
                   "label": "Action plan (Child)"
                 }
               ]
@@ -1152,6 +1168,7 @@
                 "concept": "163108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "whoElseHasBeenToldTheChildHivStatus",
+              "required":"true",
               "label": "Who else has been told the child HIV status"
             },
             {
@@ -1187,6 +1204,7 @@
                 ]
               },
               "id": "cadreD",
+              "required":"true",
               "label": "Cadre"
             },
             {
@@ -1197,6 +1215,7 @@
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "cadreotherD",
+              "required":"true",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreD) || cadreD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -1235,6 +1254,7 @@
                 ]
               },
               "id": "departmentD",
+              "required":"true",
               "label": "Department"
             },
             {
@@ -1245,6 +1265,7 @@
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "OtherdepartmentD",
+              "required":"true",
               "label": "Other department",
               "hide": {
                 "hideWhenExpression": "isEmpty(departmentD) || departmentD !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"

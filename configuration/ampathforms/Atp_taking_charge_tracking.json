@@ -378,6 +378,7 @@
                 ]
               },
               "id": "cadre",
+              "required": "true",
               "label": "Cadre"
             },
             {
@@ -398,6 +399,7 @@
               "questionOptions": {
                 "rendering": "select",
                 "concept": "164918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+
                 "answers": [
                   {
                     "concept": "4b1df788-6ba8-4e96-ac0e-0906875ffdc2",
@@ -426,6 +428,7 @@
                 ]
               },
               "id": "department",
+              "required": "true",
               "label": "Department"
             },
             {

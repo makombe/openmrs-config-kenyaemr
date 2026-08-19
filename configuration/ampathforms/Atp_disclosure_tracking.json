@@ -91,6 +91,7 @@
                 ]
               },
               "id": "primaryCaregiver",
+              "required": "true",
               "label": "Who is the child’s primary caregiver?"
             },
             {
@@ -103,6 +104,7 @@
                 "hideWhenExpression": "isEmpty(primaryCaregiver) || primaryCaregiver !== '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "id": "otherPrimaryCareGiver",
+              "required": "true",
               "label": "Other"
             },
             {
@@ -138,6 +140,7 @@
                 ]
               },
               "id": "whoBroughtChildToTheClinic",
+              "required": "true",
               "label": "Who brought child to clinic?"
             },
             {
@@ -150,6 +153,7 @@
                 "hideWhenExpression": "isEmpty(whoBroughtChildToTheClinic) || whoBroughtChildToTheClinic !== '5620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "id": "otherRelativeClinic",
+              "required": "true",
               "label": "Other specify"
             },
             {
@@ -169,6 +173,7 @@
                 ]
               },
               "id": "clinicReportChildKnowsStatus",
+              "required": "true",
               "label": "Does the clinic report the child knows they have HIV?"
             },
             {
@@ -192,6 +197,7 @@
                 ]
               },
               "id": "childKnowHIVStatus",
+              "required": "true",
               "label": "Does the child know they have HIV?"
             },
             {
@@ -211,6 +217,7 @@
                 ]
               },
               "id": "haveIllness",
+              "required": "true",
               "hide": {
                 "hideWhenExpression": "isEmpty(childKnowHIVStatus) || childKnowHIVStatus !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
@@ -249,6 +256,7 @@
                 ]
               },
               "id": "cadreA",
+              "required": "true",
               "label": "Cadre"
             },
             {
@@ -259,6 +267,7 @@
                 "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "cadreotherA",
+              "required": "true",
               "label": "Cadre other",
               "hide": {
                 "hideWhenExpression": "isEmpty(cadreA) || cadreA !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -297,6 +306,7 @@
                 ]
               },
               "id": "departmentA",
+              "required": "true",
               "label": "Department"
             },
             {
@@ -307,6 +317,7 @@
                 "concept": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "OtherdepartmentA",
+              "required": "true",
               "label": "Other department",
               "hide": {
                 "hideWhenExpression": "isEmpty(departmentA) || departmentA !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -352,6 +363,7 @@
                 ]
               },
               "id": "whyAreYouTakingYourMedicine",
+              "required": "true",
               "label": "Child response to “Why are you taking your medicine?"
             },
             {
@@ -375,6 +387,7 @@
                 "concept": "96bfe964-f54d-4a9a-978d-5d7d916d4097"
               },
               "id": "broughtChildToClinic",
+              "required": "true",
               "label": "Who brought child to clinic today? "
             },
             {
@@ -394,6 +407,7 @@
                 ]
               },
               "id": "disclosureCounselingDoneToday",
+              "required": "true",
               "label": "Disclosure counseling done today"
             },
             {
@@ -437,6 +451,7 @@
                 ]
               },
               "id": "ifNoDisclosureDiscussionIndicateWhy",
+              "required": "true",
               "hide": {
                 "hideWhenExpression": "isEmpty(disclosureCounselingDoneToday) || disclosureCounselingDoneToday !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
@@ -453,6 +468,7 @@
                 "hideWhenExpression": "isEmpty(ifNoDisclosureDiscussionIndicateWhy) || ifNoDisclosureDiscussionIndicateWhy !== '5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               },
               "id": "otherwhyNoDiscussionSpecify",
+              "required": "true",
               "label": "Other specify"
             },
             {
@@ -472,6 +488,7 @@
                 ]
               },
               "id": "haveFullDisclosure",
+              "required": "true",
               "label": "Does the child have full disclosure?"
             },
             {
@@ -507,6 +524,7 @@
                 ]
               },
               "id": "cadreB",
+              "required": "true",
               "label": "Cadre"
             },
             {
@@ -555,6 +573,7 @@
                 ]
               },
               "id": "departmentB",
+              "required": "true",
               "label": "Department"
             },
             {
@@ -602,6 +621,7 @@
                 ]
               },
               "id": "placleOfDisclosure",
+              "required": "true",
               "label": "Place where full disclosure occurred",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -679,6 +699,7 @@
                 ]
               },
               "id": "WhoConductedFullDisclosure",
+              "required": "true",
               "label": " Who conducted full disclosure?",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -714,6 +735,7 @@
                 ]
               },
               "id": "natureOfDisclosure",
+              "required":"true",
               "label": "Nature of disclosure:",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -726,6 +748,7 @@
                 "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               },
               "id": "childSReactionToFullDisclosure",
+              "required":"true",
               "label": "Child’s reaction to full disclosure",
               "hide": {
                 "hideWhenExpression": "haveFullDisclosure !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' && childKnowHIVStatus !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"

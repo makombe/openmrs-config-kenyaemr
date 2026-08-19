@@ -729,6 +729,7 @@
                 ]
               },
               "id": "cadre",
+              "required": "true",
               "label": "Cadre"
             },
             {
@@ -777,6 +778,7 @@
                 ]
               },
               "id": "department",
+               "required": "true",
               "label": "Department"
             },
             {
